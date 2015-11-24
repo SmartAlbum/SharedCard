@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SCHomeViewController.h
 //  SharedCard
 //
 //  Created by JessieYong on 15/11/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SCHomeViewController : UIViewController
 
 @end
-

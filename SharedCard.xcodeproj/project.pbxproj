@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		277005631C04DE61003815DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005621C04DE61003815DD /* main.m */; };
 		277005661C04DE61003815DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005651C04DE61003815DD /* AppDelegate.m */; };
-		277005691C04DE61003815DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005681C04DE61003815DD /* ViewController.m */; };
 		2770056C1C04DE61003815DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056A1C04DE61003815DD /* Main.storyboard */; };
 		2770056E1C04DE61003815DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2770056D1C04DE61003815DD /* Assets.xcassets */; };
 		277005711C04DE61003815DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056F1C04DE61003815DD /* LaunchScreen.storyboard */; };
 		2770057C1C04DE61003815DD /* SharedCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770057B1C04DE61003815DD /* SharedCardTests.m */; };
 		277005871C04DE61003815DD /* SharedCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005861C04DE61003815DD /* SharedCardUITests.m */; };
+		277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005981C04DEC3003815DD /* SCHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		277005621C04DE61003815DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		277005641C04DE61003815DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		277005651C04DE61003815DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		277005671C04DE61003815DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		277005681C04DE61003815DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2770056B1C04DE61003815DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2770056D1C04DE61003815DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		277005701C04DE61003815DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		277005821C04DE61003815DD /* SharedCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277005861C04DE61003815DD /* SharedCardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedCardUITests.m; sourceTree = "<group>"; };
 		277005881C04DE61003815DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		277005971C04DEC3003815DD /* SCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeViewController.h; sourceTree = "<group>"; };
+		277005981C04DEC3003815DD /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,11 @@
 		277005601C04DE61003815DD /* SharedCard */ = {
 			isa = PBXGroup;
 			children = (
+				277005941C04DE96003815DD /* controllers */,
+				277005951C04DE96003815DD /* models */,
+				277005961C04DE96003815DD /* views */,
 				277005641C04DE61003815DD /* AppDelegate.h */,
 				277005651C04DE61003815DD /* AppDelegate.m */,
-				277005671C04DE61003815DD /* ViewController.h */,
-				277005681C04DE61003815DD /* ViewController.m */,
 				2770056A1C04DE61003815DD /* Main.storyboard */,
 				2770056D1C04DE61003815DD /* Assets.xcassets */,
 				2770056F1C04DE61003815DD /* LaunchScreen.storyboard */,
@@ -138,6 +139,29 @@
 				277005881C04DE61003815DD /* Info.plist */,
 			);
 			path = SharedCardUITests;
+			sourceTree = "<group>";
+		};
+		277005941C04DE96003815DD /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				277005971C04DEC3003815DD /* SCHomeViewController.h */,
+				277005981C04DEC3003815DD /* SCHomeViewController.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		277005951C04DE96003815DD /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		277005961C04DE96003815DD /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277005691C04DE61003815DD /* ViewController.m in Sources */,
 				277005661C04DE61003815DD /* AppDelegate.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
+				277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
