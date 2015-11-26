@@ -15,6 +15,8 @@
 		2770057C1C04DE61003815DD /* SharedCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770057B1C04DE61003815DD /* SharedCardTests.m */; };
 		277005871C04DE61003815DD /* SharedCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005861C04DE61003815DD /* SharedCardUITests.m */; };
 		277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005981C04DEC3003815DD /* SCHomeViewController.m */; };
+		CF9A46AA1C06AA6A00321F09 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46A91C06AA6A00321F09 /* images */; };
+		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
 		27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */; };
 		27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */; };
 		27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */; };
@@ -58,6 +60,8 @@
 		277005881C04DE61003815DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277005971C04DEC3003815DD /* SCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeViewController.h; sourceTree = "<group>"; };
 		277005981C04DEC3003815DD /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
+		CF9A46A91C06AA6A00321F09 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGameBoardViewController.h; sourceTree = "<group>"; };
 		27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGameBoardViewController.m; sourceTree = "<group>"; };
 		27F85B7B1C0558BE00985BF5 /* SCPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayerViewController.h; sourceTree = "<group>"; };
@@ -121,12 +125,14 @@
 		277005601C04DE61003815DD /* SharedCard */ = {
 			isa = PBXGroup;
 			children = (
+				CF9A46A91C06AA6A00321F09 /* images */,
 				277005941C04DE96003815DD /* controllers */,
 				277005951C04DE96003815DD /* models */,
 				277005961C04DE96003815DD /* views */,
 				277005641C04DE61003815DD /* AppDelegate.h */,
 				277005651C04DE61003815DD /* AppDelegate.m */,
 				2770056A1C04DE61003815DD /* Main.storyboard */,
+				CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */,
 				2770056D1C04DE61003815DD /* Assets.xcassets */,
 				2770056F1C04DE61003815DD /* LaunchScreen.storyboard */,
 				277005721C04DE61003815DD /* Info.plist */,
@@ -297,9 +303,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9A46AA1C06AA6A00321F09 /* images in Resources */,
 				277005711C04DE61003815DD /* LaunchScreen.storyboard in Resources */,
 				2770056E1C04DE61003815DD /* Assets.xcassets in Resources */,
 				2770056C1C04DE61003815DD /* Main.storyboard in Resources */,
+				CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
