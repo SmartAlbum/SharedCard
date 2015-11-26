@@ -19,6 +19,9 @@
 		27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */; };
 		27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */; };
 		27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B8A1C05B79100985BF5 /* SCMCManager.m */; };
+		3E451F661C069C3C0080B546 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F651C069C3C0080B546 /* Card.swift */; };
+		3E451F681C069C450080B546 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F671C069C450080B546 /* Game.swift */; };
+		3E451F6A1C069C560080B546 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F691C069C560080B546 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,10 @@
 		27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		27F85B891C05B79100985BF5 /* SCMCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMCManager.h; sourceTree = "<group>"; };
 		27F85B8A1C05B79100985BF5 /* SCMCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMCManager.m; sourceTree = "<group>"; };
+		3E451F641C069C3B0080B546 /* SharedCard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SharedCard-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E451F651C069C3C0080B546 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3E451F671C069C450080B546 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3E451F691C069C560080B546 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +177,12 @@
 		277005951C04DE96003815DD /* models */ = {
 			isa = PBXGroup;
 			children = (
+				3E451F671C069C450080B546 /* Game.swift */,
+				3E451F651C069C3C0080B546 /* Card.swift */,
+				3E451F691C069C560080B546 /* Player.swift */,
 				27F85B891C05B79100985BF5 /* SCMCManager.h */,
 				27F85B8A1C05B79100985BF5 /* SCMCManager.m */,
+				3E451F641C069C3B0080B546 /* SharedCard-Bridging-Header.h */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -315,10 +326,13 @@
 			files = (
 				277005661C04DE61003815DD /* AppDelegate.m in Sources */,
 				27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */,
+				3E451F661C069C3C0080B546 /* Card.swift in Sources */,
 				27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
 				27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */,
 				277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */,
+				3E451F6A1C069C560080B546 /* Player.swift in Sources */,
+				3E451F681C069C450080B546 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,10 +471,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SharedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Y.SharedCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SharedCard/models/SharedCard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -468,10 +485,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SharedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Y.SharedCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SharedCard/models/SharedCard-Bridging-Header.h";
 			};
 			name = Release;
 		};
