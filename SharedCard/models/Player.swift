@@ -11,6 +11,7 @@ enum Role{
     case Farmer
     case LandLord
     case Undefined
+    
 }
 class Player{
     var cards:[Card] = []
