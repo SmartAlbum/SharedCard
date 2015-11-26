@@ -17,6 +17,10 @@
 		277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005981C04DEC3003815DD /* SCHomeViewController.m */; };
 		CF9A46AA1C06AA6A00321F09 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46A91C06AA6A00321F09 /* images */; };
 		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
+		27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */; };
+		27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */; };
+		27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */; };
+		27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B8A1C05B79100985BF5 /* SCMCManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,13 @@
 		277005981C04DEC3003815DD /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
 		CF9A46A91C06AA6A00321F09 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGameBoardViewController.h; sourceTree = "<group>"; };
+		27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGameBoardViewController.m; sourceTree = "<group>"; };
+		27F85B7B1C0558BE00985BF5 /* SCPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayerViewController.h; sourceTree = "<group>"; };
+		27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPlayerViewController.m; sourceTree = "<group>"; };
+		27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		27F85B891C05B79100985BF5 /* SCMCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMCManager.h; sourceTree = "<group>"; };
+		27F85B8A1C05B79100985BF5 /* SCMCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMCManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +97,7 @@
 		277005551C04DE61003815DD = {
 			isa = PBXGroup;
 			children = (
+				27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */,
 				277005601C04DE61003815DD /* SharedCard */,
 				2770057A1C04DE61003815DD /* SharedCardTests */,
 				277005851C04DE61003815DD /* SharedCardUITests */,
@@ -152,6 +165,10 @@
 			children = (
 				277005971C04DEC3003815DD /* SCHomeViewController.h */,
 				277005981C04DEC3003815DD /* SCHomeViewController.m */,
+				27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */,
+				27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */,
+				27F85B7B1C0558BE00985BF5 /* SCPlayerViewController.h */,
+				27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -159,6 +176,8 @@
 		277005951C04DE96003815DD /* models */ = {
 			isa = PBXGroup;
 			children = (
+				27F85B891C05B79100985BF5 /* SCMCManager.h */,
+				27F85B8A1C05B79100985BF5 /* SCMCManager.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -303,7 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				277005661C04DE61003815DD /* AppDelegate.m in Sources */,
+				27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */,
+				27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
+				27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */,
 				277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
