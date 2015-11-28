@@ -15,8 +15,6 @@
 		2770057C1C04DE61003815DD /* SharedCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770057B1C04DE61003815DD /* SharedCardTests.m */; };
 		277005871C04DE61003815DD /* SharedCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005861C04DE61003815DD /* SharedCardUITests.m */; };
 		277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005981C04DEC3003815DD /* SCHomeViewController.m */; };
-		CF9A46AA1C06AA6A00321F09 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46A91C06AA6A00321F09 /* images */; };
-		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
 		27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */; };
 		27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */; };
 		27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */; };
@@ -24,6 +22,8 @@
 		3E451F661C069C3C0080B546 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F651C069C3C0080B546 /* Card.swift */; };
 		3E451F681C069C450080B546 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F671C069C450080B546 /* Game.swift */; };
 		3E451F6A1C069C560080B546 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F691C069C560080B546 /* Player.swift */; };
+		CF9A46AA1C06AA6A00321F09 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46A91C06AA6A00321F09 /* images */; };
+		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,6 @@
 		277005881C04DE61003815DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277005971C04DEC3003815DD /* SCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeViewController.h; sourceTree = "<group>"; };
 		277005981C04DEC3003815DD /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
-		CF9A46A91C06AA6A00321F09 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
-		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGameBoardViewController.h; sourceTree = "<group>"; };
 		27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGameBoardViewController.m; sourceTree = "<group>"; };
 		27F85B7B1C0558BE00985BF5 /* SCPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayerViewController.h; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		3E451F651C069C3C0080B546 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3E451F671C069C450080B546 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		3E451F691C069C560080B546 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CF9A46A91C06AA6A00321F09 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,9 +480,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = SharedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Y.SharedCard;
+				PRODUCT_MODULE_NAME = SharedCardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SharedCard/models/SharedCard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -494,9 +496,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = SharedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Y.SharedCard;
+				PRODUCT_MODULE_NAME = SharedCardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SharedCard/models/SharedCard-Bridging-Header.h";
 			};

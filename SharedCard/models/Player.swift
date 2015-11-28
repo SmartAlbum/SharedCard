@@ -13,7 +13,7 @@ enum Role{
     case Undefined
     
 }
-class Player{
+class Player:NSObject{
     var cards:[Card] = []
     
     func SetCard(assignedCards:[Card]){

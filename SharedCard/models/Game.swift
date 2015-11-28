@@ -7,17 +7,12 @@
 //
 
 import Foundation
-class Game{
+class Game:NSObject{
     var players:[Player]
     var cards:[Card]
-    init(){
+    override init(){
         cards = []
-        for i in 1...13{
-            for type in CardType.fourValues{
-                cards.append(Card(cardType: type, cardValue: i))
-            }
-        }
-        cards.append(<#T##newElement: Card##Card#>)
         players = []
+        super.init()
     }
 }

@@ -12,12 +12,9 @@ enum CardType{
     case Spade
     case Diamond
     case Club
-    case BlackJoker
-    case RedJoker
-    static let fourValues = [Heart, Spade, Diamond, Club]
 }
 
-class Card {
+class Card:NSObject {
     var type:CardType
     var value:Int
     init(cardType:CardType,cardValue:Int){
