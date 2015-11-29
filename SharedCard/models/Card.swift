@@ -18,7 +18,8 @@ class Card:NSObject {
     var type:CardType
     var value:Int
     init(cardType:CardType,cardValue:Int){
-        type = cardType
         value = cardValue
+        type = cardType
+        super.init()
     }
 }
