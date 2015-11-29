@@ -12,14 +12,17 @@ enum CardType{
     case Spade
     case Diamond
     case Club
+    static let allValues = [Heart,Spade,Diamond,Club]
 }
 
 class Card:NSObject {
     var type:CardType
-    var value:Int
-    init(cardType:CardType,cardValue:Int){
+    var value:[Int]
+    var rankString:String
+    init(cardType:CardType,cardValue:[Int],cardString:String){
         value = cardValue
         type = cardType
+        rankString = cardString
         super.init()
     }
 }

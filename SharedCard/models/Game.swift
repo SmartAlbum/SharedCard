@@ -7,16 +7,69 @@
 //
 
 import Foundation
+extension Array {
+    mutating func shuffle() {
+        if count < 2 { return }
+        for i in 0..<(count - 1) {
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            swap(&self[i], &self[j])
+        }
+    }
+}
 class Game:NSObject{
+    static var rankString: [String] = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     var players:[Player]
     var currentTurn:Player?
     var cards:[Card]
+    let numOfCardPack = 4
     
-    override init(){
-        cards = []
-        players = []
-        currentTurn = nil
+    override convenience init(){
+        let emptyPlayers:[Player] = []
+        self.init(enteredPlayers: emptyPlayers)
+    }
+    
+    init(enteredPlayers:[Player]){
+        self.cards = []
+        self.players = enteredPlayers
+        self.currentTurn = nil
         super.init()
+        initCards()
+        
+    }
+    
+    func initCards(){
+        for var index = 0; index < self.numOfCardPack; ++index {
+            for rank in Game.rankString{
+                for type in CardType.allValues{
+                    var value = Game.getCardValue(rank)
+                    var newCard = Card(cardType: type, cardValue: value, cardString: rank)
+                    cards.append(newCard)
+                }
+            }
+        }
+        RandomCard()
+    }
+    
+    func RandomCard(){
+        cards.shuffle()
+    }
+    
+    static func getCardValue(rank:String)->[Int]{
+        var value:[Int] = rank == "A" ? [1,11] : Int(rank) == nil ? [10] : [Int(rank)!]
+        return value
+    }
+
+    func getPlayer(playerId:String)->Player?{
+        for player in players{
+            if player.Id == playerId{
+                return player
+            }
+        }
+        return nil
+    }
+    
+    private func getRemainingCardCount()->Int{
+        return cards.count
     }
     
     func getCard(playerName:String)->Card?{
@@ -25,6 +78,16 @@ class Game:NSObject{
     
     func deny(palyerName:String){
         
+    }
+    
+    //start Game, assigned cards to all players
+    func startGame(){
+        
+    }
+    
+    //enter a new player
+    func addPlayer(player:Player){
+        players.append(player)
     }
     
     //return winner

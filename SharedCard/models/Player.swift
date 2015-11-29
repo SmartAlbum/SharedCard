@@ -16,7 +16,7 @@ enum Role{
 class Player:NSObject{
     var cards:[Card] = []
     var stop:Bool = false
-    
+    var Id:String = ""
     func SetCard(assignedCards:[Card]){
         self.cards = assignedCards
     }
