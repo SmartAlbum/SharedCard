@@ -17,7 +17,7 @@ extension Array {
     }
 }
 class Game:NSObject{
-    static var rankString: [String] = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    
     var players:[Player]
     var currentTurn:Player?
     var cards:[Card]
@@ -40,9 +40,9 @@ class Game:NSObject{
     func initCards(){
         cards.removeAll()
         for var index = 0; index < self.numOfCardPack; ++index {
-            for rank in Game.rankString{
+            for rank in Card.rankString{
                 for type in CardType.allValues{
-                    var value = Game.getCardValue(rank)
+                    var value = Card.getCardValue(rank)
                     var newCard = Card(cardType: type, cardValue: value, cardString: rank)
                     cards.append(newCard)
                     
@@ -78,18 +78,10 @@ class Game:NSObject{
     }
 
     
-    static func getCardValue(rank:String)->Int{
-        var value:Int = rank == "A" ? 1 : Int(rank) == nil ? 10 : Int(rank)!
-        return value
-    }
 
-    func getPlayer(playerId:String)->Player?{
-        for player in players{
-            if player.Id == playerId{
-                return player
-            }
-        }
-        return nil
+
+    func getPlayer(playerId:String)->Player{
+        return players.filter{ $0.Id == playerId}[0]
     }
     
     private func getRemainingCardCount()->Int{
