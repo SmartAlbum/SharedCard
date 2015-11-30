@@ -44,6 +44,7 @@ class Game:NSObject{
                     var value = Game.getCardValue(rank)
                     var newCard = Card(cardType: type, cardValue: value, cardString: rank)
                     cards.append(newCard)
+                    
                 }
             }
         }
