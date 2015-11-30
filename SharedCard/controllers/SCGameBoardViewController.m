@@ -10,7 +10,7 @@
 #import "SCMCManager.h"
 @import MultipeerConnectivity;
 
-@interface SCGameBoardViewController ()<MCBrowserViewControllerDelegate, MCSessionDelegate>{
+@interface SCGameBoardViewController ()<MCBrowserViewControllerDelegate>{
     SCMCManager *_mcManager;
 }
 @end
