@@ -16,6 +16,11 @@ extension Array {
         }
     }
 }
+enum GameResult{
+    case WIN
+    case LOSE
+    case DRAW
+}
 class Game:NSObject{
     
     var players:[Player]
@@ -31,10 +36,8 @@ class Game:NSObject{
     init(enteredPlayers:[Player]){
         self.cards = []
         self.players = enteredPlayers
-        self.currentTurn = nil
         super.init()
         initCards()
-        
     }
     
     func initCards(){
@@ -92,19 +95,54 @@ class Game:NSObject{
     
     
     //stopAccpetingCard
-    func deny(palyerName:String){
-        
+    func stopGettingCard(playerId:String){
+        var stopPlayer = players.filter{ $0.Id == playerId }[0]
+        stopPlayer.stopGettingCard()
     }
     
     
     //enter a new player
     func addPlayer(player:Player){
-        players.append(player)
+        if(!players.contains{ (element) -> Bool in return element.Id == player.Id}){
+            players.append(player)
+        }
     }
     
-    //return winner
-    func getWinner()->Player?{
-        return nil
+    //get result of particular player
+    func getReuslt(playerId:String)->GameResult{
+        var currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
+        var maxValue = -1
+        for player in players{
+            if(player.Id != currnetPlayer.Id && player.isCardValueValid()){
+                maxValue = max(maxValue,player.getCardsValue())
+            }
+        }
+        
+        var numOfMaxValueCount = maxValue > 0 ? players.filter{ $0.getCardsValue() == maxValue }.count : 0
+        
+        if(maxValue<0 && !currnetPlayer.isCardValueValid()){
+            return GameResult.DRAW
+        }
+        else if(maxValue<0){
+            return GameResult.WIN
+        }
+        else if(!currnetPlayer.isCardValueValid()){
+            return GameResult.LOSE
+        }
+        else{
+            if(numOfMaxValueCount == players.count){
+                return GameResult.DRAW
+            }
+            else {
+                return currnetPlayer.getCardsValue() >= maxValue ? GameResult.WIN : GameResult.LOSE
+            }
+        }
+        
+    }
+    
+    //return players according to their corresponding GameResult
+    func getPlayerBaseOnReuslt(resultType:GameResult)->[Player]{
+        return players.filter{ getReuslt($0.Id) == resultType }
     }
     
     func RandomCard(){
