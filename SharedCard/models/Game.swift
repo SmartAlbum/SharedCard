@@ -38,6 +38,7 @@ class Game:NSObject{
     }
     
     func initCards(){
+        cards.removeAll()
         for var index = 0; index < self.numOfCardPack; ++index {
             for rank in Game.rankString{
                 for type in CardType.allValues{
@@ -51,12 +52,34 @@ class Game:NSObject{
         RandomCard()
     }
     
-    func RandomCard(){
-        cards.shuffle()
+    
+    //start Game, assigned cards to all players
+    func startGame(){
+        if(players.count<2){
+            return
+        }
+        RandomPlayer()
+        
+        if(cards.count<players.count*10){
+            initCards()
+        }
+        for var player in players{
+            player.cards.removeAll()
+            player.hideCard = cards.removeLast()
+            player.cards.append(cards.removeLast())
+        }
     }
     
-    static func getCardValue(rank:String)->[Int]{
-        var value:[Int] = rank == "A" ? [1,11] : Int(rank) == nil ? [10] : [Int(rank)!]
+    func getCard(Id:String)->Card{
+        var filterPlayers:[Player] = players.filter{ $0.Id == Id}
+        var assignedCard:Card = cards.removeLast()
+        filterPlayers[0].cards.append(assignedCard)
+        return assignedCard
+    }
+
+    
+    static func getCardValue(rank:String)->Int{
+        var value:Int = rank == "A" ? 1 : Int(rank) == nil ? 10 : Int(rank)!
         return value
     }
 
@@ -73,18 +96,14 @@ class Game:NSObject{
         return cards.count
     }
     
-    func getCard(playerName:String)->Card?{
-        return nil
-    }
+
     
+    
+    //stopAccpetingCard
     func deny(palyerName:String){
         
     }
     
-    //start Game, assigned cards to all players
-    func startGame(){
-        
-    }
     
     //enter a new player
     func addPlayer(player:Player){
@@ -96,6 +115,12 @@ class Game:NSObject{
         return nil
     }
     
+    func RandomCard(){
+        cards.shuffle()
+    }
+    func RandomPlayer(){
+        players.shuffle()
+    }
     
     
     

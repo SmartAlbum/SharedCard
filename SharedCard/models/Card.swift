@@ -17,9 +17,9 @@ enum CardType{
 
 class Card:NSObject {
     var type:CardType
-    var value:[Int]
+    var value:Int
     var rankString:String
-    init(cardType:CardType,cardValue:[Int],cardString:String){
+    init(cardType:CardType,cardValue:Int,cardString:String){
         value = cardValue
         type = cardType
         rankString = cardString
