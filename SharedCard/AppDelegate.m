@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "SCHomeViewController.h"
+#import "SCGameBoardViewController.h"
+
+#define ISIPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 @interface AppDelegate ()
 
@@ -16,7 +20,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch. 34344
+    // Override point for customization after application launch.
+    NSString *storyboardName;
+    if(ISIPAD) {
+        storyboardName = @"Main";
+           }
+    else{
+        storyboardName = @"iPhone";
+    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIViewController *con = [storyboard instantiateInitialViewController];
+    self.window.rootViewController = con;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
