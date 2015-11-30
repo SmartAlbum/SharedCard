@@ -1,17 +1,18 @@
 //
-//  SCPlayerViewController.m
+//  SCPlayerBoardViewController.m
 //  SharedCard
 //
-//  Created by JessieYong on 15/11/25.
+//  Created by JessieYong on 15/11/30.
 //  Copyright © 2015年 JessieYong. All rights reserved.
 //
 
-#import "SCPlayerViewController.h"
+#import "SCPlayerBoardViewController.h"
 
-@interface SCPlayerViewController ()
+@interface SCPlayerBoardViewController ()
+
 @end
 
-@implementation SCPlayerViewController
+@implementation SCPlayerBoardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,9 +23,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 /*
 #pragma mark - Navigation

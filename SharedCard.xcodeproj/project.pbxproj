@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275070FE1C0BFBDA0051810B /* SCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */; };
+		275071011C0BFBFB0051810B /* SCStarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071001C0BFBFB0051810B /* SCStarterViewController.m */; };
+		275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071031C0BFC120051810B /* SCPlayerBoardViewController.m */; };
 		277005631C04DE61003815DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005621C04DE61003815DD /* main.m */; };
 		277005661C04DE61003815DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005651C04DE61003815DD /* AppDelegate.m */; };
 		2770056C1C04DE61003815DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056A1C04DE61003815DD /* Main.storyboard */; };
@@ -14,9 +17,7 @@
 		277005711C04DE61003815DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056F1C04DE61003815DD /* LaunchScreen.storyboard */; };
 		2770057C1C04DE61003815DD /* SharedCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770057B1C04DE61003815DD /* SharedCardTests.m */; };
 		277005871C04DE61003815DD /* SharedCardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005861C04DE61003815DD /* SharedCardUITests.m */; };
-		277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005981C04DEC3003815DD /* SCHomeViewController.m */; };
 		27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */; };
-		27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */; };
 		27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */; };
 		27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F85B8A1C05B79100985BF5 /* SCMCManager.m */; };
 		3E451F661C069C3C0080B546 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E451F651C069C3C0080B546 /* Card.swift */; };
@@ -103,6 +104,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275070FC1C0BFBDA0051810B /* SCWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWelcomeViewController.h; sourceTree = "<group>"; };
+		275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWelcomeViewController.m; sourceTree = "<group>"; };
+		275070FF1C0BFBFB0051810B /* SCStarterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStarterViewController.h; sourceTree = "<group>"; };
+		275071001C0BFBFB0051810B /* SCStarterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStarterViewController.m; sourceTree = "<group>"; };
+		275071021C0BFC120051810B /* SCPlayerBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayerBoardViewController.h; sourceTree = "<group>"; };
+		275071031C0BFC120051810B /* SCPlayerBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPlayerBoardViewController.m; sourceTree = "<group>"; };
 		2770055E1C04DE61003815DD /* SharedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277005621C04DE61003815DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		277005641C04DE61003815DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,12 +124,8 @@
 		277005821C04DE61003815DD /* SharedCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		277005861C04DE61003815DD /* SharedCardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedCardUITests.m; sourceTree = "<group>"; };
 		277005881C04DE61003815DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		277005971C04DEC3003815DD /* SCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeViewController.h; sourceTree = "<group>"; };
-		277005981C04DEC3003815DD /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
 		27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGameBoardViewController.h; sourceTree = "<group>"; };
 		27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGameBoardViewController.m; sourceTree = "<group>"; };
-		27F85B7B1C0558BE00985BF5 /* SCPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayerViewController.h; sourceTree = "<group>"; };
-		27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPlayerViewController.m; sourceTree = "<group>"; };
 		27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		27F85B891C05B79100985BF5 /* SCMCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMCManager.h; sourceTree = "<group>"; };
 		27F85B8A1C05B79100985BF5 /* SCMCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMCManager.m; sourceTree = "<group>"; };
@@ -347,12 +350,14 @@
 		277005941C04DE96003815DD /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				277005971C04DEC3003815DD /* SCHomeViewController.h */,
-				277005981C04DEC3003815DD /* SCHomeViewController.m */,
 				27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */,
 				27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */,
-				27F85B7B1C0558BE00985BF5 /* SCPlayerViewController.h */,
-				27F85B7C1C0558BE00985BF5 /* SCPlayerViewController.m */,
+				275070FC1C0BFBDA0051810B /* SCWelcomeViewController.h */,
+				275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */,
+				275070FF1C0BFBFB0051810B /* SCStarterViewController.h */,
+				275071001C0BFBFB0051810B /* SCStarterViewController.m */,
+				275071021C0BFC120051810B /* SCPlayerBoardViewController.h */,
+				275071031C0BFC120051810B /* SCPlayerBoardViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -568,14 +573,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */,
 				277005661C04DE61003815DD /* AppDelegate.m in Sources */,
 				27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */,
 				3E451F661C069C3C0080B546 /* Card.swift in Sources */,
+				275070FE1C0BFBDA0051810B /* SCWelcomeViewController.m in Sources */,
 				27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
-				27F85B7D1C0558BE00985BF5 /* SCPlayerViewController.m in Sources */,
-				277005991C04DEC3003815DD /* SCHomeViewController.m in Sources */,
 				3E451F6A1C069C560080B546 /* Player.swift in Sources */,
+				275071011C0BFBFB0051810B /* SCStarterViewController.m in Sources */,
 				3E451F681C069C450080B546 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

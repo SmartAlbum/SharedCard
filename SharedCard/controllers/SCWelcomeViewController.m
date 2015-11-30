@@ -1,18 +1,18 @@
 //
-//  SCHomeViewController.m
+//  SCWelcomeViewController.m
 //  SharedCard
 //
-//  Created by JessieYong on 15/11/25.
+//  Created by JessieYong on 15/11/30.
 //  Copyright © 2015年 JessieYong. All rights reserved.
 //
 
-#import "SCHomeViewController.h"
+#import "SCWelcomeViewController.h"
 
-@interface SCHomeViewController ()
+@interface SCWelcomeViewController ()
 
 @end
 
-@implementation SCHomeViewController
+@implementation SCWelcomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SCHomeViewController.h"
-#import "SCGameBoardViewController.h"
 
 #define ISIPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
