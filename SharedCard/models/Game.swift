@@ -81,6 +81,7 @@ class Game:NSObject{
             initCards()
         }
         for var player in players{
+            player.stop = false
             player.cards.removeAll()
             player.hideCard = cards.removeLast()
             player.cards.append(cards.removeLast())
