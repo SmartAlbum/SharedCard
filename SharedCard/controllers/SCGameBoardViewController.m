@@ -8,21 +8,51 @@
 
 #import "SCGameBoardViewController.h"
 #import "SCMCManager.h"
+
 @import MultipeerConnectivity;
 
-@interface SCGameBoardViewController ()<MCBrowserViewControllerDelegate>{
-    SCMCManager *_mcManager;
-}
+@interface SCGameBoardViewController ()
 @end
 
 @implementation SCGameBoardViewController
 
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+    }
+    [self addObserver];
+    return  self;
+}
+
+- (void)addObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(peerDidChangeStateWithNotification:)
+                                                 name:@"SCMCDidChangeStateNotification"
+                                               object:nil];
+}
+
+- (void)removeObserver {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)dealloc {
+    [self removeObserver];
+}
+
+- (void)peerDidChangeStateWithNotification:(NSNotification *)notification{
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
+//TODO For Tina(这个时候有人加进来或者出去了)
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _mcManager = [[SCMCManager alloc] init];
-    [_mcManager setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
-    [_mcManager advertiseSelf:YES];
-    
+//    _mcManager = [[SCMCManager alloc] init];
+//    [_mcManager setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+//    [_mcManager advertiseSelf:YES];
+
 //    MCBrowserViewController *browserVC = [[MCBrowserViewController alloc] initWithServiceType:@"testtest" session:_session];
 //    browserVC.delegate = self;
 //    [self presentViewController:browserVC animated:YES completion:NULL];
@@ -46,30 +76,11 @@
 */
 
 
-#pragma mark - MCBrowserViewControllerDelegate methods
-- (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController
-{
-    [browserViewController dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
-{
-    [browserViewController dismissViewControllerAnimated:YES completion:^{
-    }];
-}
-
-
-
-- (IBAction)beginSearch:(id)sender {
-    [_mcManager setupMCBrowser];
-    [[_mcManager browser] setDelegate:self];
-    [self presentViewController:[_mcManager browser] animated:YES completion:nil];
-}
 
 - (IBAction)sendData:(id)sender {
     NSError *error = nil;
     NSString *str = @"123";
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-    [_mcManager.session sendData:data toPeers:[_mcManager.session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
+//    [[[SCMCManager shareInstance]  session] sendData:data toPeers:[_mcManager.session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
 }
 @end

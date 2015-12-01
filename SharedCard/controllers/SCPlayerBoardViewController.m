@@ -7,12 +7,43 @@
 //
 
 #import "SCPlayerBoardViewController.h"
+#import "SCMCManager.h"
+@import MultipeerConnectivity;
 
 @interface SCPlayerBoardViewController ()
 
 @end
 
 @implementation SCPlayerBoardViewController
+
+- (id)init {
+    if (self=[super init]) {
+    }
+    [self addObserver];
+    return  self;
+}
+
+- (void)addObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(peerDidChangeStateWithNotification:)
+                                                 name:@"SCMCDidChangeStateNotification"
+                                               object:nil];
+}
+
+- (void)removeObserver {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)dealloc {
+    [self removeObserver];
+}
+
+-(void)peerDidChangeStateWithNotification:(NSNotification *)notification{
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    //TODO For Tina(这个时候有人加进来或者出去了)
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -10,8 +10,6 @@
 
 @interface SCGameBoardViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIButton *beginSearchButton;
-- (IBAction)beginSearch:(id)sender;
 
 - (IBAction)sendData:(id)sender;
 

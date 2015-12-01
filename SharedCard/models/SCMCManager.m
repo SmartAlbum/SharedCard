@@ -7,17 +7,38 @@
 //
 
 #import "SCMCManager.h"
+#define ISIPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 
 @implementation SCMCManager
 
--(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName{
-    _peerID = [[MCPeerID alloc] initWithDisplayName:displayName];
-    _session = [[MCSession alloc] initWithPeer:_peerID];
-    _session.delegate = self;
++ (instancetype)shareInstance
+{
+    static SCMCManager *shareManager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shareManager = [[SCMCManager alloc] init];
+    });
+    return shareManager;
 }
 
--(void)setupMCBrowser{
-    _browser = [[MCBrowserViewController alloc] initWithServiceType:@"card-files"session:_session];
+
+-(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName{
+    MCPeerID *peerID = [[MCPeerID alloc] initWithDisplayName:displayName];
+    if (_session && ISIPAD) {
+        _session = [[MCSession alloc] initWithPeer:peerID];
+        _session.delegate = self;
+    }
+    else if(!_session) {
+        _session = [[MCSession alloc] initWithPeer:peerID];
+        _session.delegate = self;
+    }
+}
+
+-(void)setupMCBrowser {
+    if (_session) {
+        _browser = [[MCBrowserViewController alloc] initWithServiceType:@"card-files"session:_session];
+        _browser.maximumNumberOfPeers = 1;
+    }
 }
 
 -(void)advertiseSelf:(BOOL)shouldAdvertise{
@@ -36,7 +57,12 @@
 
 
 -(void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state{
-    
+    NSDictionary *dict = @{@"peerID": peerID,
+                           @"state" : [NSNumber numberWithInt:state]
+                           };
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SCMCDidChangeStateNotification"
+                                                        object:nil
+                                                      userInfo:dict];
 }
 
 
