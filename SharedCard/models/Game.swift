@@ -16,8 +16,13 @@ extension Array {
         }
     }
 }
+enum GameResult{
+    case WIN
+    case LOSE
+    case DRAW
+}
 class Game:NSObject{
-    static var rankString: [String] = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    
     var players:[Player]
     var currentTurn:Player?
     var cards:[Card]
@@ -31,17 +36,16 @@ class Game:NSObject{
     init(enteredPlayers:[Player]){
         self.cards = []
         self.players = enteredPlayers
-        self.currentTurn = nil
         super.init()
         initCards()
-        
     }
     
     func initCards(){
+        cards.removeAll()
         for var index = 0; index < self.numOfCardPack; ++index {
-            for rank in Game.rankString{
+            for rank in Card.rankString{
                 for type in CardType.allValues{
-                    var value = Game.getCardValue(rank)
+                    var value = Card.getCardValue(rank)
                     var newCard = Card(cardType: type, cardValue: value, cardString: rank)
                     cards.append(newCard)
                     
@@ -51,49 +55,101 @@ class Game:NSObject{
         RandomCard()
     }
     
-    func RandomCard(){
-        cards.shuffle()
+    
+    //start Game, assigned cards to all players
+    func startGame(){
+        if(players.count<2){
+            return
+        }
+        RandomPlayer()
+        
+        if(cards.count<players.count*10){
+            initCards()
+        }
+        for var player in players{
+            player.cards.removeAll()
+            player.hideCard = cards.removeLast()
+            player.cards.append(cards.removeLast())
+        }
     }
     
-    static func getCardValue(rank:String)->[Int]{
-        var value:[Int] = rank == "A" ? [1,11] : Int(rank) == nil ? [10] : [Int(rank)!]
-        return value
+    func getCard(Id:String)->Card{
+        var filterPlayers:[Player] = players.filter{ $0.Id == Id}
+        var assignedCard:Card = cards.removeLast()
+        filterPlayers[0].cards.append(assignedCard)
+        return assignedCard
     }
 
-    func getPlayer(playerId:String)->Player?{
-        for player in players{
-            if player.Id == playerId{
-                return player
-            }
-        }
-        return nil
+    
+
+
+    func getPlayer(playerId:String)->Player{
+        return players.filter{ $0.Id == playerId}[0]
     }
     
     private func getRemainingCardCount()->Int{
         return cards.count
     }
     
-    func getCard(playerName:String)->Card?{
-        return nil
+
+    
+    
+    //stopAccpetingCard
+    func stopGettingCard(playerId:String){
+        var stopPlayer = players.filter{ $0.Id == playerId }[0]
+        stopPlayer.stopGettingCard()
     }
     
-    func deny(palyerName:String){
-        
-    }
-    
-    //start Game, assigned cards to all players
-    func startGame(){
-        
-    }
     
     //enter a new player
     func addPlayer(player:Player){
-        players.append(player)
+        if(!players.contains{ (element) -> Bool in return element.Id == player.Id}){
+            players.append(player)
+        }
     }
     
-    //return winner
-    func getWinner()->Player?{
-        return nil
+    //get result of particular player
+    func getReuslt(playerId:String)->GameResult{
+        var currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
+        var maxValue = -1
+        for player in players{
+            if(player.Id != currnetPlayer.Id && player.isCardValueValid()){
+                maxValue = max(maxValue,player.getCardsValue())
+            }
+        }
+        
+        var numOfMaxValueCount = maxValue > 0 ? players.filter{ $0.getCardsValue() == maxValue }.count : 0
+        
+        if(maxValue<0 && !currnetPlayer.isCardValueValid()){
+            return GameResult.DRAW
+        }
+        else if(maxValue<0){
+            return GameResult.WIN
+        }
+        else if(!currnetPlayer.isCardValueValid()){
+            return GameResult.LOSE
+        }
+        else{
+            if(numOfMaxValueCount == players.count){
+                return GameResult.DRAW
+            }
+            else {
+                return currnetPlayer.getCardsValue() >= maxValue ? GameResult.WIN : GameResult.LOSE
+            }
+        }
+        
+    }
+    
+    //return players according to their corresponding GameResult
+    func getPlayerBaseOnReuslt(resultType:GameResult)->[Player]{
+        return players.filter{ getReuslt($0.Id) == resultType }
+    }
+    
+    func RandomCard(){
+        cards.shuffle()
+    }
+    func RandomPlayer(){
+        players.shuffle()
     }
     
     
