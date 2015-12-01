@@ -76,12 +76,36 @@ class Game:NSObject{
             player.hideCard = cards.removeLast()
             player.cards.append(cards.removeLast())
         }
+        currentTurn = players[0]
     }
     
     func getCard(Id:String)->Card{
         var filterPlayers:[Player] = players.filter{ $0.Id == Id}
         var assignedCard:Card = cards.removeLast()
         filterPlayers[0].cards.append(assignedCard)
+        
+        if(!filterPlayers[0].isCardValueValid()){
+            filterPlayers[0].stopGettingCard()
+            var currentPlayer:Player?
+            
+            for var offset = 1 ; offset < players.count  ; ++offset{
+                var currentIndex = players.indexOf(filterPlayers[0])
+                var index = (currentIndex! + offset) % players.count
+                if(players[index].isCardValueValid() && !players[index].stop){
+                    currentPlayer = players[index]
+                    break
+                }
+            }
+            if(currentPlayer != nil){
+                currentTurn = currentPlayer!
+            }
+            else{
+                //todo
+                currentTurn = nil
+                NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+            }
+        }
+        
         return assignedCard
     }
 
@@ -103,6 +127,23 @@ class Game:NSObject{
     func stopGettingCard(playerId:String){
         var stopPlayer = players.filter{ $0.Id == playerId }[0]
         stopPlayer.stopGettingCard()
+        var currentPlayer:Player?
+        for var offset = 1 ; offset < players.count  ; ++offset{
+            var currentIndex = players.indexOf(stopPlayer)
+            var index = (currentIndex! + offset) % players.count
+            if(players[index].isCardValueValid() && !players[index].stop){
+                currentPlayer = players[index]
+                break
+            }
+        }
+        if(currentPlayer != nil){
+            currentTurn = currentPlayer!
+        }
+        else{
+            //todo
+            currentTurn = nil
+            NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+        }
     }
     
     
@@ -161,7 +202,9 @@ class Game:NSObject{
         players.shuffle()
     }
     
-    
+    func getCurrentPlayer()->Player?{
+        return currentTurn
+    }
     
     
     
