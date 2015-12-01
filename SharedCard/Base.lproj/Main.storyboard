@@ -38,7 +38,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QBR-xF-1E7" kind="presentation" identifier="loginToGameBoard2" id="WXZ-Ol-VCV"/>
+                                    <segue destination="QBR-xF-1E7" kind="presentation" identifier="loginToGameBoard2" id="WXZ1-Ol-VCV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-Lv-JsE">
@@ -95,7 +95,7 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
-                                <rect key="frame" x="198" y="508" width="117" height="99"/>
+                                <rect key="frame" x="201" y="506" width="112" height="101"/>
                                 <animations/>
                             </imageView>
                         </subviews>
