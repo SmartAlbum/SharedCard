@@ -22,7 +22,7 @@
                                 <animations/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="6t8-cA-gnJ" kind="presentation" id="hEz-Ev-0XK"/>
+                                    <action selector="beginSearch:" destination="Zqd-WB-XtR" eventType="touchUpInside" id="FFq-6b-G6u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-Pp-vtu">
@@ -119,7 +119,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ahY-1l-YQk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6t8-cA-gnJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="playerboard" automaticallyAdjustsScrollViewInsets="NO" id="6t8-cA-gnJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

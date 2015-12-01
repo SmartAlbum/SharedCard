@@ -10,12 +10,15 @@
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 //import SharedCardProject-Swift.h to refer to swift function
 #import "SharedCardProject-Swift.h"
+
 @interface SCMCManager : NSObject<MCSessionDelegate>
 
-@property (nonatomic, strong) MCPeerID *peerID;
+//@property (nonatomic, strong) MCPeerID *peerID;
 @property (nonatomic, strong) MCSession *session;
 @property (nonatomic, strong) MCBrowserViewController *browser;
 @property (nonatomic, strong) MCAdvertiserAssistant *advertiser;
+
++ (instancetype)shareInstance;
 
 -(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName;
 -(void)setupMCBrowser;

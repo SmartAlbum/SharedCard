@@ -10,4 +10,6 @@
 
 @interface SCStarterViewController : UIViewController
 
+- (IBAction)beginSearch:(id)sender;
+
 @end

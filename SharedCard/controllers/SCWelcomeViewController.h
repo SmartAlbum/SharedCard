@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SCWelcomeViewController : UIViewController
+- (IBAction)beginAdvertiseing:(id)sender;
 
 @end
