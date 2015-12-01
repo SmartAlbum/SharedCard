@@ -16,6 +16,18 @@ extension Array {
         }
     }
 }
+
+extension RangeReplaceableCollectionType where Generator.Element : Equatable {
+    
+    // Remove first collection element that is equal to the given `object`:
+    mutating func removeObject(object : Generator.Element) {
+        if let index = self.indexOf(object) {
+            self.removeAtIndex(index)
+        }
+    }
+}
+
+
 enum GameResult{
     case WIN
     case LOSE
@@ -28,12 +40,14 @@ class Game:NSObject{
     var cards:[Card]
     let numOfCardPack = 4
     
-    override convenience init(){
+    static let Instance = Game()
+    
+    private override convenience init(){
         let emptyPlayers:[Player] = []
         self.init(enteredPlayers: emptyPlayers)
     }
     
-    init(enteredPlayers:[Player]){
+    private init(enteredPlayers:[Player]){
         self.cards = []
         self.players = enteredPlayers
         super.init()
@@ -106,6 +120,10 @@ class Game:NSObject{
         if(!players.contains{ (element) -> Bool in return element.Id == player.Id}){
             players.append(player)
         }
+    }
+    
+    func removePlayer(playerId:String){
+        players.removeAtIndex(players.indexOf{ $0.Id == playerId }!)
     }
     
     //get result of particular player
