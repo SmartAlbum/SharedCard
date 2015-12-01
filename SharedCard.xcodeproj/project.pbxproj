@@ -96,6 +96,7 @@
 		CF497B6A1C0C5DE900A8B50F /* head_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B5C1C0C5DE900A8B50F /* head_5.png */; };
 		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
 		CFBF93D31C0D8315001BBC1E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93D21C0D8315001BBC1E /* bg2.png */; };
+		CFBF93D61C0D9898001BBC1E /* SCGameBoard3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBF93D51C0D9898001BBC1E /* SCGameBoard3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,8 @@
 		CF497B5C1C0C5DE900A8B50F /* head_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_5.png; sourceTree = "<group>"; };
 		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		CFBF93D21C0D8315001BBC1E /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
+		CFBF93D41C0D9898001BBC1E /* SCGameBoard3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCGameBoard3ViewController.h; path = ../SCGameBoard3ViewController.h; sourceTree = "<group>"; };
+		CFBF93D51C0D9898001BBC1E /* SCGameBoard3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCGameBoard3ViewController.m; path = ../SCGameBoard3ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,10 +389,12 @@
 		277005941C04DE96003815DD /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */,
-				27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */,
 				275070FC1C0BFBDA0051810B /* SCWelcomeViewController.h */,
 				275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */,
+				27F85B781C0558AD00985BF5 /* SCGameBoardViewController.h */,
+				27F85B791C0558AD00985BF5 /* SCGameBoardViewController.m */,
+				CFBF93D41C0D9898001BBC1E /* SCGameBoard3ViewController.h */,
+				CFBF93D51C0D9898001BBC1E /* SCGameBoard3ViewController.m */,
 				275070FF1C0BFBFB0051810B /* SCStarterViewController.h */,
 				275071001C0BFBFB0051810B /* SCStarterViewController.m */,
 				275071021C0BFC120051810B /* SCPlayerBoardViewController.h */,
@@ -622,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */,
+				CFBF93D61C0D9898001BBC1E /* SCGameBoard3ViewController.m in Sources */,
 				277005661C04DE61003815DD /* AppDelegate.m in Sources */,
 				27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */,
 				3E451F661C069C3C0080B546 /* Card.swift in Sources */,

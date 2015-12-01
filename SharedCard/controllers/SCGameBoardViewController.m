@@ -17,6 +17,9 @@
 
 @implementation SCGameBoardViewController
 
+@synthesize player1;
+@synthesize player2;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _mcManager = [[SCMCManager alloc] init];

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Welcome Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SCWelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,13 +20,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sB1-FH-zCY">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlv-EH-OaD">
-                                <rect key="frame" x="479" y="555" width="66" height="61"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="QUIT">
-                                    <color key="titleColor" red="0.024693077781780114" green="0.40053217904601773" blue="0.56044382241532964" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-Yf-mTx">
                                 <rect key="frame" x="351" y="386" width="324" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -68,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="-94" y="298"/>
         </scene>
-        <!--Game Board2-->
+        <!--Game Board View Controller-->
         <scene sceneID="Xyb-6X-aKN">
             <objects>
-                <viewController id="vxg-9T-lqD" customClass="GameBoard2" sceneMemberID="viewController">
+                <viewController id="vxg-9T-lqD" customClass="SCGameBoardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QYx-hK-wqR"/>
                         <viewControllerLayoutGuide type="bottom" id="nvg-Fu-HcV"/>
@@ -87,7 +80,7 @@
                                 <rect key="frame" x="730" y="512" width="104" height="96"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
-                                <rect key="frame" x="201" y="506" width="112" height="101"/>
+                                <rect key="frame" x="201" y="507" width="112" height="101"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,6 +96,10 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="player1" destination="E9T-gL-ZIO" id="dOD-cF-Bip"/>
+                        <outlet property="player2" destination="hpq-9m-0oI" id="lV4-GV-MjE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyy-ex-FLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1021" y="298"/>
         </scene>
-        <!--Game Board3-->
+        <!--Game Board3 View Controller-->
         <scene sceneID="zw1-Sv-YK5">
             <objects>
-                <viewController id="ZF3-2N-g8h" customClass="GameBoard3" sceneMemberID="viewController">
+                <viewController id="ZF3-2N-g8h" customClass="SCGameBoard3ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V5j-XO-sB7"/>
                         <viewControllerLayoutGuide type="bottom" id="iM2-hh-gS8"/>
@@ -162,6 +159,11 @@
                     <navigationItem key="navigationItem" id="14J-6a-xkW"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="player1" destination="hL2-OE-Y9a" id="LE2-48-Fho"/>
+                        <outlet property="player2" destination="Vax-aO-t5q" id="Osq-Mp-6fO"/>
+                        <outlet property="player3" destination="4hV-kP-kRV" id="cGr-o6-K7Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijq-yD-Gsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

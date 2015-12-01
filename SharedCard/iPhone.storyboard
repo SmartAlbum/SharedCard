@@ -31,14 +31,6 @@
                                     <segue destination="6t8-cA-gnJ" kind="presentation" id="hEz-Ev-0XK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-Pp-vtu">
-                                <rect key="frame" x="304" y="271" width="53" height="37"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="QUIT">
-                                    <color key="titleColor" red="0.071735138095948434" green="0.59031625093963613" blue="0.6715988005050505" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
                                 <rect key="frame" x="257" y="53" width="146" height="139"/>
                             </imageView>
@@ -71,6 +63,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zn-fOo">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="udW-6o-xyR">
+                                <rect key="frame" x="99" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="z2m-wv-0ly">
+                                <rect key="frame" x="159" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-N7-Ew2">
+                                <rect key="frame" x="279" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-UX-OGn">
+                                <rect key="frame" x="339" y="141" width="119" height="172"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One more card?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOI-HN-APM">
                                 <rect key="frame" x="547" y="292" width="134" height="21"/>
                                 <animations/>
@@ -99,6 +106,9 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" red="1" green="0.05888293980137338" blue="0.24034064444815861" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="NO_btn:" destination="5SW-ja-49s" eventType="touchUpInside" id="Dcp-hC-x4g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-ui-xNk">
                                 <rect key="frame" x="540" y="321" width="51" height="50"/>
@@ -107,27 +117,15 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.19540607033382007" green="1" blue="0.77654622263105666" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="YES_btn:" destination="5SW-ja-49s" eventType="touchUpInside" id="9hg-Eq-13K"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Duv-ER-4Bo">
                                 <rect key="frame" x="575" y="111" width="77" height="77"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zn-fOo">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="udW-6o-xyR">
-                                <rect key="frame" x="99" y="141" width="119" height="172"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="z2m-wv-0ly">
-                                <rect key="frame" x="159" y="141" width="119" height="172"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-UX-OGn">
-                                <rect key="frame" x="219" y="141" width="119" height="172"/>
-                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="KmF-hH-Qmv">
-                                <rect key="frame" x="280" y="141" width="119" height="172"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-N7-Ew2">
-                                <rect key="frame" x="340" y="141" width="119" height="172"/>
+                                <rect key="frame" x="219" y="141" width="119" height="172"/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -142,6 +140,15 @@
                     <navigationItem key="navigationItem" id="Zfv-oM-zHr"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="card1" destination="udW-6o-xyR" id="4Ui-Gi-3Di"/>
+                        <outlet property="card2" destination="z2m-wv-0ly" id="Xr1-3e-nWR"/>
+                        <outlet property="card3" destination="KmF-hH-Qmv" id="GiG-9H-5or"/>
+                        <outlet property="card4" destination="aTL-N7-Ew2" id="CCG-g4-4CF"/>
+                        <outlet property="card5" destination="IMv-UX-OGn" id="DT0-sD-1tN"/>
+                        <outlet property="currentPoints" destination="7ST-eG-YI9" id="uzf-Gy-mX4"/>
+                        <outlet property="player" destination="Duv-ER-4Bo" id="94D-U1-nJC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvB-nu-1Ju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

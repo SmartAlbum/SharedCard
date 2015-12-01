@@ -1,26 +1,22 @@
 //
-//  SCPlayerBoardViewController.m
+//  SCGameBoard3ViewController.m
 //  SharedCard
 //
-//  Created by JessieYong on 15/11/30.
-//  Copyright © 2015年 JessieYong. All rights reserved.
+//  Created by Christina on 1/12/15.
+//  Copyright © 2015 JessieYong. All rights reserved.
 //
 
-#import "SCPlayerBoardViewController.h"
+#import "SCGameBoard3ViewController.h"
 
-@interface SCPlayerBoardViewController ()
+@interface SCGameBoard3ViewController ()
 
 @end
 
-@implementation SCPlayerBoardViewController
+@implementation SCGameBoard3ViewController
 
-@synthesize player;
-@synthesize currentPoints;
-@synthesize card1;
-@synthesize card2;
-@synthesize card3;
-@synthesize card4;
-@synthesize card5;
+@synthesize player1;
+@synthesize player2;
+@synthesize player3;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,9 +38,4 @@
 }
 */
 
-- (IBAction)YES_btn:(id)sender {
-}
-
-- (IBAction)NO_btn:(id)sender {
-}
 @end
