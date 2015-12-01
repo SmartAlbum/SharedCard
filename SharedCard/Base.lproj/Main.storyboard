@@ -21,16 +21,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlv-EH-OaD">
-                                <rect key="frame" x="479" y="558" width="66" height="61"/>
+                                <rect key="frame" x="479" y="555" width="66" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="Quit">
+                                <state key="normal" title="QUIT">
                                     <color key="titleColor" red="0.024693077781780114" green="0.40053217904601773" blue="0.56044382241532964" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-Yf-mTx">
-                                <rect key="frame" x="385" y="389" width="255" height="61"/>
+                                <rect key="frame" x="351" y="386" width="324" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="Start for 2 players">
+                                <state key="normal" title="START FOR 2 PLAYERS">
                                     <color key="titleColor" red="0.096517064279943901" green="0.79638178661616166" blue="0.7241952200701689" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,9 +39,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-Lv-JsE">
-                                <rect key="frame" x="382" y="466" width="261" height="39"/>
+                                <rect key="frame" x="350" y="458" width="325" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="Start for 3 players">
+                                <state key="normal" title="START FOR 3 PLAYERS">
                                     <color key="titleColor" red="0.078004218521171578" green="0.64190519537725477" blue="0.73029119318181812" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="4LV-PV-aN2">
-                                <rect key="frame" x="431" y="149" width="163" height="163"/>
+                                <rect key="frame" x="414" y="118" width="197" height="187"/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -83,7 +83,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2_for2.png" translatesAutoresizingMaskIntoConstraints="NO" id="84v-x1-Di3">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_3_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
                                 <rect key="frame" x="730" y="512" width="104" height="96"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
@@ -141,14 +141,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2_for3.png" translatesAutoresizingMaskIntoConstraints="NO" id="w71-Ba-un5">
                                 <rect key="frame" x="0.0" y="59" width="1024" height="709"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
-                                <rect key="frame" x="799" y="488" width="116" height="93"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_4_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-aO-t5q">
                                 <rect key="frame" x="464" y="538" width="99" height="79"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-OE-Y9a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_3_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-OE-Y9a">
                                 <rect key="frame" x="84" y="476" width="114" height="95"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
+                                <rect key="frame" x="799" y="487" width="116" height="93"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,8 +192,8 @@
         <image name="bg2_for2.png" width="1286" height="772"/>
         <image name="bg2_for3.png" width="1286" height="772"/>
         <image name="head_1_b.png" width="119" height="102"/>
-        <image name="head_2_b.png" width="124" height="105"/>
-        <image name="head_3_b.png" width="118" height="99"/>
+        <image name="head_2_b.png" width="118" height="99"/>
+        <image name="head_3_b.png" width="124" height="105"/>
         <image name="head_4_b.png" width="105" height="83"/>
         <image name="head_5_b.png" width="119" height="103"/>
     </resources>

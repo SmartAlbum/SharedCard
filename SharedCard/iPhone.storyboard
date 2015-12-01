@@ -21,10 +21,10 @@
                                 <rect key="frame" x="-5" y="-5" width="672" height="380"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-Wg-hf9">
-                                <rect key="frame" x="297" y="231" width="68" height="30"/>
+                                <rect key="frame" x="293" y="225" width="76" height="41"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="START">
                                     <color key="titleColor" red="0.10195178291418258" green="0.84122474747474751" blue="0.76497347298020668" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -35,8 +35,8 @@
                                 <rect key="frame" x="304" y="271" width="53" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Quit">
-                                    <color key="titleColor" red="0.083990926920519141" green="0.69117046971247331" blue="0.78633996212121215" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="QUIT">
+                                    <color key="titleColor" red="0.071735138095948434" green="0.59031625093963613" blue="0.6715988005050505" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
