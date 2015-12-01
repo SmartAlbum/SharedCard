@@ -87,15 +87,15 @@
                                 <rect key="frame" x="730" y="512" width="104" height="96"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
-                                <rect key="frame" x="198" y="508" width="117" height="99"/>
+                                <rect key="frame" x="201" y="506" width="112" height="101"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="84v-x1-Di3" secondAttribute="trailing" id="9D7-H5-6Mt"/>
-                            <constraint firstItem="84v-x1-Di3" firstAttribute="leading" secondItem="PrZ-i9-nn3" secondAttribute="leading" id="EL2-nn-Dn3"/>
-                            <constraint firstItem="84v-x1-Di3" firstAttribute="top" secondItem="QYx-hK-wqR" secondAttribute="bottom" id="Jp0-YH-PQH"/>
-                            <constraint firstItem="nvg-Fu-HcV" firstAttribute="top" secondItem="84v-x1-Di3" secondAttribute="bottom" id="spC-TB-WD6"/>
+                            <constraint firstItem="84v-x1-Di3" firstAttribute="top" secondItem="QYx-hK-wqR" secondAttribute="bottom" id="8ny-If-RTj"/>
+                            <constraint firstItem="nvg-Fu-HcV" firstAttribute="top" secondItem="84v-x1-Di3" secondAttribute="bottom" id="FIY-k0-9xW"/>
+                            <constraint firstItem="84v-x1-Di3" firstAttribute="leading" secondItem="PrZ-i9-nn3" secondAttribute="leading" id="dys-Yx-6wU"/>
+                            <constraint firstAttribute="trailing" secondItem="84v-x1-Di3" secondAttribute="trailing" id="eU7-gD-lcA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9mq-QD-Y7t">
@@ -138,7 +138,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg2_for3.png" translatesAutoresizingMaskIntoConstraints="NO" id="w71-Ba-un5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2_for3.png" translatesAutoresizingMaskIntoConstraints="NO" id="w71-Ba-un5">
                                 <rect key="frame" x="0.0" y="59" width="1024" height="709"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
@@ -155,7 +155,7 @@
                         <constraints>
                             <constraint firstItem="w71-Ba-un5" firstAttribute="leading" secondItem="Qpc-lW-E3x" secondAttribute="leading" id="0jr-l9-8fx"/>
                             <constraint firstItem="iM2-hh-gS8" firstAttribute="top" secondItem="w71-Ba-un5" secondAttribute="bottom" id="1qX-6g-CXg"/>
-                            <constraint firstItem="w71-Ba-un5" firstAttribute="top" secondItem="Qpc-lW-E3x" secondAttribute="top" id="mhf-tg-ljZ"/>
+                            <constraint firstItem="w71-Ba-un5" firstAttribute="top" secondItem="Qpc-lW-E3x" secondAttribute="top" constant="59" id="mhf-tg-ljZ"/>
                             <constraint firstAttribute="trailing" secondItem="w71-Ba-un5" secondAttribute="trailing" id="tnW-Fd-Vd8"/>
                         </constraints>
                     </view>

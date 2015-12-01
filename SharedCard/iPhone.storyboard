@@ -14,14 +14,14 @@
                         <viewControllerLayoutGuide type="bottom" id="e7B-9o-lCn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EKC-zx-E0t">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-Va-FPl">
-                                <rect key="frame" x="-5" y="-5" width="573" height="325"/>
+                                <rect key="frame" x="-5" y="-5" width="672" height="380"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-Wg-hf9">
-                                <rect key="frame" x="250" y="199" width="68" height="30"/>
+                                <rect key="frame" x="297" y="231" width="68" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Start">
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-Pp-vtu">
-                                <rect key="frame" x="257" y="237" width="53" height="37"/>
+                                <rect key="frame" x="304" y="271" width="53" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Quit">
@@ -40,7 +40,7 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
-                                <rect key="frame" x="222" y="47" width="124" height="120"/>
+                                <rect key="frame" x="257" y="53" width="146" height="139"/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -53,11 +53,11 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ha3-b2-a3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-813"/>
+            <point key="canvasLocation" x="54.5" y="-813.5"/>
         </scene>
         <!--Player Board View Controller-->
         <scene sceneID="UHd-mQ-App">
@@ -68,67 +68,66 @@
                         <viewControllerLayoutGuide type="bottom" id="KXM-id-Qnl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qKW-rf-jkX">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zn-fOo">
-                                <rect key="frame" x="0.0" y="0.0" width="569" height="320"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="8t1-L3-R9w">
-                                <rect key="frame" x="59" y="122" width="96" height="139"/>
-                                <animations/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-Rb-9vc">
-                                <rect key="frame" x="108" y="122" width="96" height="139"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="boY-IX-0jI">
-                                <rect key="frame" x="157" y="122" width="96" height="139"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="JMV-SZ-EVP">
-                                <rect key="frame" x="205" y="122" width="96" height="139"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="udW-6o-xyR">
-                                <rect key="frame" x="254" y="122" width="96" height="139"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One more card?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOI-HN-APM">
-                                <rect key="frame" x="395" y="238" width="134" height="21"/>
+                                <rect key="frame" x="547" y="292" width="134" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current points：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-je-eaa">
-                                <rect key="frame" x="395" y="187" width="139" height="21"/>
+                                <rect key="frame" x="547" y="222" width="139" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ST-eG-YI9">
-                                <rect key="frame" x="482" y="213" width="46" height="21"/>
+                                <rect key="frame" x="634" y="248" width="46" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.979098369644677" green="1" blue="0.99406229253145584" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjQ-ya-9vN">
-                                <rect key="frame" x="476" y="261" width="30" height="30"/>
+                                <rect key="frame" x="642" y="321" width="41" height="50.5"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="No">
                                     <color key="titleColor" red="1" green="0.05888293980137338" blue="0.24034064444815861" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-ui-xNk">
-                                <rect key="frame" x="413" y="261" width="30" height="30"/>
+                                <rect key="frame" x="540" y="321" width="51" height="50"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.19540607033382007" green="1" blue="0.77654622263105666" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Duv-ER-4Bo">
-                                <rect key="frame" x="443" y="91" width="77" height="77"/>
+                                <rect key="frame" x="575" y="111" width="77" height="77"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zn-fOo">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="udW-6o-xyR">
+                                <rect key="frame" x="99" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="z2m-wv-0ly">
+                                <rect key="frame" x="159" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-UX-OGn">
+                                <rect key="frame" x="219" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="KmF-hH-Qmv">
+                                <rect key="frame" x="280" y="141" width="119" height="172"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_10.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-N7-Ew2">
+                                <rect key="frame" x="340" y="141" width="119" height="172"/>
                             </imageView>
                         </subviews>
                         <animations/>
@@ -142,11 +141,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zfv-oM-zHr"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvB-nu-1Ju" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="18"/>
+            <point key="canvasLocation" x="60" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ahY-1l-YQk">
@@ -167,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TmJ-8j-Ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-433"/>
+            <point key="canvasLocation" x="54" y="-373"/>
         </scene>
     </scenes>
     <resources>

@@ -95,6 +95,7 @@
 		CF497B691C0C5DE900A8B50F /* head_5_b.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B5B1C0C5DE900A8B50F /* head_5_b.png */; };
 		CF497B6A1C0C5DE900A8B50F /* head_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B5C1C0C5DE900A8B50F /* head_5.png */; };
 		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
+		CFBF93D31C0D8315001BBC1E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93D21C0D8315001BBC1E /* bg2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +217,7 @@
 		CF497B5B1C0C5DE900A8B50F /* head_5_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_5_b.png; sourceTree = "<group>"; };
 		CF497B5C1C0C5DE900A8B50F /* head_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_5.png; sourceTree = "<group>"; };
 		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		CFBF93D21C0D8315001BBC1E /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 		277005611C04DE61003815DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFBF93D21C0D8315001BBC1E /* bg2.png */,
 				CF497B4F1C0C5DE900A8B50F /* bg2_for2.png */,
 				CF497B501C0C5DE900A8B50F /* bg2_for3.png */,
 				CF497B511C0C5DE900A8B50F /* Cardicon.png */,
@@ -527,6 +530,7 @@
 				CF497B001C0BF5DC00A8B50F /* 2_J.png in Resources */,
 				CF497B0E1C0BF5DC00A8B50F /* 3_K.png in Resources */,
 				CF497AFE1C0BF5DC00A8B50F /* 2_9.png in Resources */,
+				CFBF93D31C0D8315001BBC1E /* bg2.png in Resources */,
 				CF497B1D1C0BF5DC00A8B50F /* Bjoker.png in Resources */,
 				CF497B151C0BF5DC00A8B50F /* 4_6.png in Resources */,
 				CF497B071C0BF5DC00A8B50F /* 3_5.png in Resources */,
