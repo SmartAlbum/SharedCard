@@ -7,9 +7,10 @@
 //
 
 #import "SCWelcomeViewController.h"
+#import "SCMCManager.h"
+
 
 @interface SCWelcomeViewController ()
-
 @end
 
 @implementation SCWelcomeViewController
@@ -34,5 +35,11 @@
 }
 */
 
+
+
+- (IBAction)beginAdvertiseing:(id)sender {
+    [[SCMCManager shareInstance] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+    [[SCMCManager shareInstance] advertiseSelf:YES];
+}
 
 @end

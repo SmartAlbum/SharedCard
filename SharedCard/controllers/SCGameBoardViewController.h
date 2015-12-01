@@ -10,6 +10,7 @@
 
 @interface SCGameBoardViewController : UIViewController
 
+
 @property (strong, nonatomic) IBOutlet UIImageView *player1;
 @property (strong, nonatomic) IBOutlet UIImageView *player2;
 @property (strong, nonatomic) IBOutlet UIButton *beginSearchButton;
