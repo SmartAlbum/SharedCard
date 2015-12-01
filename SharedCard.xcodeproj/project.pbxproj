@@ -125,7 +125,7 @@
 		275071031C0BFC120051810B /* SCPlayerBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPlayerBoardViewController.m; sourceTree = "<group>"; };
 		2770055E1C04DE61003815DD /* SharedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277005621C04DE61003815DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		277005641C04DE61003815DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		277005641C04DE61003815DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 		277005651C04DE61003815DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2770056B1C04DE61003815DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2770056D1C04DE61003815DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,7 +276,6 @@
 				277005941C04DE96003815DD /* controllers */,
 				277005951C04DE96003815DD /* models */,
 				277005961C04DE96003815DD /* views */,
-				277005641C04DE61003815DD /* AppDelegate.h */,
 				277005651C04DE61003815DD /* AppDelegate.m */,
 				2770056A1C04DE61003815DD /* Main.storyboard */,
 				CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */,
@@ -409,6 +408,7 @@
 				3E451F671C069C450080B546 /* Game.swift */,
 				3E451F651C069C3C0080B546 /* Card.swift */,
 				3E451F691C069C560080B546 /* Player.swift */,
+				277005641C04DE61003815DD /* AppDelegate.h */,
 				27F85B891C05B79100985BF5 /* SCMCManager.h */,
 				27F85B8A1C05B79100985BF5 /* SCMCManager.m */,
 				3E451F641C069C3B0080B546 /* SharedCard-Bridging-Header.h */,
