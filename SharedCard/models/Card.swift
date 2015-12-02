@@ -28,7 +28,7 @@ class Card:NSObject {
     }
     
     static func getCardValue(rank:String)->Int{
-        var value:Int = rank == "A" ? 1 : Int(rank) == nil ? 10 : Int(rank)!
+        let value:Int = rank == "A" ? 1 : Int(rank) == nil ? 10 : Int(rank)!
         return value
     }
 }

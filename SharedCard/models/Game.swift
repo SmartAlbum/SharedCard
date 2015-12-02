@@ -44,7 +44,6 @@ class Game:NSObject{
     var currentTurn:Player?
     var cards:[Card]
     let numOfCardPack = 4
-    
     static let Instance = Game()
     
     private override convenience init(){
@@ -64,8 +63,8 @@ class Game:NSObject{
         for var index = 0; index < self.numOfCardPack; ++index {
             for rank in Card.rankString{
                 for type in CardType.allValues{
-                    var value = Card.getCardValue(rank)
-                    var newCard = Card(cardType: type, cardValue: value, cardString: rank)
+                    let value = Card.getCardValue(rank)
+                    let newCard = Card(cardType: type, cardValue: value, cardString: rank)
                     cards.append(newCard)
                     
                 }
@@ -77,9 +76,9 @@ class Game:NSObject{
     
     //start Game, assigned cards to all players
     func startGame(){
-        if(players.count<2){
-            return
-        }
+//        if(players.count<2){
+//            return
+//        }
         RandomPlayer()
         
         if(cards.count<players.count*10){
@@ -95,7 +94,7 @@ class Game:NSObject{
     }
     
     func getCard()->Card{
-        var assignedCard:Card = cards.removeLast()
+        let assignedCard:Card = cards.removeLast()
         currentTurn!.cards.append(assignedCard)
         
         if(!currentTurn!.isCardValueValid()){
@@ -103,8 +102,8 @@ class Game:NSObject{
             var nextPlayer:Player?
             
             for var offset = 1 ; offset < players.count  ; ++offset{
-                var currentIndex = players.indexOf(currentTurn!)
-                var index = (currentIndex! + offset) % players.count
+                let currentIndex = players.indexOf(currentTurn!)
+                let index = (currentIndex! + offset) % players.count
                 if(players[index].isCardValueValid() && !players[index].stop){
                     nextPlayer = players[index]
                     break
@@ -122,8 +121,8 @@ class Game:NSObject{
         else{
             var nextPlayer:Player?
             for var offset = 1 ; offset < players.count  ; ++offset{
-                var currentIndex = players.indexOf(currentTurn!)
-                var index = (currentIndex! + offset) % players.count
+                let currentIndex = players.indexOf(currentTurn!)
+                let index = (currentIndex! + offset) % players.count
                 if(players[index].isCardValueValid() && !players[index].stop){
                     nextPlayer = players[index]
                     break
@@ -157,12 +156,12 @@ class Game:NSObject{
     
     //stopAccpetingCard
     func stopGettingCard(playerId:MCPeerID){
-        var stopPlayer = players.filter{ $0.Id == playerId }[0]
+        let stopPlayer = players.filter{ $0.Id == playerId }[0]
         stopPlayer.stopGettingCard()
         var currentPlayer:Player?
         for var offset = 1 ; offset < players.count  ; ++offset{
-            var currentIndex = players.indexOf(stopPlayer)
-            var index = (currentIndex! + offset) % players.count
+            let currentIndex = players.indexOf(stopPlayer)
+            let index = (currentIndex! + offset) % players.count
             if(players[index].isCardValueValid() && !players[index].stop){
                 currentPlayer = players[index]
                 break
@@ -196,7 +195,7 @@ class Game:NSObject{
     
     //get result of particular player
     func getReuslt(playerId:MCPeerID)->GameResult{
-        var currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
+        let currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
         var maxValue = -1
         for player in players{
             if(player.Id != currnetPlayer.Id && player.isCardValueValid()){
@@ -204,7 +203,7 @@ class Game:NSObject{
             }
         }
         
-        var numOfMaxValueCount = maxValue > 0 ? players.filter{ $0.getCardsValue() == maxValue }.count : 0
+        let numOfMaxValueCount = maxValue > 0 ? players.filter{ $0.getCardsValue() == maxValue }.count : 0
         
         if(maxValue<0 && !currnetPlayer.isCardValueValid()){
             return GameResult.DRAW
