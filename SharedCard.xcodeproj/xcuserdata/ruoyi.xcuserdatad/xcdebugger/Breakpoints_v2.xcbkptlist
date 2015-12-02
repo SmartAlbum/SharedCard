@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SharedCard/tools/toast/UIView+Toast.m"
-            timestampString = "470721057.14265"
+            filePath = "SharedCard/controllers/SCGameBoardViewController.m"
+            timestampString = "470724849.37738"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-cs_showToast:duration:position:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-peerDidChangeStateWithNotification:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
