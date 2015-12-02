@@ -12,7 +12,6 @@
 
 @interface SCPlayerBoardViewController ()<SCMCManagerDelegate>
 @property (strong, nonatomic) Player *playerSelf;
-@property (strong, nonatomic) Game *gameCenter;
 
 @end
 
@@ -28,7 +27,6 @@
 
 - (id)init {
     if (self=[super init]) {
-        _gameCenter = [[Game alloc] init];
     }
     [self addObserver];
     [SCMCManager shareInstance].delegate = self;
