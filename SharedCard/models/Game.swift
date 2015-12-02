@@ -140,7 +140,7 @@ class Game:NSObject{
     
 
 
-    func getPlayer(playerId:String)->Player{
+    func getPlayer(playerId:MCPeerID)->Player{
         return players.filter{ $0.Id == playerId}[0]
     }
     
@@ -156,7 +156,7 @@ class Game:NSObject{
     
     
     //stopAccpetingCard
-    func stopGettingCard(playerId:String){
+    func stopGettingCard(playerId:MCPeerID){
         var stopPlayer = players.filter{ $0.Id == playerId }[0]
         stopPlayer.stopGettingCard()
         var currentPlayer:Player?
@@ -186,7 +186,7 @@ class Game:NSObject{
         }
     }
     
-    func removePlayer(playerId:String){
+    func removePlayer(playerId:MCPeerID){
         players.removeAtIndex(players.indexOf{ $0.Id == playerId }!)
     }
     
