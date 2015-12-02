@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import MultipeerConnectivity
+
 enum Role{
     case Farmer
     case LandLord
@@ -19,7 +21,6 @@ class Player:NSObject{
     var stop:Bool = false
     var Id:String = ""
     var Name:String = ""
-    
     
     func SetCard(assignedCards:[Card]){
         self.cards = assignedCards
@@ -59,4 +60,9 @@ class Player:NSObject{
         }
         return value
     }
+    
+
+//    let dataExample : NSData = NSKeyedArchiver.archivedDataWithRootObject(dictionaryExample)
+//    let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(dataExample)! as NSDictionary
+
 }

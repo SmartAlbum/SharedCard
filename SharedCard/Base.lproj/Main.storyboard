@@ -81,11 +81,11 @@
                                 <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b_b.png" highlightedImage="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
                                 <rect key="frame" x="730" y="512" width="104" height="96"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b_b.png" highlightedImage="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
                                 <rect key="frame" x="201" y="506" width="112" height="101"/>
                                 <animations/>
                             </imageView>
@@ -188,15 +188,18 @@
                                 <rect key="frame" x="0.0" y="59" width="1024" height="709"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_4_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-aO-t5q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_4_b_b.png" highlightedImage="head_4_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-aO-t5q">
                                 <rect key="frame" x="464" y="538" width="99" height="79"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_3_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-OE-Y9a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_3_b_b.png" highlightedImage="head_3_b.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-OE-Y9a">
                                 <rect key="frame" x="84" y="476" width="114" height="95"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b_b.png" highlightedImage="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
                                 <rect key="frame" x="799" y="487" width="116" height="93"/>
                                 <animations/>
                             </imageView>
@@ -310,10 +313,15 @@
         <image name="bg2_for2.png" width="1286" height="772"/>
         <image name="bg2_for3.png" width="1286" height="772"/>
         <image name="head_1_b.png" width="119" height="102"/>
+        <image name="head_1_b_b.png" width="119" height="102"/>
         <image name="head_2_b.png" width="118" height="99"/>
+        <image name="head_2_b_b.png" width="118" height="99"/>
         <image name="head_3_b.png" width="124" height="105"/>
+        <image name="head_3_b_b.png" width="124" height="105"/>
         <image name="head_4_b.png" width="105" height="83"/>
+        <image name="head_4_b_b.png" width="105" height="83"/>
         <image name="head_5_b.png" width="119" height="103"/>
+        <image name="head_5_b_b.png" width="119" height="103"/>
         <image name="transparent.png" width="225" height="315"/>
     </resources>
 </document>
