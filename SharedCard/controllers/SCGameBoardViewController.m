@@ -41,18 +41,26 @@
 
 - (void)dealloc {
     [self removeObserver];
+     [[SCMCManager shareInstance] advertiseSelf:NO];
 }
 
 - (void)peerDidChangeStateWithNotification:(NSNotification *)notification{
     MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
     NSString *peerDisplayName = peerID.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    NSLog(@"PEER STATUE CHANGE(From SCGameBoard):%@ is %ld\n", peerDisplayName, (long)state);
 //TODO For Tina(这个时候有人加进来或者出去了)
 
 }
 
+- (void)beginAdvertiseing {
+    [[SCMCManager shareInstance] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+    [[SCMCManager shareInstance] advertiseSelf:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self beginAdvertiseing];
 //    _mcManager = [[SCMCManager alloc] init];
 //    [_mcManager setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
 //    [_mcManager advertiseSelf:YES];

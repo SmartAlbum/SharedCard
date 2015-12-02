@@ -49,6 +49,7 @@
     MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
     NSString *peerDisplayName = peerID.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    NSLog(@"PEER STATUE CHANGE(From SCPlayerBoard):%@ is %ld\n", peerDisplayName, (long)state);
     //TODO For Tina(这个时候有人加进来或者出去了)
 }
 

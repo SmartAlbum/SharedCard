@@ -40,13 +40,14 @@
 }
 
 - (void)dealloc {
-    [self removeObserver];
+//    [self removeObserver];
 }
 
 -(void)peerDidChangeStateWithNotification:(NSNotification *)notification{
     MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
     NSString *peerDisplayName = peerID.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    NSLog(@"PEER STATUE CHANGE(From SCStarterBoard):%@ is %ld\n", peerDisplayName, (long)state);
     if (state == MCSessionStateConnected) {
         _isConnected = YES;
     }
