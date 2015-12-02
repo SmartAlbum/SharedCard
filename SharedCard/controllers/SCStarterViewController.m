@@ -11,7 +11,6 @@
 #import "SCMCManager.h"
 
 @interface SCStarterViewController ()<MCBrowserViewControllerDelegate>
-@property(nonatomic, strong) MCPeerID *peerID;
 @property(nonatomic, assign) BOOL isConnected;
 @end
 
@@ -21,7 +20,6 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         _isConnected = NO;
-        _peerID = [[MCPeerID alloc] initWithDisplayName:[UIDevice currentDevice].name];
     }
     [self addObserver];
     return  self;

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MCSession;
+@class MCPeerID;
 
 @interface SCPlayerBoardViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *player;
@@ -16,7 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *card3;
 @property (strong, nonatomic) IBOutlet UIImageView *card4;
 @property (strong, nonatomic) IBOutlet UIImageView *card5;
+
 - (IBAction)YES_btn:(id)sender;
 - (IBAction)NO_btn:(id)sender;
+
 
 @end

@@ -11,10 +11,18 @@
 //import SharedCardProject-Swift.h to refer to swift function
 #import "SharedCardProject-Swift.h"
 
+@protocol SCMCManagerDelegate <NSObject>
+@optional
+- (void)refreshWithPlayer:(Player *)player;
+- (void)refreshWithUserChoice:(BOOL)anotherCard;
+@end
+
 @interface SCMCManager : NSObject<MCSessionDelegate>
 
 //@property (nonatomic, strong) MCPeerID *peerID;
+@property (nonatomic, assign) id<SCMCManagerDelegate>delegate;
 @property (nonatomic, strong) MCSession *session;
+@property (nonatomic, strong) Player *player;
 @property (nonatomic, strong) MCBrowserViewController *browser;
 @property (nonatomic, strong) MCAdvertiserAssistant *advertiser;
 
@@ -24,5 +32,9 @@
 -(void)setupMCBrowser;
 -(void)advertiseSelf:(BOOL)shouldAdvertise;
 -(void)sendData:(NSData *)data toPeer:(MCPeerID *)peerID error:(NSError *)error;
+
+//for iPhone
+-(void)setIpadCenterPeerID:(MCPeerID *)peerID;
+-(void)sendData:(NSData *)data toIpadCenterError:(NSError *)error;
 
 @end

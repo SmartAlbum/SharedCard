@@ -10,7 +10,9 @@
 #import "SCMCManager.h"
 @import MultipeerConnectivity;
 
-@interface SCPlayerBoardViewController ()
+@interface SCPlayerBoardViewController ()<SCMCManagerDelegate>
+@property (strong, nonatomic) Player *playerSelf;
+@property (strong, nonatomic) Game *gameCenter;
 
 @end
 
@@ -23,10 +25,13 @@
 @synthesize card3;
 @synthesize card4;
 @synthesize card5;
+
 - (id)init {
     if (self=[super init]) {
+        _gameCenter = [[Game alloc] init];
     }
     [self addObserver];
+    [SCMCManager shareInstance].delegate = self;
     return  self;
 }
 
@@ -74,8 +79,33 @@
 */
 
 - (IBAction)YES_btn:(id)sender {
+    if (_playerSelf) {
+        NSError *error;
+        NSString *boolStr = [NSString stringWithFormat:@"%d", YES];
+        NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
+        [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
+    }
 }
 
 - (IBAction)NO_btn:(id)sender {
+    if (_playerSelf) {
+        NSError *error;
+        NSString *boolStr = [NSString stringWithFormat:@"%d", NO];
+        NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
+        [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
+    }
 }
+
+
+- (void)refreshWithPlayer:(Player *)player {
+    _playerSelf = player;
+   //绘制界面
+    Card *hiddenCard = player.hideCard;
+    NSArray *otherCards = player.cards;
+    if (hiddenCard) {
+    }
+    for (Card *card in otherCards) {
+    }
+}
+
 @end
