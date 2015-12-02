@@ -9,13 +9,14 @@
 #import "SCGameBoard3ViewController.h"
 #import "SCMCManager.h"
 #import "SharedCardProject-Swift.h"
+#import "UIView+Toast.h"
 @import MultipeerConnectivity;
 
 
 
 @interface SCGameBoard3ViewController ()
 @property(nonatomic, strong)Game *gameManager;
-@property(nonatomic, strong)NSMutableDictionary *playerAvatarDic;
+//@property(nonatomic, strong)NSMutableDictionary *playerAvatarDic;
 @property(assign) NSInteger playerCount;
 
 
@@ -32,7 +33,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         _gameManager = [[Game alloc] init];
         _playerCount = 0;
-        _playerAvatarDic = [NSMutableDictionary dictionary];
+//        _playerAvatarDic = [NSMutableDictionary dictionary];
     }
     [self addObserver];
     return  self;
@@ -84,6 +85,20 @@
             });
         }
         _playerCount++;
+//        if(_playerCount == 3) {
+        //game begins
+        CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
+        style.imageSize = CGSizeMake(40, 40);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"head_1"] style:style completion:^(BOOL didTap) {
+                [_gameManager startGame];
+                for (Player *player in [_gameManager getAllPlayers]) {
+                    NSError *error = nil;
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+                    //                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+                }}];
+        });
+//    }
     }
     if(state == MCSessionStateNotConnected) {
         Player *player = [_gameManager getPlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];

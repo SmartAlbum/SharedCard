@@ -23,5 +23,6 @@
 -(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName;
 -(void)setupMCBrowser;
 -(void)advertiseSelf:(BOOL)shouldAdvertise;
+-(void)sendData:(NSData *)data toPeer:(MCPeerID *)peerID error:(NSError *)error;
 
 @end

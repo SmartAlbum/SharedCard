@@ -12,7 +12,7 @@ extension Array {
         if count < 2 { return }
         for i in 0..<(count - 1) {
             let j = Int(arc4random_uniform(UInt32(count - i))) + i
-            swap(&self[i], &self[j])
+//            swap(&self[i], &self[j])
         }
     }
 }
@@ -127,6 +127,10 @@ class Game:NSObject{
 
     func getPlayer(playerId:String)->Player{
         return players.filter{ $0.Id == playerId}[0]
+    }
+    
+    func getAllPlayers()->Array<Player>{
+        return players
     }
     
     private func getRemainingCardCount()->Int{

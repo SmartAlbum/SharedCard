@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271845C31C0EA00D00C9E1DB /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 271845C21C0EA00D00C9E1DB /* UIView+Toast.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		271845C51C0EA02200C9E1DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271845C41C0EA02200C9E1DB /* QuartzCore.framework */; };
 		275070FE1C0BFBDA0051810B /* SCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */; };
 		275071011C0BFBFB0051810B /* SCStarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071001C0BFBFB0051810B /* SCStarterViewController.m */; };
 		275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071031C0BFC120051810B /* SCPlayerBoardViewController.m */; };
@@ -122,6 +124,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271845C11C0EA00D00C9E1DB /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		271845C21C0EA00D00C9E1DB /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		271845C41C0EA02200C9E1DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		275070FC1C0BFBDA0051810B /* SCWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWelcomeViewController.h; sourceTree = "<group>"; };
 		275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWelcomeViewController.m; sourceTree = "<group>"; };
 		275070FF1C0BFBFB0051810B /* SCStarterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStarterViewController.h; sourceTree = "<group>"; };
@@ -238,6 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271845C51C0EA02200C9E1DB /* QuartzCore.framework in Frameworks */,
 				27F85B851C05A59400985BF5 /* MultipeerConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +265,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271845BF1C0EA00D00C9E1DB /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				271845C01C0EA00D00C9E1DB /* toast */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		271845C01C0EA00D00C9E1DB /* toast */ = {
+			isa = PBXGroup;
+			children = (
+				271845C11C0EA00D00C9E1DB /* UIView+Toast.h */,
+				271845C21C0EA00D00C9E1DB /* UIView+Toast.m */,
+			);
+			path = toast;
+			sourceTree = "<group>";
+		};
 		277005551C04DE61003815DD = {
 			isa = PBXGroup;
 			children = (
+				271845C41C0EA02200C9E1DB /* QuartzCore.framework */,
 				27F85B841C05A59400985BF5 /* MultipeerConnectivity.framework */,
 				277005601C04DE61003815DD /* SharedCard */,
 				2770057A1C04DE61003815DD /* SharedCardTests */,
@@ -283,6 +307,7 @@
 		277005601C04DE61003815DD /* SharedCard */ = {
 			isa = PBXGroup;
 			children = (
+				271845BF1C0EA00D00C9E1DB /* tools */,
 				277005941C04DE96003815DD /* controllers */,
 				277005951C04DE96003815DD /* models */,
 				277005961C04DE96003815DD /* views */,
@@ -647,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271845C31C0EA00D00C9E1DB /* UIView+Toast.m in Sources */,
 				275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */,
 				CFBF93D61C0D9898001BBC1E /* SCGameBoard3ViewController.m in Sources */,
 				277005661C04DE61003815DD /* AppDelegate.m in Sources */,

@@ -54,6 +54,11 @@
     }
 }
 
+-(void)sendData:(NSData *)data toPeer:(MCPeerID *)peerID error:(NSError *)error{
+    if ([_session.connectedPeers containsObject:peerID]) {
+        [_session sendData:data toPeers:@[peerID] withMode:MCSessionSendDataReliable error:&error];
+    }
+}
 
 
 -(void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state{
