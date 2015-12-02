@@ -64,21 +64,30 @@
         player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
-            [player1 setImage:[UIImage imageNamed:@"head_1_b"]];
-            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [player1 setHighlighted:YES];
+            });
+//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
         }
-        if (_playerCount == 1) {
-            [player1 setImage:[UIImage imageNamed:@"head_2_b"]];
-            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
+        else if (_playerCount == 1) {
+//            [player2 setImage:[UIImage imageNamed:@"head_2_b"]];
+//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [player2 setHighlighted:YES];
+            });
         }
-        if (_playerCount == 2) {
-            [player1 setImage:[UIImage imageNamed:@"head_3_b"]];
-            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_3_b"] forKey:player.Id];
+        else if (_playerCount == 2) {
+//            [player3 setImage:[UIImage imageNamed:@"head_3_b"]];
+//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_3_b"] forKey:player.Id];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [player3 setHighlighted:YES];
+            });
         }
         _playerCount++;
     }
     if(state == MCSessionStateNotConnected) {
         Player *player = [_gameManager getPlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+//         [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops!" message:[NSString stringWithFormat:@"%@ is offline. Game is stop!", player.Name] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * action) {
@@ -93,7 +102,7 @@
         UIImage *avatar = [_playerAvatarDic valueForKey:player.Id];
         //拿到原来的头像
         _playerCount--;
-        [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+       
     }*/
 }
 
@@ -109,6 +118,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self beginAdvertiseing];
+
     // Do any additional setup after loading the view.
 }
 

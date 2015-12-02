@@ -64,12 +64,18 @@
         player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
-            [player1 setImage:[UIImage imageNamed:@"head_1_b"]];
-            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [player1 setHighlighted:YES];
+            });
+//            [player1 setImage:[UIImage imageNamed:@"head_1_b"]];
+//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
         }
         if (_playerCount == 1) {
-            [player1 setImage:[UIImage imageNamed:@"head_2_b"]];
-            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [player2 setHighlighted:YES];
+            });
+//            [player1 setImage:[UIImage imageNamed:@"head_2_b"]];
+//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
         }
         _playerCount++;
     }
