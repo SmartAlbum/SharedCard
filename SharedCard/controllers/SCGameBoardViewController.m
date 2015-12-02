@@ -16,6 +16,8 @@
 
 @interface SCGameBoardViewController ()
 @property(nonatomic, strong)Game *gameManager;
+@property(nonatomic, strong)NSMutableDictionary *playerAvatarDic;
+@property(assign) NSInteger playerCount;
 @end
 
 @implementation SCGameBoardViewController
@@ -28,6 +30,9 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         _gameManager = [[Game alloc] init];
+        _playerCount = 0;
+        _playerAvatarDic = [NSMutableDictionary dictionary];
+
     }
     [self addObserver];
     return  self;
@@ -58,10 +63,34 @@
         Player *player = [[Player alloc] init];
         player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
         [_gameManager addPlayer:player];
+        if (_playerCount == 0) {
+            [player1 setImage:[UIImage imageNamed:@"head_1_b"]];
+            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
+        }
+        if (_playerCount == 1) {
+            [player1 setImage:[UIImage imageNamed:@"head_2_b"]];
+            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
+        }
+        _playerCount++;
     }
     if(state == MCSessionStateNotConnected) {
-        [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+        Player *player = [_gameManager getPlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops!" message:[NSString stringWithFormat:@"%@ is offline. Game is stop!", player.Name] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  [self dismissViewControllerAnimated:YES completion:nil];
+                                                                  [_gameManager removeAllPlayer];
+                                                              }];
+        [alertController addAction:defaultAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
+    /*
+     
+     UIImage *avatar = [_playerAvatarDic valueForKey:player.Id];
+     //拿到原来的头像
+     _playerCount--;
+     [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+     }*/
 }
 
 - (void)beginAdvertiseing {
