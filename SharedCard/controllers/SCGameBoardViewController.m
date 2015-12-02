@@ -81,14 +81,14 @@
         //        if(_playerCount == 2) {
         //game begins
         CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
-        style.imageSize = CGSizeMake(40, 40);
+        style.imageSize = CGSizeMake(320, 320);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"head_1"] style:style completion:nil];
+            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"start-game"] style:style completion:nil];
             [[Game Instance] startGame];
             for (Player *player in [[Game Instance] getAllPlayers]) {
                 NSError *error = nil;
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+//                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+//                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
             }});
     }
     if(state == MCSessionStateNotConnected) {

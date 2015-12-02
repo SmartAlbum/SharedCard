@@ -88,7 +88,7 @@
         CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
         style.imageSize = CGSizeMake(40, 40);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"head_1"] style:style completion:nil];
+            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"start-game"] style:style completion:nil];
             [[Game Instance] startGame];
             for (Player *player in [[Game Instance] getAllPlayers]) {
                 NSError *error = nil;
