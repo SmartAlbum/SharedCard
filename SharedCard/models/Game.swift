@@ -143,7 +143,7 @@ class Game:NSObject{
         return players.filter{ $0.Id == playerId}[0]
     }
     
-    func getAllPlayers()->Array<Player>{
+    func getAllPlayers()->[Player]{
         return players
     }
     

@@ -530,7 +530,7 @@
 				TargetAttributes = {
 					2770055D1C04DE61003815DD = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = L227789K4Q;
+						DevelopmentTeam = JTEBXQLUYD;
 					};
 					277005761C04DE61003815DD = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -824,12 +824,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = SharedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Y.SharedCard;
 				PRODUCT_MODULE_NAME = SharedCardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SharedCard/models/SharedCard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -842,12 +844,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = SharedCard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Y.SharedCard;
 				PRODUCT_MODULE_NAME = SharedCardProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SharedCard/models/SharedCard-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
