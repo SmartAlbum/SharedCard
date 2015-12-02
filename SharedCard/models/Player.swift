@@ -15,13 +15,32 @@ enum Role{
     case Undefined
     
 }
-class Player:NSObject{
+class Player:NSObject , NSCoding{
     var hideCard:Card? = nil
     var cards:[Card] = []
     var stop:Bool = false
     var Id:MCPeerID?
     var Name:String = ""
     
+    required init(coder aDecoder: NSCoder) {
+        super.init()
+        Id = aDecoder.decodeObjectForKey("Id") as! MCPeerID?
+        cards = aDecoder.decodeObjectForKey("cards") as! [Card]
+        stop = aDecoder.decodeObjectForKey("stop") as! Bool
+        hideCard = aDecoder.decodeObjectForKey("hideCard") as! Card?
+        Name = aDecoder.decodeObjectForKey("Name") as! String
+    }
+    override init(){
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(Id,forKey:"Id")
+        aCoder.encodeObject(cards,forKey:"cards")
+        aCoder.encodeObject(stop,forKey:"stop")
+        aCoder.encodeObject(hideCard,forKey:"hideCard")
+        aCoder.encodeObject(Name,forKey:"Name")
+    }
     
     func SetCard(assignedCards:[Card]){
         self.cards = assignedCards
@@ -61,5 +80,7 @@ class Player:NSObject{
         }
         return value
     }
+    
+    
 
 }
