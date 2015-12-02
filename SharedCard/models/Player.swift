@@ -41,7 +41,7 @@ class Player:NSObject{
     //check card value is less and equal to 21
     func isCardValueValid()->Bool{
         
-        var value = getCardsValue()
+        let value = getCardsValue()
         return value <= 21 && value >= 0
     }
     
@@ -49,7 +49,7 @@ class Player:NSObject{
         var containZero = self.cards.contains{ (element) -> Bool in
             return element.rankString == "A"
         }
-        containZero == containZero || hideCard!.rankString == "A"
+        containZero = containZero || (hideCard!.rankString == "A")
         
         var value = hideCard!.value
         
