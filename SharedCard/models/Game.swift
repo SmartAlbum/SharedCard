@@ -79,30 +79,43 @@ class Game:NSObject{
         currentTurn = players[0]
     }
     
-    func getCard(Id:String)->Card{
-        var filterPlayers:[Player] = players.filter{ $0.Id == Id}
+    func getCard()->Card{
         var assignedCard:Card = cards.removeLast()
-        filterPlayers[0].cards.append(assignedCard)
+        currentTurn!.cards.append(assignedCard)
         
-        if(!filterPlayers[0].isCardValueValid()){
-            filterPlayers[0].stopGettingCard()
-            var currentPlayer:Player?
+        if(!currentTurn!.isCardValueValid()){
+            currentTurn!.stopGettingCard()
+            var nextPlayer:Player?
             
             for var offset = 1 ; offset < players.count  ; ++offset{
-                var currentIndex = players.indexOf(filterPlayers[0])
+                var currentIndex = players.indexOf(currentTurn!)
                 var index = (currentIndex! + offset) % players.count
                 if(players[index].isCardValueValid() && !players[index].stop){
-                    currentPlayer = players[index]
+                    nextPlayer = players[index]
                     break
                 }
             }
-            if(currentPlayer != nil){
-                currentTurn = currentPlayer!
+            if(nextPlayer != nil){
+                currentTurn = nextPlayer!
             }
             else{
                 //todo
                 currentTurn = nil
                 NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+            }
+        }
+        else{
+            var nextPlayer:Player?
+            for var offset = 1 ; offset < players.count  ; ++offset{
+                var currentIndex = players.indexOf(currentTurn!)
+                var index = (currentIndex! + offset) % players.count
+                if(players[index].isCardValueValid() && !players[index].stop){
+                    nextPlayer = players[index]
+                    break
+                }
+            }
+            if(nextPlayer != nil){
+                currentTurn = nextPlayer!
             }
         }
         

@@ -45,40 +45,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "Game"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SharedCardProject.Game.Instance.unsafeMutableAddressor : SharedCardProject.Game"
-                  moduleName = "SharedCard"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lin/iosDevelopTmpFile/SharedCard/SharedCard/models/Game.swift"
-                  timestampString = "470664827.966792"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static SharedCardProject.Game.Instance.getter : SharedCardProject.Game"
-                  moduleName = "SharedCard"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lin/iosDevelopTmpFile/SharedCard/SharedCard/models/Game.swift"
-                  timestampString = "470664827.966973"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
+            landmarkName = "init(enteredPlayers:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -92,7 +60,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
-            endingLineNumber = "30">
+            endingLineNumber = "30"
+            landmarkName = "Game"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -123,7 +93,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "init()"
+            landmarkName = "init(enteredPlayers:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -139,8 +109,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "Game"
-            landmarkType = "3">
+            landmarkName = "init(enteredPlayers:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -155,8 +125,24 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "Game"
-            landmarkType = "3">
+            landmarkName = "initCards()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedCard/models/Game.swift"
+            timestampString = "470669054.680743"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getCard()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
