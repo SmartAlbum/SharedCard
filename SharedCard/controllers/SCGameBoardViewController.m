@@ -63,7 +63,7 @@
     NSLog(@"PEER STATUE CHANGE(From SCGameBoard):%@ is %ld\n", peerDisplayName, (long)state);
     if(state == MCSessionStateConnected) {
         Player *player = [[Player alloc] init];
-        player.Id = [NSString stringWithFormat:@"%@", peerID];
+        player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
             dispatch_async(dispatch_get_main_queue(), ^{
