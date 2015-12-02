@@ -3,10 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Game.getPlayer(String) -&gt; Player:Game.swift">
+         contextName = "Game.(getPlayer(Game) -&gt; (String) -&gt; Player).(closure #1):Game.swift">
          <PersistentStrings>
             <PersistentString
-               value = "players[0].Id == playerId">
+               value = "players">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Array&lt;A&gt;.shuffle&lt;A&gt;() -&gt; ():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -17,32 +25,49 @@
                value = "count">
             </PersistentString>
             <PersistentString
-               value = "self">
+               value = "self.count">
             </PersistentString>
             <PersistentString
-               value = "self.count">
+               value = "self">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Game.addPlayer(Player) -&gt; ():Game.swift">
-      </ContextState>
-      <ContextState
-         contextName = "Game.(getPlayer(Game) -&gt; (String) -&gt; Player).(closure #1):Game.swift">
+         contextName = "Game.getPlayer(String) -&gt; Player:Game.swift">
          <PersistentStrings>
             <PersistentString
-               value = "players">
+               value = "players[0].Id == playerId">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[SCGameBoardViewController peerDidChangeStateWithNotification:]:SCGameBoardViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "Array&lt;A&gt;.shuffle&lt;A&gt;() -&gt; ():Game.swift">
          <PersistentStrings>
             <PersistentString
-               value = "count">
+               value = "_playerCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.init(enteredPlayers : [Player]) -&gt; Game:Game.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Game.addPlayer(Player) -&gt; ():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "player.Id = &quot;abc&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "player.Id[0...5]">
+            </PersistentString>
+            <PersistentString
+               value = "player">
+            </PersistentString>
+            <PersistentString
+               value = "player.Id.substringWithRange(Range&lt;String.Index&gt;(start: 0, end: 5))">
+            </PersistentString>
+            <PersistentString
+               value = "player.Id">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

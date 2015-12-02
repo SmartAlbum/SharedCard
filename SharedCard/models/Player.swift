@@ -19,8 +19,9 @@ class Player:NSObject{
     var hideCard:Card? = nil
     var cards:[Card] = []
     var stop:Bool = false
-    var Id:String = ""
+    var Id:MCPeerID?
     var Name:String = ""
+    
     
     func SetCard(assignedCards:[Card]){
         self.cards = assignedCards

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MultipeerConnectivity
 extension CollectionType {
     /// Return a copy of `self` with its elements shuffled
     func shuffle() -> [Generator.Element] {
@@ -194,7 +195,7 @@ class Game:NSObject{
     }
     
     //get result of particular player
-    func getReuslt(playerId:String)->GameResult{
+    func getReuslt(playerId:MCPeerID)->GameResult{
         var currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
         var maxValue = -1
         for player in players{
@@ -227,7 +228,7 @@ class Game:NSObject{
     
     //return players according to their corresponding GameResult
     func getPlayerBaseOnReuslt(resultType:GameResult)->[Player]{
-        return players.filter{ getReuslt($0.Id) == resultType }
+        return players.filter{ getReuslt($0.Id!) == resultType }
     }
     
     func RandomCard(){
