@@ -7,8 +7,14 @@
 //
 
 #import "SCGameBoard3ViewController.h"
+#import "SCMCManager.h"
+#import "SharedCardProject-Swift.h"
+@import MultipeerConnectivity;
+
+
 
 @interface SCGameBoard3ViewController ()
+@property(nonatomic, strong)Game *gameManager;
 
 @end
 
@@ -18,8 +24,53 @@
 @synthesize player2;
 @synthesize player3;
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        _gameManager = [[Game alloc] init];
+    }
+    [self addObserver];
+    return  self;
+}
+
+- (void)addObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(peerDidChangeStateWithNotification:)
+                                                 name:@"SCMCDidChangeStateNotification"
+                                               object:nil];
+}
+
+- (void)removeObserver {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)dealloc {
+    [self removeObserver];
+    [[SCMCManager shareInstance] advertiseSelf:NO];
+}
+
+- (void)peerDidChangeStateWithNotification:(NSNotification *)notification{
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    NSLog(@"PEER STATUE CHANGE(From SCGameBoard3):%@ is %ld\n", peerDisplayName, (long)state);
+    if(state == MCSessionStateConnected) {
+        Player *player = [[Player alloc] init];
+        player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
+        [_gameManager addPlayer:player];
+    }
+    if(state == MCSessionStateNotConnected) {
+        [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+    }
+}
+
+- (void)beginAdvertiseing {
+    [[SCMCManager shareInstance] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+    [[SCMCManager shareInstance] advertiseSelf:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self beginAdvertiseing];
     // Do any additional setup after loading the view.
 }
 

@@ -8,10 +8,14 @@
 
 #import "SCGameBoardViewController.h"
 #import "SCMCManager.h"
-
+#import "SharedCardProject-Swift.h"
 @import MultipeerConnectivity;
 
+
+
+
 @interface SCGameBoardViewController ()
+@property(nonatomic, strong)Game *gameManager;
 @end
 
 @implementation SCGameBoardViewController
@@ -23,6 +27,7 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
+        _gameManager = [[Game alloc] init];
     }
     [self addObserver];
     return  self;
@@ -49,8 +54,14 @@
     NSString *peerDisplayName = peerID.displayName;
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
     NSLog(@"PEER STATUE CHANGE(From SCGameBoard):%@ is %ld\n", peerDisplayName, (long)state);
-//TODO For Tina(这个时候有人加进来或者出去了)
-
+    if(state == MCSessionStateConnected) {
+        Player *player = [[Player alloc] init];
+        player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
+        [_gameManager addPlayer:player];
+    }
+    if(state == MCSessionStateNotConnected) {
+        [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+    }
 }
 
 - (void)beginAdvertiseing {
