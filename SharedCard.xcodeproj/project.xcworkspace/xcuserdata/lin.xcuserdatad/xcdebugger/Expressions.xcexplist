@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Array&lt;A&gt;.shuffle&lt;A&gt;() -&gt; ():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MutableCollectionType&lt;A where ...&gt;.shuffleInPlace&lt;A where ...&gt;() -&gt; ():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "count">
+            </PersistentString>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+            <PersistentString
+               value = "self.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
