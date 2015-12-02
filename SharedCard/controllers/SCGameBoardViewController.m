@@ -63,7 +63,7 @@
     NSLog(@"PEER STATUE CHANGE(From SCGameBoard):%@ is %ld\n", peerDisplayName, (long)state);
     if(state == MCSessionStateConnected) {
         Player *player = [[Player alloc] init];
-        player.Id = [NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]];
+        player.Id = [NSString stringWithFormat:@"%@", peerID];
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -96,7 +96,7 @@
         //    }
     }
     if(state == MCSessionStateNotConnected) {
-        Player *player = [_gameManager getPlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+        Player *player = [_gameManager getPlayer:[NSString stringWithFormat:@"%@", peerID]];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops!" message:[NSString stringWithFormat:@"%@ is offline. Game is stop!", player.Name] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * action) {
