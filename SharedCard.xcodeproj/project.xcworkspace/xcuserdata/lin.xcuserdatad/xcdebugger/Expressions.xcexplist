@@ -3,29 +3,41 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Game.getPlayer(MCPeerID) -&gt; Player:Game.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "players">
-            </PersistentString>
-            <PersistentString
-               value = "playerId == players[0].Id">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__64-[SCGameBoardViewController peerDidChangeStateWithNotification:]_block_invoke68:SCGameBoardViewController.m">
+         contextName = "__64-[SCGameBoardViewController peerDidChangeStateWithNotification:]_block_invoke58:SCGameBoardViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "_gameManager">
             </PersistentString>
+            <PersistentString
+               value = "_gameManager == nil">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Game.(getPlayer(Game) -&gt; (String) -&gt; Player).(closure #1):Game.swift">
+         contextName = "Game.init(enteredPlayers : [Player]) -&gt; Game:Game.swift">
+      </ContextState>
+      <ContextState
+         contextName = "__64-[SCGameBoardViewController peerDidChangeStateWithNotification:]_block_invoke_2:SCGameBoardViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "MutableCollectionType&lt;A where ...&gt;.shuffleInPlace&lt;A where ...&gt;() -&gt; ():Game.swift">
          <PersistentStrings>
             <PersistentString
-               value = "players">
+               value = "count">
+            </PersistentString>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+            <PersistentString
+               value = "self.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SCGameBoardViewController peerDidChangeStateWithNotification:]:SCGameBoardViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "player3.Id">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -50,20 +62,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MutableCollectionType&lt;A where ...&gt;.shuffleInPlace&lt;A where ...&gt;() -&gt; ():Game.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "count">
-            </PersistentString>
-            <PersistentString
-               value = "self">
-            </PersistentString>
-            <PersistentString
-               value = "self.count">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "Game.getPlayer(String) -&gt; Player:Game.swift">
          <PersistentStrings>
             <PersistentString
@@ -72,13 +70,44 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Game.init(enteredPlayers : [Player]) -&gt; Game:Game.swift">
+         contextName = "Game.startGame() -&gt; ():Game.swift">
       </ContextState>
       <ContextState
-         contextName = "-[SCGameBoardViewController peerDidChangeStateWithNotification:]:SCGameBoardViewController.m">
+         contextName = "__64-[SCGameBoardViewController peerDidChangeStateWithNotification:]_block_invoke68:SCGameBoardViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "_playerCount">
+               value = "_gameManager">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.(getPlayer(Game) -&gt; (MCPeerID) -&gt; Player).(closure #1):Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "players[0].Id">
+            </PersistentString>
+            <PersistentString
+               value = "players.filter{ $0.Id == playerId}[0]">
+            </PersistentString>
+            <PersistentString
+               value = "players[0].Id == playerId">
+            </PersistentString>
+            <PersistentString
+               value = "players">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.getPlayer(MCPeerID) -&gt; Player:Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "players">
+            </PersistentString>
+            <PersistentString
+               value = "players.filter{ $0.Id == playerId}[0]">
+            </PersistentString>
+            <PersistentString
+               value = "playerId == players[0].Id">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -87,6 +116,14 @@
          <PersistentStrings>
             <PersistentString
                value = "count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.(getPlayer(Game) -&gt; (String) -&gt; Player).(closure #1):Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "players">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
