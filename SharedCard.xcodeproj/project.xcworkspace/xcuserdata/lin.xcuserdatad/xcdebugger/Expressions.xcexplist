@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Array&lt;A&gt;.shuffle&lt;A&gt;() -&gt; ():Game.swift">
+         contextName = "Game.getPlayer(String) -&gt; Player:Game.swift">
          <PersistentStrings>
             <PersistentString
-               value = "count">
+               value = "players[0].Id == playerId">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -21,6 +21,28 @@
             </PersistentString>
             <PersistentString
                value = "self.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.addPlayer(Player) -&gt; ():Game.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Game.(getPlayer(Game) -&gt; (String) -&gt; Player).(closure #1):Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "players">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SCGameBoardViewController peerDidChangeStateWithNotification:]:SCGameBoardViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "Array&lt;A&gt;.shuffle&lt;A&gt;() -&gt; ():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
