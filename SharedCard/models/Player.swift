@@ -16,6 +16,7 @@ enum Role{
     
 }
 class Player:NSObject , NSCoding{
+    
     var hideCard:Card? = nil
     var cards:[Card] = []
     var stop:Bool = false
