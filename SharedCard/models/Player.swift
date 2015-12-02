@@ -60,9 +60,5 @@ class Player:NSObject{
         }
         return value
     }
-    
-
-//    let dataExample : NSData = NSKeyedArchiver.archivedDataWithRootObject(dictionaryExample)
-//    let dictionary:NSDictionary = NSKeyedUnarchiver.unarchiveObjectWithData(dataExample)! as NSDictionary
 
 }
