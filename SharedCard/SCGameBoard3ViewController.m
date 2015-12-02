@@ -92,11 +92,11 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"head_1"] style:style completion:^(BOOL didTap) {
                 [_gameManager startGame];
-                for (Player *player in [_gameManager getAllPlayers]) {
-                    NSError *error = nil;
-                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+//                for (Player *player in [_gameManager getAllPlayers]) {
+//                    NSError *error = nil;
+//                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
                     //                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                }}];
+                }];
         });
 //    }
     }
