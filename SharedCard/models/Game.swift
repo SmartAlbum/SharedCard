@@ -171,6 +171,10 @@ class Game:NSObject{
         players.removeAtIndex(players.indexOf{ $0.Id == playerId }!)
     }
     
+    func removeAllPlayer(){
+        players .removeAll();
+    }
+    
     //get result of particular player
     func getReuslt(playerId:String)->GameResult{
         var currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
