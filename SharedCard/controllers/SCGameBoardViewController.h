@@ -16,6 +16,4 @@
 @property (strong, nonatomic) IBOutlet UIButton *beginSearchButton;
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards1;
 
-- (IBAction)sendData:(id)sender;
-
 @end
