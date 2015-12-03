@@ -76,9 +76,9 @@ class Game:NSObject{
     
     //start Game, assigned cards to all players
     func startGame(){
-//        if(players.count<2){
-//            return
-//        }
+        if(players.count<2){
+            return
+        }
         RandomPlayer()
         
         if(cards.count<players.count*10){
