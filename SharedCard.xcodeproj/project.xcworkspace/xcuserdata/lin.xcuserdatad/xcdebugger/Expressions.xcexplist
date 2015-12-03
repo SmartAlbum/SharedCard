@@ -20,24 +20,24 @@
          contextName = "__64-[SCGameBoardViewController peerDidChangeStateWithNotification:]_block_invoke_2:SCGameBoardViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[SCGameBoardViewController peerDidChangeStateWithNotification:]:SCGameBoardViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "player3.Id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MutableCollectionType&lt;A where ...&gt;.shuffleInPlace&lt;A where ...&gt;() -&gt; ():Game.swift">
          <PersistentStrings>
             <PersistentString
                value = "count">
             </PersistentString>
             <PersistentString
-               value = "self">
-            </PersistentString>
-            <PersistentString
                value = "self.count">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SCGameBoardViewController peerDidChangeStateWithNotification:]:SCGameBoardViewController.m">
-         <PersistentStrings>
             <PersistentString
-               value = "player3.Id">
+               value = "self">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -94,6 +94,17 @@
             </PersistentString>
             <PersistentString
                value = "players">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Player.encodeWithCoder(NSCoder) -&gt; ():Player.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cards">
+            </PersistentString>
+            <PersistentString
+               value = "aCoder">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
