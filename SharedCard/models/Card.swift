@@ -15,6 +15,7 @@ enum Planet: Int {
     case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
 }
 class Card:NSObject , NSCoding {
+    
     static var rankString: [String] = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     var type:CardType
     var value:Int
