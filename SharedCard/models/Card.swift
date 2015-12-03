@@ -14,11 +14,25 @@ enum CardType: Int {
 enum Planet: Int {
     case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
 }
-class Card:NSObject {
+class Card:NSObject , NSCoding {
     static var rankString: [String] = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     var type:CardType
     var value:Int
     var rankString:String
+    
+    required init(coder aDecoder: NSCoder) {
+        type = CardType(rawValue: aDecoder.decodeObjectForKey("type") as! Int)!
+        value = aDecoder.decodeObjectForKey("value") as! Int
+        rankString = aDecoder.decodeObjectForKey("rankString") as! String
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(type.rawValue,forKey:"type")
+        aCoder.encodeObject(value,forKey:"value")
+        aCoder.encodeObject(rankString,forKey: "rankString")
+    }
+    
     init(cardType:CardType,cardValue:Int,cardString:String){
         value = cardValue
         type = cardType
