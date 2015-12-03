@@ -92,16 +92,12 @@
                                 <rect key="frame" x="201" y="506" width="112" height="101"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="155-rW-c9U">
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="155-rW-c9U">
                                 <rect key="frame" x="659" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1d-Xt-fIV">
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1d-Xt-fIV">
                                 <rect key="frame" x="693" y="381" width="70" height="103"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-hO-T5k">
-                                <rect key="frame" x="727" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="leX-aE-2ND">
@@ -112,24 +108,28 @@
                                 <rect key="frame" x="795" y="381" width="72" height="103"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNX-w6-hGA">
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNX-w6-hGA">
                                 <rect key="frame" x="188" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="h03-EU-gEj">
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="h03-EU-gEj">
                                 <rect key="frame" x="222" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-2u-V6X">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-2u-V6X">
                                 <rect key="frame" x="256" y="381" width="70" height="103"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-8C-hrC">
-                                <rect key="frame" x="290" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-7h-rFW">
                                 <rect key="frame" x="324" y="381" width="72" height="103"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-hO-T5k">
+                                <rect key="frame" x="730" y="381" width="70" height="103"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-8C-hrC">
+                                <rect key="frame" x="290" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -150,6 +150,10 @@
                     <connections>
                         <outlet property="player1" destination="E9T-gL-ZIO" id="dOD-cF-Bip"/>
                         <outlet property="player2" destination="hpq-9m-0oI" id="lV4-GV-MjE"/>
+                        <outletCollection property="playercards1" destination="eBD-8C-hrC" id="x72-lj-oeH"/>
+                        <outletCollection property="playercards1" destination="eAV-2u-V6X" id="wVg-H6-Q8x"/>
+                        <outletCollection property="playercards1" destination="h03-EU-gEj" id="DFK-hb-LuG"/>
+                        <outletCollection property="playercards1" destination="LNX-w6-hGA" id="7Ar-Do-NhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyy-ex-FLg" userLabel="First Responder" sceneMemberID="firstResponder"/>

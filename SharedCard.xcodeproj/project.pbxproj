@@ -14,7 +14,7 @@
 		275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071031C0BFC120051810B /* SCPlayerBoardViewController.m */; };
 		277005631C04DE61003815DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005621C04DE61003815DD /* main.m */; };
 		277005661C04DE61003815DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005651C04DE61003815DD /* AppDelegate.m */; };
-		2770056C1C04DE61003815DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056A1C04DE61003815DD /* Main.storyboard */; };
+		2770056C1C04DE61003815DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056A1C04DE61003815DD /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		2770056E1C04DE61003815DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2770056D1C04DE61003815DD /* Assets.xcassets */; };
 		277005711C04DE61003815DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056F1C04DE61003815DD /* LaunchScreen.storyboard */; };
 		2770057C1C04DE61003815DD /* SharedCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770057B1C04DE61003815DD /* SharedCardTests.m */; };
@@ -534,6 +534,9 @@
 		277005561C04DE61003815DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = JessieYong;
 				TargetAttributes = {

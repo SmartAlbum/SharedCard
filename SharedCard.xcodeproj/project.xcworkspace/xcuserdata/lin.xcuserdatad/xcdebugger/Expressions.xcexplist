@@ -25,6 +25,12 @@
             <PersistentString
                value = "player3.Id">
             </PersistentString>
+            <PersistentString
+               value = "imageView.tag">
+            </PersistentString>
+            <PersistentString
+               value = "image">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
@@ -34,10 +40,10 @@
                value = "count">
             </PersistentString>
             <PersistentString
-               value = "self.count">
+               value = "self">
             </PersistentString>
             <PersistentString
-               value = "self">
+               value = "self.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

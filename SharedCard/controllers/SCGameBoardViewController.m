@@ -27,6 +27,7 @@
 
 @synthesize player1;
 @synthesize player2;
+@synthesize playercards1;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -80,13 +81,34 @@
 //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
         }
         _playerCount++;
+        
+        if(_playerCount == 1){
+            [_gameManager startGame];
+            player = [_gameManager getPlayer:player.Id];
+            [_gameManager getCard];
+            [_gameManager getCard];
+            [_gameManager getCard];
+            for (int i=0; i < player.cards.count;i++) {
+                for (UIImageView *imageView in playercards1) {
+                    if(imageView.tag==i){
+                        Card *card = [player.cards objectAtIndex:i];
+                        NSString *imageName = [NSString stringWithFormat:@"%d_%@.png",(int)card.typeValue,card.imageValueStr];
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            UIImage *image = [UIImage imageNamed: imageName];
+                            [imageView setImage:image];
+                        });
+
+                    }
+                }
+            }
+        }
         //        if(_playerCount == 2) {
         //game begins
         CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
         style.imageSize = CGSizeMake(40, 40);
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"head_1"] style:style completion:^(BOOL didTap) {
-                [_gameManager startGame];
 //                for (Player *player in [_gameManager getAllPlayers]) {
 //                NSError *error = nil;
 //                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];

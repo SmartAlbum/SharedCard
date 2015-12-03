@@ -76,9 +76,9 @@ class Game:NSObject{
     
     //start Game, assigned cards to all players
     func startGame(){
-        if(players.count<2){
-            return
-        }
+//        if(players.count<2){
+//            return
+//        }
         RandomPlayer()
         
         if(cards.count<players.count*10){
@@ -93,15 +93,16 @@ class Game:NSObject{
         currentTurn = players[0]
     }
     
-    func getCard()->Card{
+    func getCard()->Card?{
+        if(currentTurn == nil){
+            return nil
+        }
         let assignedCard:Card = cards.removeLast()
         currentTurn!.cards.append(assignedCard)
-        
         if(!currentTurn!.isCardValueValid()){
             currentTurn!.stopGettingCard()
             var nextPlayer:Player?
-            
-            for var offset = 1 ; offset < players.count  ; ++offset{
+            for var offset = 1 ; offset < players.count  ; ++offset {
                 let currentIndex = players.indexOf(currentTurn!)
                 let index = (currentIndex! + offset) % players.count
                 if(players[index].isCardValueValid() && !players[index].stop){
@@ -109,6 +110,7 @@ class Game:NSObject{
                     break
                 }
             }
+            
             if(nextPlayer != nil){
                 currentTurn = nextPlayer!
             }
@@ -132,11 +134,11 @@ class Game:NSObject{
                 currentTurn = nextPlayer!
             }
         }
-        
         return assignedCard
     }
-
     
+
+
 
 
     func getPlayer(playerId:MCPeerID)->Player?{
@@ -246,7 +248,6 @@ class Game:NSObject{
     func getCurrentPlayer()->Player?{
         return currentTurn
     }
-    
     
     
 }

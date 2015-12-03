@@ -7,14 +7,13 @@
 //
 
 import Foundation
-enum CardType{
-    case Heart
-    case Spade
-    case Diamond
-    case Club
-    static let allValues = [Heart,Spade,Diamond,Club]
+enum CardType: Int {
+    case Spade = 1,Heart=2,Club=3, Diamond=4
+    static let allValues = [Spade, Heart, Club, Diamond]
 }
-
+enum Planet: Int {
+    case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+}
 class Card:NSObject {
     static var rankString: [String] = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     var type:CardType
@@ -27,8 +26,22 @@ class Card:NSObject {
         super.init()
     }
     
+    var typeValue:Int {
+        get {
+            return type.rawValue
+        }
+    }
+    
     static func getCardValue(rank:String)->Int{
         let value:Int = rank == "A" ? 1 : Int(rank) == nil ? 10 : Int(rank)!
         return value
     }
+    
+    var imageValueStr:String{
+        get{
+            let value:String = rankString == "A" ? "1" : rankString
+            return value
+        }
+    }
+    
 }
