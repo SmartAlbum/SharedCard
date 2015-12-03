@@ -139,8 +139,14 @@ class Game:NSObject{
     
 
 
-    func getPlayer(playerId:MCPeerID)->Player{
-        return players.filter{ $0.Id == playerId}[0]
+    func getPlayer(playerId:MCPeerID)->Player?{
+        if(players.filter{ $0.Id == playerId}.count>0){
+            return players.filter{ $0.Id == playerId}[0]
+        }
+        else {
+            return nil
+        }
+        
     }
     
     func getAllPlayers()->[Player]{
