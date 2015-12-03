@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="e7B-9o-lCn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EKC-zx-E0t">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-Va-FPl">
@@ -22,18 +22,20 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-Wg-hf9">
-                                <rect key="frame" x="293" y="234" width="76" height="41"/>
+                                <rect key="frame" x="246" y="219" width="76" height="41"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.10195178291418258" green="0.84122474747474751" blue="0.76497347298020668" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="beginSearch:" destination="Zqd-WB-XtR" eventType="touchUpInside" id="FFq-6b-G6u"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
-                                <rect key="frame" x="258" y="53" width="146" height="139"/>
+                                <rect key="frame" x="224" y="57" width="120" height="111"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -47,11 +49,11 @@
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ha3-b2-a3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54.5" y="-813.5"/>
+            <point key="canvasLocation" x="54" y="-814"/>
         </scene>
         <!--Player Board View Controller-->
         <scene sceneID="UHd-mQ-App">
@@ -62,78 +64,78 @@
                         <viewControllerLayoutGuide type="bottom" id="KXM-id-Qnl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qKW-rf-jkX">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zn-fOo">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One more card?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOI-HN-APM">
-                                <rect key="frame" x="547" y="292" width="134" height="21"/>
+                                <rect key="frame" x="382" y="215" width="134" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.16078431372549021" green="0.8666666666666667" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current points：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-je-eaa">
-                                <rect key="frame" x="547" y="222" width="139" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjQ-ya-9vN">
+                                <rect key="frame" x="464" y="249" width="78" height="44"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ST-eG-YI9">
-                                <rect key="frame" x="634" y="248" width="46" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.979098369644677" green="1" blue="0.99406229253145584" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjQ-ya-9vN">
-                                <rect key="frame" x="642" y="321" width="41" height="51"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="No">
+                                <state key="normal" title="No" image="no_btn.png">
                                     <color key="titleColor" red="1" green="0.05888293980137338" blue="0.24034064444815861" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="NO_btn:" destination="5SW-ja-49s" eventType="touchUpInside" id="Dcp-hC-x4g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-ui-xNk">
-                                <rect key="frame" x="540" y="321" width="51" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-ui-xNk">
+                                <rect key="frame" x="371" y="249" width="78" height="44"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Yes">
+                                <state key="normal" title="Yes" image="yes_btn.png">
                                     <color key="titleColor" red="0.19540607033382007" green="1" blue="0.77654622263105666" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="YES_btn:" destination="5SW-ja-49s" eventType="touchUpInside" id="9hg-Eq-13K"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="udW-6o-xyR">
-                                <rect key="frame" x="99" y="141" width="119" height="172"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-UX-OGn" userLabel="Card1">
+                                <rect key="frame" x="54" y="103" width="96" height="140"/>
                                 <animations/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="z2m-wv-0ly">
-                                <rect key="frame" x="159" y="141" width="119" height="172"/>
-                                <animations/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjK-1v-ydd" userLabel="Card2">
+                                <rect key="frame" x="103" y="103" width="96" height="140"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-UX-OGn">
-                                <rect key="frame" x="219" y="141" width="119" height="172"/>
-                                <animations/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="4GY-RP-XkC" userLabel="Card3">
+                                <rect key="frame" x="152" y="103" width="96" height="140"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="KmF-hH-Qmv">
-                                <rect key="frame" x="280" y="141" width="119" height="172"/>
-                                <animations/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-6t-ErV" userLabel="Card4">
+                                <rect key="frame" x="201" y="103" width="96" height="140"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-N7-Ew2">
-                                <rect key="frame" x="340" y="141" width="119" height="172"/>
-                                <animations/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-45-rCG" userLabel="Card5">
+                                <rect key="frame" x="250" y="103" width="96" height="140"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current points：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-je-eaa">
+                                <rect key="frame" x="382" y="161" width="139" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.070351413823358896" green="0.57510304771585219" blue="0.65421796085858586" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ST-eG-YI9">
+                                <rect key="frame" x="462" y="188" width="46" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.090196078431372548" green="0.50588235294117645" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.979098369644677" green="1" blue="0.99406229253145584" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Duv-ER-4Bo">
-                                <rect key="frame" x="576" y="111" width="77" height="77"/>
+                                <rect key="frame" x="472" y="85" width="67" height="67"/>
                                 <animations/>
                             </imageView>
                         </subviews>
@@ -148,12 +150,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zfv-oM-zHr"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="card1" destination="udW-6o-xyR" id="4Ui-Gi-3Di"/>
-                        <outlet property="card2" destination="z2m-wv-0ly" id="Xr1-3e-nWR"/>
-                        <outlet property="card3" destination="KmF-hH-Qmv" id="GiG-9H-5or"/>
-                        <outlet property="card4" destination="aTL-N7-Ew2" id="CCG-g4-4CF"/>
                         <outlet property="card5" destination="IMv-UX-OGn" id="DT0-sD-1tN"/>
                         <outlet property="currentPoints" destination="7ST-eG-YI9" id="uzf-Gy-mX4"/>
                         <outlet property="player" destination="Duv-ER-4Bo" id="94D-U1-nJC"/>
@@ -189,6 +187,8 @@
         <image name="Cardicon2.png" width="152" height="152"/>
         <image name="bg1.jpg" width="2560" height="1600"/>
         <image name="bg3.png" width="1536" height="1024"/>
+        <image name="no_btn.png" width="444" height="202"/>
         <image name="transparent.png" width="225" height="315"/>
+        <image name="yes_btn.png" width="444" height="202"/>
     </resources>
 </document>
