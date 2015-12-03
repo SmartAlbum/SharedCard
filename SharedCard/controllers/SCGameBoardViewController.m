@@ -84,16 +84,17 @@
         
         //        if(_playerCount == 2) {
         //game begins
-        CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
-        style.imageSize = CGSizeMake(400, 400);
+        if(_playerCount ==2){
+            CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
+            style.imageSize = CGSizeMake(400, 400);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"start-game"] style:style completion:^(BOOL didTap) {
+                }];
+            });
+            //    }
+        }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"start-game"] style:style completion:^(BOOL didTap) {
-            }];
-        });
-        //    }
-    }
-    if(_playerCount ==2){
         [_gameManager startGame];
         
         for (Player *player in [_gameManager getAllPlayers]) {
