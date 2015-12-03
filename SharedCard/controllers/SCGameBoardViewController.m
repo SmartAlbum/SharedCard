@@ -93,18 +93,18 @@
                 }];
             });
             //    }
-        }
-        
-        [_gameManager startGame];
-        
-        for (Player *player in [_gameManager getAllPlayers]) {
-            NSError *error = nil;
-            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-            //            [_gameManager getCard];
-            //            [_gameManager getCard];
-            //            [_gameManager getCard];
             
+            [_gameManager startGame];
+            
+            for (Player *player in [_gameManager getAllPlayers]) {
+                NSError *error = nil;
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+                //            [_gameManager getCard];
+                //            [_gameManager getCard];
+                //            [_gameManager getCard];
+                
+            }
         }
     }
     

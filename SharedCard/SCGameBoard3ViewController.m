@@ -85,21 +85,31 @@
             });
         }
         _playerCount++;
-//        if(_playerCount == 3) {
-        //game begins
-        CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
-        style.imageSize = CGSizeMake(40, 40);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"head_1"] style:style completion:^(BOOL didTap) {
-                [_gameManager startGame];
-//                for (Player *player in [_gameManager getAllPlayers]) {
-//                    NSError *error = nil;
-//                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-                    //                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+    
+        if(_playerCount ==3){
+            CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
+            style.imageSize = CGSizeMake(400, 400);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.view makeToast:nil duration:3 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"start-game"] style:style completion:^(BOOL didTap) {
                 }];
-        });
-//    }
+            });
+            //    }
+            
+            [_gameManager startGame];
+            
+            for (Player *player in [_gameManager getAllPlayers]) {
+                NSError *error = nil;
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+                //            [_gameManager getCard];
+                //            [_gameManager getCard];
+                //            [_gameManager getCard];
+                
+            }
+        }
     }
+    
     if(state == MCSessionStateNotConnected) {
         Player *player = [_gameManager getPlayer:peerID];
 //         [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
