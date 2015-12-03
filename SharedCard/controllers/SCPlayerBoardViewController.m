@@ -97,14 +97,15 @@
 }
 
 
-- (void)refreshWithPlayer:(Player *)player {
-    _playerSelf = player;
+- (void)refreshWithPlayer:(Player *)refreshPlayer {
+    _playerSelf = refreshPlayer;
    //绘制界面
-    Card *hiddenCard = player.hideCard;
-    NSArray *otherCards = player.cards;
+    Card *hiddenCard = refreshPlayer.hideCard;
+    NSArray *otherCards = refreshPlayer.cards;
     if (hiddenCard) {
     }
     for (Card *card in otherCards) {
+        //绘制
     }
 }
 
