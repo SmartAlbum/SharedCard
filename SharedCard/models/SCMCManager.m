@@ -82,7 +82,6 @@
         else{
             //不要牌了
         }
-        
     }
     else{
         Player *player = (Player *)[NSKeyedUnarchiver unarchiveObjectWithData:data];

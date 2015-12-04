@@ -12,7 +12,6 @@
 
 @interface SCPlayerBoardViewController ()<SCMCManagerDelegate>
 @property (strong, nonatomic) Player *playerSelf;
-@property (strong, nonatomic) Game *gameCenter;
 
 @end
 
@@ -26,14 +25,6 @@
 @synthesize card4;
 @synthesize card5;
 
-- (id)init {
-    if (self=[super init]) {
-        _gameCenter = [[Game alloc] init];
-    }
-    [self addObserver];
-    [SCMCManager shareInstance].delegate = self;
-    return  self;
-}
 
 - (void)addObserver {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -56,10 +47,13 @@
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
     NSLog(@"PEER STATUE CHANGE(From SCPlayerBoard):%@ is %ld\n", peerDisplayName, (long)state);
     //TODO For Tina(这个时候有人加进来或者出去了)
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addObserver];
+    [[SCMCManager shareInstance] setDelegate:self];
     // Do any additional setup after loading the view.
 }
 

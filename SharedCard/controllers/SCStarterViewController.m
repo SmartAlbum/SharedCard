@@ -48,6 +48,14 @@
     NSLog(@"PEER STATUE CHANGE(From SCStarterBoard):%@ is %ld\n", peerDisplayName, (long)state);
     if (state == MCSessionStateConnected) {
         _isConnected = YES;
+        __weak SCStarterViewController *weakSelf = self;
+        [[[SCMCManager shareInstance] browser] dismissViewControllerAnimated:YES completion:^{
+            NSString *storyboardName = @"iPhone";
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+            UIViewController *con = [storyboard instantiateViewControllerWithIdentifier:@"playerboard"];
+            [weakSelf presentViewController:con animated:NO completion:^{
+            }];
+        }];
     }
     else if (state == MCSessionStateNotConnected){
         _isConnected = NO;
@@ -75,15 +83,7 @@
 
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController
 {
-    [browserViewController dismissViewControllerAnimated:NO completion:^{
-        if (_isConnected) {
-            NSString *storyboardName = @"iPhone";
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-            UIViewController *con = [storyboard instantiateViewControllerWithIdentifier:@"playerboard"];
-            [self presentViewController:con animated:NO completion:^{
-            }];
-        }
-    }];
+    [browserViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
 
