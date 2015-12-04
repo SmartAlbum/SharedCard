@@ -108,11 +108,16 @@
                 NSError *error = nil;
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
                 [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                //            [_gameManager getCard];
-                //            [_gameManager getCard];
-                //            [_gameManager getCard];
-                
             }
+            
+            //check if any player is still available for getting cards.
+            if(_gameManager.currentTurn){
+                NSError *error = nil;
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
+                [[SCMCManager shareInstance] sendData:data toPeer:_gameManager.currentTurn.Id error:error];
+            }
+            
+            
         }
     }
     
