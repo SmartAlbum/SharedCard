@@ -13,8 +13,11 @@
 @interface SCPlayerBoardViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *player;
 @property (strong, nonatomic) IBOutlet UILabel *currentPoints;
-@property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *playercards;
 @property (strong, nonatomic) IBOutlet UIImageView *hideCard;
+@property (strong, nonatomic) IBOutlet UIButton *yes_button;
+@property (strong, nonatomic) IBOutlet UIButton *no_button;
+
 
 - (IBAction)YES_btn:(id)sender;
 - (IBAction)NO_btn:(id)sender;

@@ -158,7 +158,9 @@
                     <connections>
                         <outlet property="currentPoints" destination="7ST-eG-YI9" id="uzf-Gy-mX4"/>
                         <outlet property="hideCard" destination="IMv-UX-OGn" id="pwN-ko-Spx"/>
+                        <outlet property="no_button" destination="EjQ-ya-9vN" id="p0E-Tr-zTO"/>
                         <outlet property="player" destination="Duv-ER-4Bo" id="94D-U1-nJC"/>
+                        <outlet property="yes_button" destination="8Kh-ui-xNk" id="tUY-cN-KGY"/>
                         <outletCollection property="playercards" destination="SjK-1v-ydd" id="cZR-oL-tAu"/>
                         <outletCollection property="playercards" destination="4GY-RP-XkC" id="Xsv-1f-KIi"/>
                         <outletCollection property="playercards" destination="aXx-6t-ErV" id="vKX-ox-Adb"/>

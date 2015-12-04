@@ -15,6 +15,7 @@
 @optional
 - (void)refreshWithPlayer:(Player *)player;
 - (void)refreshWithUserChoice:(BOOL)anotherCard;
+- (void)enableUserChoice;
 @end
 
 @interface SCMCManager : NSObject<MCSessionDelegate>

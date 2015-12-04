@@ -75,20 +75,50 @@
     if (ISIPAD) {
         NSString *boolStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         BOOL anotherCard = [boolStr boolValue];
-        if (anotherCard == YES) {
-            //current user needs another card
-
+        Game *game = [Game Instance];
+        if(game.currentTurn.Id == peerID){
+            if (anotherCard == YES) {
+                //current user needs another card
+                Player *player = game.currentTurn;
+                [game getCard];
+                NSError *error = nil;
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+            }
+            else{
+                //不要牌了
+                [game stopGettingCard:game.currentTurn.Id];
+            }
+            
+            //check if any player is still available for getting cards.
+            if(game.currentTurn){
+                NSError *error = nil;
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
+                [[SCMCManager shareInstance] sendData:data toPeer:game.currentTurn.Id error:error];
+            }
         }
         else{
-            //不要牌了
+            //todo
+            printf("exception occur");
         }
     }
     else{
-        Player *player = (Player *)[NSKeyedUnarchiver unarchiveObjectWithData:data];
-        if (player != nil) {
-            _player = player;
-            if (_delegate && [_delegate respondsToSelector:@selector(refreshWithPlayer:)]) {
+        NSObject *unarchiverObject = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if([unarchiverObject isKindOfClass:[Player class]]){
+            Player *player = (Player *)unarchiverObject;
+            if (player != nil) {
+                _player = player;
+                if (_delegate && [_delegate respondsToSelector:@selector(refreshWithPlayer:)]) {
                 [_delegate refreshWithPlayer:_player];
+                }
+            }
+        }
+        else if([unarchiverObject isKindOfClass:[NSString class]]){
+            NSString *message = (NSString *)unarchiverObject;
+            if([message  isEqual: @"getCard"]){
+                if (_delegate && [_delegate respondsToSelector:@selector(enableUserChoice)]) {
+                    [_delegate enableUserChoice];
+                }
             }
         }
     }
