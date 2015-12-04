@@ -13,8 +13,11 @@
 
 @protocol SCMCManagerDelegate <NSObject>
 @optional
+//player and ipad
 - (void)refreshWithPlayer:(Player *)player;
+//just ipad
 - (void)refreshWithUserChoice:(BOOL)anotherCard;
+//...more data transfer methods
 @end
 
 @interface SCMCManager : NSObject<MCSessionDelegate>
