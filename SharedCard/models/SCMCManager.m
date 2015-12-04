@@ -72,6 +72,7 @@
 
 
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
+    NSLog(@"hahaahahaAre u kidding");
     if (ISIPAD) {
         NSString *boolStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         BOOL anotherCard = [boolStr boolValue];
@@ -99,7 +100,7 @@
         }
         else{
             //todo
-            printf("exception occur");
+            NSLog(@"exception occur");
         }
     }
     else{
