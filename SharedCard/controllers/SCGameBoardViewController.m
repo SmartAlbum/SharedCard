@@ -28,7 +28,7 @@
 @synthesize player1;
 @synthesize player2;
 @synthesize playercards1;
-
+@synthesize playercards2;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {

@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *player2;
 @property (strong, nonatomic) IBOutlet UIButton *beginSearchButton;
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards1;
+@property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards2;
 
 @end
