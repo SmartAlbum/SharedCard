@@ -69,9 +69,9 @@ class Player:NSObject , NSCoding{
         var containZero = self.cards.contains{ (element) -> Bool in
             return element.rankString == "A"
         }
-        containZero = containZero || (hideCard!.rankString == "A")
+        containZero = containZero || (hideCard != nil && hideCard!.rankString == "A")
         
-        var value = hideCard!.value
+        var value = hideCard == nil ? 0 : hideCard!.value
         
         for card in cards{
             value += card.value
@@ -82,6 +82,11 @@ class Player:NSObject , NSCoding{
         return value
     }
     
-    
+    var cardValueStr:String{
+        get{
+            let value = self.getCardsValue()
+            return String(value)
+        }
+    }
 
 }

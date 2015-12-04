@@ -19,11 +19,8 @@
 
 @synthesize player;
 @synthesize currentPoints;
-@synthesize card1;
-@synthesize card2;
-@synthesize card3;
-@synthesize card4;
-@synthesize card5;
+@synthesize hideCard;
+@synthesize playercards;
 
 
 - (void)addObserver {
@@ -97,10 +94,18 @@
     Card *hiddenCard = refreshPlayer.hideCard;
     NSArray *otherCards = refreshPlayer.cards;
     if (hiddenCard) {
+        [hideCard setImage:[UIImage imageNamed: hiddenCard.imageName]];
     }
-    for (Card *card in otherCards) {
-        //绘制
+    for (int i = 0 ; i< otherCards.count;i++) {
+        for(UIImageView *playerCard in playercards){
+            if(playerCard.tag == i){
+                [playerCard setImage:[UIImage imageNamed:[[otherCards objectAtIndex:i] imageName]]];
+            }
+        }
     }
+    currentPoints.text = _playerSelf.cardValueStr;
+    
+    
 }
 
 @end

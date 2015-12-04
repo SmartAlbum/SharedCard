@@ -14,11 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *player;
 @property (strong, nonatomic) IBOutlet UILabel *currentPoints;
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards;
-@property (strong, nonatomic) IBOutlet UIImageView *card1;
-@property (strong, nonatomic) IBOutlet UIImageView *card2;
-@property (strong, nonatomic) IBOutlet UIImageView *card3;
-@property (strong, nonatomic) IBOutlet UIImageView *card4;
-@property (strong, nonatomic) IBOutlet UIImageView *card5;
+@property (strong, nonatomic) IBOutlet UIImageView *hideCard;
 
 - (IBAction)YES_btn:(id)sender;
 - (IBAction)NO_btn:(id)sender;
