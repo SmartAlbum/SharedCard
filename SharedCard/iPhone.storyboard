@@ -104,19 +104,19 @@
                                 <rect key="frame" x="54" y="103" width="96" height="140"/>
                                 <animations/>
                             </imageView>
-                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjK-1v-ydd" userLabel="Card2">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjK-1v-ydd" userLabel="Card2">
                                 <rect key="frame" x="103" y="103" width="96" height="140"/>
                                 <animations/>
                             </imageView>
-                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="4GY-RP-XkC" userLabel="Card3">
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="4GY-RP-XkC" userLabel="Card3">
                                 <rect key="frame" x="152" y="103" width="96" height="140"/>
                                 <animations/>
                             </imageView>
-                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-6t-ErV" userLabel="Card4">
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-6t-ErV" userLabel="Card4">
                                 <rect key="frame" x="201" y="103" width="96" height="140"/>
                                 <animations/>
                             </imageView>
-                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-45-rCG" userLabel="Card5">
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-45-rCG" userLabel="Card5">
                                 <rect key="frame" x="250" y="103" width="96" height="140"/>
                                 <animations/>
                             </imageView>
@@ -156,10 +156,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="card5" destination="IMv-UX-OGn" id="DT0-sD-1tN"/>
                         <outlet property="currentPoints" destination="7ST-eG-YI9" id="uzf-Gy-mX4"/>
+                        <outlet property="hideCard" destination="IMv-UX-OGn" id="pwN-ko-Spx"/>
+                        <outlet property="no_button" destination="EjQ-ya-9vN" id="p0E-Tr-zTO"/>
                         <outlet property="player" destination="Duv-ER-4Bo" id="94D-U1-nJC"/>
-                        <outletCollection property="playercards" destination="IMv-UX-OGn" id="Oqh-Wa-ciB"/>
+                        <outlet property="yes_button" destination="8Kh-ui-xNk" id="tUY-cN-KGY"/>
                         <outletCollection property="playercards" destination="SjK-1v-ydd" id="cZR-oL-tAu"/>
                         <outletCollection property="playercards" destination="4GY-RP-XkC" id="Xsv-1f-KIi"/>
                         <outletCollection property="playercards" destination="aXx-6t-ErV" id="vKX-ox-Adb"/>

@@ -19,12 +19,10 @@
 
 @synthesize player;
 @synthesize currentPoints;
-@synthesize card1;
-@synthesize card2;
-@synthesize card3;
-@synthesize card4;
-@synthesize card5;
-
+@synthesize hideCard;
+@synthesize playercards;
+@synthesize yes_button;
+@synthesize no_button;
 
 - (void)addObserver {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -55,6 +53,8 @@
     [self addObserver];
     [[SCMCManager shareInstance] setDelegate:self];
     // Do any additional setup after loading the view.
+    yes_button.enabled = false;
+    no_button.enabled = false;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +78,7 @@
         NSString *boolStr = [NSString stringWithFormat:@"%d", YES];
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
+        yes_button.enabled = false;
     }
 }
 
@@ -87,6 +88,7 @@
         NSString *boolStr = [NSString stringWithFormat:@"%d", NO];
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
+        no_button.enabled = false;
     }
 }
 
@@ -97,10 +99,20 @@
     Card *hiddenCard = refreshPlayer.hideCard;
     NSArray *otherCards = refreshPlayer.cards;
     if (hiddenCard) {
+        [hideCard setImage:[UIImage imageNamed: hiddenCard.imageName]];
     }
-    for (Card *card in otherCards) {
-        //绘制
+    for (int i = 0 ; i< otherCards.count;i++) {
+        for(UIImageView *playerCard in playercards){
+            if(playerCard.tag == i){
+                [playerCard setImage:[UIImage imageNamed:[[otherCards objectAtIndex:i] imageName]]];
+            }
+        }
     }
+    currentPoints.text = _playerSelf.cardValueStr;
+}
+- (void)enableUserChoice{
+    yes_button.enabled = true;
+    no_button.enabled = true;
 }
 
 @end

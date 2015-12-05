@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SharedCardProject-Swift.h"
 @interface SCGameBoardViewController : UIViewController
 
 
@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *beginSearchButton;
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards1;
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards2;
-
+@property (strong, nonatomic) Player *_player1;
+@property (strong, nonatomic) Player *_player2;
 @end

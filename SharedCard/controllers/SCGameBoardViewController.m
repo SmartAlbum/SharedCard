@@ -29,6 +29,8 @@
 @synthesize player2;
 @synthesize playercards1;
 @synthesize playercards2;
+@synthesize _player1;
+@synthesize _player2;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -81,6 +83,12 @@
             //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
         }
         _playerCount++;
+        if(_playerCount==1){
+            _player1 = player;
+        }
+        else if(_playerCount==2){
+            _player2 = player;
+        }
         
         //        if(_playerCount == 2) {
         //game begins
@@ -100,11 +108,18 @@
                 NSError *error = nil;
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
                 [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                //            [_gameManager getCard];
-                //            [_gameManager getCard];
-                //            [_gameManager getCard];
-                
+                [self refreshWithPlayer:player ];
             }
+            
+            //check if any player is still available for getting cards.
+            if(_gameManager.currentTurn){
+                NSError *error = nil;
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
+                [[SCMCManager shareInstance] sendData:data toPeer:_gameManager.currentTurn.Id error:error];
+                [self refreshWithPlayer:_gameManager.currentTurn ];
+            }
+            
+            
         }
     }
     
@@ -131,16 +146,29 @@
 }
 
 - (void)refreshWithPlayer:(Player *)player {
+    
+    NSArray *targetCards;
+    if(_player1.Id == player.Id){
+        _player1 = player;
+        targetCards = playercards1;
+    }
+    else if(_player2.Id == player.Id){
+        _player2 = player;
+        targetCards = playercards2;
+    }
+    
     for (int i=0; i < player.cards.count;i++) {
-        for (UIImageView *imageView in playercards1) {
-            if(imageView.tag==i){
-                Card *card = [player.cards objectAtIndex:i];
-                NSString *imageName = [NSString stringWithFormat:@"%d_%@.png",(int)card.typeValue,card.imageValueStr];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    UIImage *image = [UIImage imageNamed: imageName];
-                    [imageView setImage:image];
-                });
-                
+        if(targetCards){
+            for (UIImageView *imageView in targetCards) {
+                if(imageView.tag==i){
+                    Card *card = [player.cards objectAtIndex:i];
+                    NSString *imageName = card.imageName;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIImage *image = [UIImage imageNamed: imageName];
+                        [imageView setImage:image];
+                    });
+                    
+                }
             }
         }
     }

@@ -18,6 +18,7 @@
 //just ipad
 - (void)refreshWithUserChoice:(BOOL)anotherCard;
 //...more data transfer methods
+- (void)enableUserChoice;
 @end
 
 @interface SCMCManager : NSObject<MCSessionDelegate>

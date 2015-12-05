@@ -58,5 +58,12 @@ class Card:NSObject , NSCoding {
             return value
         }
     }
+    var imageName:String{
+        get{
+            let typeStr:String = String(type.rawValue)
+            let value:String = rankString == "A" ? "1" : rankString
+            return typeStr+"_"+value
+        }
+    }
     
 }
