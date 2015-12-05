@@ -78,7 +78,7 @@
         NSString *boolStr = [NSString stringWithFormat:@"%d", YES];
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
-        yes_button.enabled = false;
+//        yes_button.enabled = false;
     }
 }
 
@@ -88,6 +88,8 @@
         NSString *boolStr = [NSString stringWithFormat:@"%d", NO];
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
+        //在不拿牌的时候都disable
+        yes_button.enabled = false;
         no_button.enabled = false;
     }
 }
@@ -110,6 +112,7 @@
     }
     currentPoints.text = _playerSelf.cardValueStr;
 }
+
 - (void)enableUserChoice{
     yes_button.enabled = true;
     no_button.enabled = true;
