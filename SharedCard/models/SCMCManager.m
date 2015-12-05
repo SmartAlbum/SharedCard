@@ -68,6 +68,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SCMCDidChangeStateNotification"
                                                         object:nil
                                                       userInfo:dict];
+    if (!ISIPAD && state == MCSessionStateConnected) {
+        _iPadPeerID = peerID;
+    }
 }
 
 
