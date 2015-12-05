@@ -53,8 +53,8 @@
     [self addObserver];
     [[SCMCManager shareInstance] setDelegate:self];
     // Do any additional setup after loading the view.
-    yes_button.enabled = false;
-    no_button.enabled = false;
+        yes_button.enabled = FALSE;
+        no_button.enabled = FALSE;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,6 +97,10 @@
 
 - (void)refreshWithPlayer:(Player *)refreshPlayer {
     _playerSelf = refreshPlayer;
+    if ([_playerSelf isEqual:[[Game Instance] currentTurn]]) {
+        yes_button.enabled = TRUE;
+        no_button.enabled = TRUE;
+    }
    //绘制界面
     Card *hiddenCard = refreshPlayer.hideCard;
     NSArray *otherCards = refreshPlayer.cards;
@@ -111,6 +115,7 @@
         }
     }
     currentPoints.text = _playerSelf.cardValueStr;
+    
 }
 
 - (void)enableUserChoice{

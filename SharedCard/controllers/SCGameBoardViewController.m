@@ -108,7 +108,7 @@
                 NSError *error = nil;
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
                 [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                [self refreshWithPlayer:player ];
+//                [self refreshWithPlayer:player ];
             }
             
             //check if any player is still available for getting cards.
@@ -134,7 +134,9 @@
                                                                   [weakSelf.gameManager removeAllPlayer];
                                                               }];
         [alertController addAction:defaultAction];
-        [self presentViewController:alertController animated:YES completion:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:alertController animated:YES completion:nil];
+        });
     }
     /*
      
