@@ -110,7 +110,9 @@
             if (player != nil) {
                 _player = player;
                 if (_delegate && [_delegate respondsToSelector:@selector(refreshWithPlayer:)]) {
-                [_delegate refreshWithPlayer:_player];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [_delegate refreshWithPlayer:_player];
+                    });
                 }
             }
         }
