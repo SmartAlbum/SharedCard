@@ -89,6 +89,7 @@ class Game:NSObject{
             player.cards.removeAll()
             player.hideCard = cards.removeLast()
             player.cards.append(cards.removeLast())
+            player.result = nil
         }
         currentTurn = players[0]
     }
@@ -101,10 +102,10 @@ class Game:NSObject{
         currentTurn!.cards.append(assignedCard)
         
         if(!currentTurn!.isAcceptingCard()){
-            currentTurn?.stopGettingCard()
+            currentTurn!.stopGettingCard()
         }
         
-        //determine a player to stop getting card.
+        
         var nextPlayer:Player?
         for var offset = 1 ; offset < players.count  ; ++offset {
             let currentIndex = players.indexOf(currentTurn!)
@@ -191,42 +192,42 @@ class Game:NSObject{
         players.removeAll();
     }
     
-    //get result of particular player
-    func getReuslt(playerId:MCPeerID)->GameResult{
-        let currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
-        var maxValue = -1
-        for player in players{
-            if(player.Id != currnetPlayer.Id && player.isCardValueValid()){
-                maxValue = max(maxValue,player.getCardsValue())
-            }
-        }
-        
-        let numOfMaxValueCount = maxValue > 0 ? players.filter{ $0.getCardsValue() == maxValue }.count : 0
-        
-        if(maxValue<0 && !currnetPlayer.isCardValueValid()){
-            return GameResult.DRAW
-        }
-        else if(maxValue<0){
-            return GameResult.WIN
-        }
-        else if(!currnetPlayer.isCardValueValid()){
-            return GameResult.LOSE
-        }
-        else{
-            if(numOfMaxValueCount == players.count){
-                return GameResult.DRAW
-            }
-            else {
-                return currnetPlayer.getCardsValue() >= maxValue ? GameResult.WIN : GameResult.LOSE
-            }
-        }
-        
-    }
+//    //get result of particular player
+//    func getReuslt(playerId:MCPeerID)->GameResult{
+//        let currnetPlayer:Player = players.filter{ $0.Id == playerId }[0]
+//        var maxValue = -1
+//        for player in players{
+//            if(player.Id != currnetPlayer.Id && player.isCardValueValid()){
+//                maxValue = max(maxValue,player.getCardsValue())
+//            }
+//        }
+//        
+//        let numOfMaxValueCount = maxValue > 0 ? players.filter{ $0.getCardsValue() == maxValue }.count : 0
+//        
+//        if(maxValue<0 && !currnetPlayer.isCardValueValid()){
+//            return GameResult.DRAW
+//        }
+//        else if(maxValue<0){
+//            return GameResult.WIN
+//        }
+//        else if(!currnetPlayer.isCardValueValid()){
+//            return GameResult.LOSE
+//        }
+//        else{
+//            if(numOfMaxValueCount == players.count){
+//                return GameResult.DRAW
+//            }
+//            else {
+//                return currnetPlayer.getCardsValue() >= maxValue ? GameResult.WIN : GameResult.LOSE
+//            }
+//        }
+//        
+//    }
     
     //return players according to their corresponding GameResult
-    func getPlayerBaseOnReuslt(resultType:GameResult)->[Player]{
-        return players.filter{ getReuslt($0.Id!) == resultType }
-    }
+//    func getPlayerBaseOnReuslt(resultType:GameResult)->[Player]{
+//        return players.filter{ getReuslt($0.Id!) == resultType }
+//    }
     
     func RandomCard(){
         cards = cards.shuffle()
@@ -252,5 +253,69 @@ class Game:NSObject{
         return players.count
     }
     
+    func isGameEnd()->Bool{
+        let availabelPlayers = players.filter{ $0.isAcceptingCard() && $0.result == nil}
+        if(availabelPlayers.count <= 1){
+            compareAndGetResult()
+        }
+        return availabelPlayers.count <= 1;
+    }
     
+    func compareAndGetResult(){
+        let unLabeledPlayer = players.filter{ $0.result == nil}
+        var maxCardNum = 0
+        for var player in unLabeledPlayer{
+            if(player.cards.count > maxCardNum){
+                maxCardNum = player.cards.count
+            }
+        }
+        
+        let fiveCard = maxCardNum > 3
+        for var player in unLabeledPlayer{
+            if(fiveCard){
+                if(player.cards.count<4){
+                    player.result = GameResult.LOSE
+                }
+                else{
+                    let fiveCardPlayers = unLabeledPlayer.filter{ $0.cards.count > 3 && $0.Id != player.Id}
+                    if(fiveCardPlayers.count>0){
+                        var maxFiveCardValue = 0;
+                        for fiveCardPlayer in fiveCardPlayers{
+                            if(fiveCardPlayer.getCardsValue() > maxFiveCardValue){
+                                maxFiveCardValue = fiveCardPlayer.getCardsValue()
+                            }
+                        }
+                        if(player.getCardsValue()>maxFiveCardValue){
+                            player.result = GameResult.WIN
+                        }
+                        else if(player.getCardsValue() == maxFiveCardValue){
+                            player.result = GameResult.DRAW
+                        }
+                        else {
+                            player.result = GameResult.LOSE
+                        }
+                    }
+                }
+                
+            } else{
+                let otherPlayers = unLabeledPlayer.filter{ $0.Id != player.Id}
+                var maxCardValue = 0;
+                for otherPlayer in otherPlayers{
+                    if(otherPlayer.getCardsValue() > maxCardValue){
+                        maxCardValue = otherPlayer.getCardsValue()
+                    }
+                }
+                if(player.getCardsValue()>maxCardValue){
+                    player.result = GameResult.WIN
+                }
+                else if(player.getCardsValue() == maxCardValue){
+                    player.result = GameResult.DRAW
+                }
+                else {
+                    player.result = GameResult.LOSE
+                }
+                
+            }
+        }
+    }
 }

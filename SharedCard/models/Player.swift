@@ -22,8 +22,8 @@ class Player:NSObject , NSCoding{
     var stop:Bool = false
     var Id:MCPeerID?
     var Name:String = ""
-    var ready:Bool = true;
-    
+    var ready:Bool = true
+    var result:GameResult?
     required init(coder aDecoder: NSCoder) {
         super.init()
         Id = aDecoder.decodeObjectForKey("Id") as! MCPeerID?
@@ -58,6 +58,9 @@ class Player:NSObject , NSCoding{
     func stopGettingCard(){
         stop = true
         //todo
+        if(self.isCardValueValid()){
+            self.result = GameResult.LOSE
+        }
     }
     func isAccepttingCard()->Bool{
         return !stop

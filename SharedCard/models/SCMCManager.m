@@ -120,9 +120,12 @@
                     //不要牌了
                     [game stopGettingCard:game.currentTurn.Id];
                 }
-                
-                //check if any player is still available for getting cards.
-                if(game.currentTurn){
+                if([game isGameEnd]){
+                    for(Player *player in [game getAllPlayers]){
+                        //show result based on player.result
+                    }
+                }
+                else if(game.currentTurn){
                     NSError *error = nil;
                     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
                     [[SCMCManager shareInstance] sendData:data toPeer:game.currentTurn.Id error:error];
