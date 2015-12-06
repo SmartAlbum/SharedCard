@@ -103,7 +103,7 @@
             //    }
             
             [_gameManager startGame];
-            
+            //todo render ui here. e.g: show player cards.
             
         }
     }
