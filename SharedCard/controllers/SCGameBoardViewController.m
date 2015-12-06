@@ -104,21 +104,6 @@
             
             [_gameManager startGame];
             
-            for (Player *player in [_gameManager getAllPlayers]) {
-                NSError *error = nil;
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-//                [self refreshWithPlayer:player ];
-            }
-            
-            //check if any player is still available for getting cards.
-            if(_gameManager.currentTurn){
-                NSError *error = nil;
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
-                [[SCMCManager shareInstance] sendData:data toPeer:_gameManager.currentTurn.Id error:error];
-                [self refreshWithPlayer:_gameManager.currentTurn ];
-            }
-            
             
         }
     }

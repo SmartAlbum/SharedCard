@@ -22,6 +22,7 @@ class Player:NSObject , NSCoding{
     var stop:Bool = false
     var Id:MCPeerID?
     var Name:String = ""
+    var ready:Bool = true;
     
     required init(coder aDecoder: NSCoder) {
         super.init()
@@ -30,6 +31,7 @@ class Player:NSObject , NSCoding{
         stop = aDecoder.decodeObjectForKey("stop") as! Bool
         hideCard = aDecoder.decodeObjectForKey("hideCard") as! Card?
         Name = aDecoder.decodeObjectForKey("Name") as! String
+        ready = aDecoder.decodeObjectForKey("ready") as! Bool
     }
     override init(){
         super.init()
@@ -41,6 +43,8 @@ class Player:NSObject , NSCoding{
         aCoder.encodeObject(stop,forKey:"stop")
         aCoder.encodeObject(hideCard,forKey:"hideCard")
         aCoder.encodeObject(Name,forKey:"Name")
+        aCoder.encodeObject(ready,forKey:"ready")
+        
     }
     
     func SetCard(assignedCards:[Card]){

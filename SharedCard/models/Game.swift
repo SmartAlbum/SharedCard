@@ -81,7 +81,7 @@ class Game:NSObject{
 //        }
         RandomPlayer()
         
-        if(cards.count<players.count*10){
+        if(cards.count<players.count*5){
             initCards()
         }
         for var player in players{
@@ -198,7 +198,7 @@ class Game:NSObject{
     }
     
     func removeAllPlayer(){
-        players .removeAll();
+        players.removeAll();
     }
     
     //get result of particular player
@@ -239,14 +239,27 @@ class Game:NSObject{
     }
     
     func RandomCard(){
-        cards.shuffle()
+        cards = cards.shuffle()
     }
     func RandomPlayer(){
-        players.shuffle()
+        players = players.shuffle()
     }
     
     func getCurrentPlayer()->Player?{
         return currentTurn
+    }
+    
+    func playerReady(playerId:MCPeerID)->Int{
+        let targetPlayers = players.filter{ $0.Id == playerId }
+        if(targetPlayers.count>0){
+            let player = targetPlayers[0]
+            player.ready = true
+        }
+        return players.filter{ $0.ready }.count
+    }
+    
+    func playerCount()->Int{
+        return players.count
     }
     
     

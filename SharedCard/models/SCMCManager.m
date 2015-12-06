@@ -75,36 +75,61 @@
 
 
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    NSLog(@"hahaahahaAre u kidding");
     if (ISIPAD) {
-        NSString *boolStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        BOOL anotherCard = [boolStr boolValue];
-        Game *game = [Game Instance];
-        if(game.currentTurn.Id == peerID){
-            if (anotherCard == YES) {
-                //current user needs another card
-                Player *player = game.currentTurn;
-                [game getCard];
-                NSError *error = nil;
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-            }
-            else{
-                //不要牌了
-                [game stopGettingCard:game.currentTurn.Id];
+        NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if([msg  isEqual:@"ready"]){
+            Game *game = [Game Instance];
+            int readyCount = (int)[game playerReady:peerID];
+            if(readyCount == [game playerCount]){
+                for (Player *player in [game getAllPlayers]) {
+                    NSError *error = nil;
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+                    [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+                    //                [self refreshWithPlayer:player ];
+                }
+                
+                //check if any player is still available for getting cards.
+                if(game.currentTurn){
+                    NSError *error = nil;
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
+                    [[SCMCManager shareInstance] sendData:data toPeer:game.currentTurn.Id error:error];
+                    NSLog(@"ask player to get card");
+                }
             }
             
-            //check if any player is still available for getting cards.
-            if(game.currentTurn){
-                NSError *error = nil;
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
-                [[SCMCManager shareInstance] sendData:data toPeer:game.currentTurn.Id error:error];
+        }else{
+            NSString *boolStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            BOOL anotherCard = [boolStr boolValue];
+            Game *game = [Game Instance];
+            if(game.currentTurn.Id == peerID){
+                if (anotherCard == YES) {
+                    //current user needs another card
+                    Player *player = game.currentTurn;
+                    [game getCard];
+                    NSError *error = nil;
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+                    [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+                    NSLog(@"receive player yes message");
+                }
+                else{
+                    //不要牌了
+                    [game stopGettingCard:game.currentTurn.Id];
+                    NSLog(@"receive player no message");
+                }
+                
+                //check if any player is still available for getting cards.
+                if(game.currentTurn){
+                    NSError *error = nil;
+                    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"getCard"];
+                    [[SCMCManager shareInstance] sendData:data toPeer:game.currentTurn.Id error:error];
+                }
+            }
+            else{
+                //todo
+                NSLog(@"exception occur");
             }
         }
-        else{
-            //todo
-            NSLog(@"exception occur");
-        }
+
     }
     else{
         NSObject *unarchiverObject = [NSKeyedUnarchiver unarchiveObjectWithData:data];
@@ -116,6 +141,7 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [_delegate refreshWithPlayer:_player];
                     });
+                    NSLog(@"Receive player message");
                 }
             }
         }
@@ -124,7 +150,9 @@
             if([message  isEqual: @"getCard"]){
                 if (_delegate && [_delegate respondsToSelector:@selector(enableUserChoice)]) {
                     [_delegate enableUserChoice];
+                    NSLog(@"Receive get card message");
                 }
+                
             }
         }
     }

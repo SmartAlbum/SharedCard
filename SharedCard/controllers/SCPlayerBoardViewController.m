@@ -53,8 +53,12 @@
     [self addObserver];
     [[SCMCManager shareInstance] setDelegate:self];
     // Do any additional setup after loading the view.
-        yes_button.enabled = FALSE;
-        no_button.enabled = FALSE;
+    yes_button.enabled = FALSE;
+    no_button.enabled = FALSE;
+    NSError *error;
+    NSString *readyMsg = @"ready";
+    NSData *data = [readyMsg dataUsingEncoding:NSUTF8StringEncoding];
+    [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,14 +101,11 @@
 
 - (void)refreshWithPlayer:(Player *)refreshPlayer {
     _playerSelf = refreshPlayer;
-    if ([_playerSelf isEqual:[[Game Instance] currentTurn]]) {
-        yes_button.enabled = TRUE;
-        no_button.enabled = TRUE;
-    }
    //绘制界面
     Card *hiddenCard = refreshPlayer.hideCard;
     NSArray *otherCards = refreshPlayer.cards;
     if (hiddenCard) {
+        NSLog(@"player set hidden Card");
         [hideCard setImage:[UIImage imageNamed: hiddenCard.imageName]];
     }
     for (int i = 0 ; i< otherCards.count;i++) {
@@ -121,6 +122,7 @@
 - (void)enableUserChoice{
     yes_button.enabled = true;
     no_button.enabled = true;
+    NSLog(@"player enable button");
 }
 
 @end
