@@ -240,13 +240,16 @@ class Game:NSObject{
         return currentTurn
     }
     
-    func playerReady(playerId:MCPeerID)->Int{
+    func playerReady(playerId:MCPeerID){
         let targetPlayers = players.filter{ $0.Id == playerId }
         if(targetPlayers.count>0){
             let player = targetPlayers[0]
             player.ready = true
         }
-        return players.filter{ $0.ready }.count
+    }
+    
+    func ready()->Bool{
+        return players.filter{$0.ready}.count == players.count
     }
     
     func playerCount()->Int{

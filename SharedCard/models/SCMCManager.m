@@ -79,8 +79,8 @@
         NSString *msg = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         if([msg  isEqual:@"ready"]){
             Game *game = [Game Instance];
-            int readyCount = (int)[game playerReady:peerID];
-            if(readyCount == [game playerCount]){
+            [game playerReady:peerID];
+            if([game ]){
                 for (Player *player in [game getAllPlayers]) {
                     NSError *error = nil;
                     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
