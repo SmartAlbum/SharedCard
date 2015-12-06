@@ -258,7 +258,7 @@ class Game:NSObject{
     }
     
     func isGameEnd()->Bool{
-        let availabelPlayers = players.filter{ $0.isAcceptingCard() && $0.result == nil}
+        let availabelPlayers = players.filter{ $0.isCardValueValid() && $0.result == nil}
         if(availabelPlayers.count <= 1){
             compareAndGetResult()
         }
