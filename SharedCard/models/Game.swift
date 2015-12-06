@@ -249,6 +249,7 @@ class Game:NSObject{
     }
     
     func ready()->Bool{
+        NSLog("readyCount %d",players.filter{$0.ready}.count)
         return players.filter{$0.ready}.count == players.count
     }
     
