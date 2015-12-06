@@ -40,10 +40,10 @@
                value = "count">
             </PersistentString>
             <PersistentString
-               value = "self">
+               value = "self.count">
             </PersistentString>
             <PersistentString
-               value = "self.count">
+               value = "self">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -76,7 +76,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[SCMCManager session:didReceiveData:fromPeer:]:SCMCManager.m">
+      </ContextState>
+      <ContextState
          contextName = "Game.startGame() -&gt; ():Game.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[SCGameBoardViewController refreshWithPlayer:]:SCGameBoardViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "player.Id">
+            </PersistentString>
+            <PersistentString
+               value = "_player1.Id">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "__64-[SCGameBoardViewController peerDidChangeStateWithNotification:]_block_invoke68:SCGameBoardViewController.m">

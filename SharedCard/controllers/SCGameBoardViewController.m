@@ -104,7 +104,9 @@
             
             [_gameManager startGame];
             //todo render ui here. e.g: show player cards.
-            
+            for(Player *player in [_gameManager getAllPlayers]){
+                [self refreshWithPlayer:player];
+            }
         }
     }
     

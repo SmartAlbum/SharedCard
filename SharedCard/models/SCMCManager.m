@@ -85,7 +85,10 @@
                     NSError *error = nil;
                     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
                     [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                    //                [self refreshWithPlayer:player ];
+                    
+                    if (_delegate && [_delegate respondsToSelector:@selector(refreshWithPlayer:)]) {
+                        [_delegate refreshWithPlayer:_player];
+                    }
                 }
                 
                 //check if any player is still available for getting cards.
@@ -109,12 +112,13 @@
                     NSError *error = nil;
                     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
                     [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                    NSLog(@"receive player yes message");
+                    if (_delegate && [_delegate respondsToSelector:@selector(refreshWithPlayer:)]) {
+                        [_delegate refreshWithPlayer:player];
+                    }
                 }
                 else{
                     //不要牌了
                     [game stopGettingCard:game.currentTurn.Id];
-                    NSLog(@"receive player no message");
                 }
                 
                 //check if any player is still available for getting cards.
@@ -141,7 +145,6 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [_delegate refreshWithPlayer:_player];
                     });
-                    NSLog(@"Receive player message");
                 }
             }
         }
