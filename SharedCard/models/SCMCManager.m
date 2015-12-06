@@ -80,7 +80,7 @@
         if([msg  isEqual:@"ready"]){
             Game *game = [Game Instance];
             [game playerReady:peerID];
-            if([game ]){
+            if([game ready]){
                 for (Player *player in [game getAllPlayers]) {
                     NSError *error = nil;
                     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
