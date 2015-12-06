@@ -82,7 +82,8 @@
         NSString *boolStr = [NSString stringWithFormat:@"%d", YES];
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
-//        yes_button.enabled = false;
+        yes_button.enabled = false;
+        no_button.enabled = false;
     }
 }
 

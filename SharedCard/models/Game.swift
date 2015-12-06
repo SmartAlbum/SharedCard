@@ -99,44 +99,34 @@ class Game:NSObject{
         }
         let assignedCard:Card = cards.removeLast()
         currentTurn!.cards.append(assignedCard)
-        if(!currentTurn!.isCardValueValid()){
-            currentTurn!.stopGettingCard()
-            var nextPlayer:Player?
-            for var offset = 1 ; offset < players.count  ; ++offset {
-                let currentIndex = players.indexOf(currentTurn!)
-                let index = (currentIndex! + offset) % players.count
-                if(players[index].isCardValueValid() && !players[index].stop){
-                    nextPlayer = players[index]
-                    break
-                }
-            }
-            
-            if(nextPlayer != nil){
-                currentTurn = nextPlayer!
-            }
-            else{
-                //todo
-                currentTurn = nil
-                NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+        
+        if(!currentTurn!.isAcceptingCard()){
+            currentTurn?.stopGettingCard()
+        }
+        
+        //determine a player to stop getting card.
+        var nextPlayer:Player?
+        for var offset = 1 ; offset < players.count  ; ++offset {
+            let currentIndex = players.indexOf(currentTurn!)
+            let index = (currentIndex! + offset) % players.count
+            if(players[index].isAcceptingCard()){
+                nextPlayer = players[index]
+                break
             }
         }
-        else{
-            var nextPlayer:Player?
-            for var offset = 1 ; offset < players.count  ; ++offset{
-                let currentIndex = players.indexOf(currentTurn!)
-                let index = (currentIndex! + offset) % players.count
-                if(players[index].isCardValueValid() && !players[index].stop){
-                    nextPlayer = players[index]
-                    break
-                }
-            }
-            if(nextPlayer != nil){
-                currentTurn = nextPlayer!
-            }
+        
+        if(nextPlayer != nil){
+            currentTurn = nextPlayer!
         }
+        else if(!currentTurn!.isAcceptingCard()){
+            //todo
+            currentTurn = nil
+            NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+        }
+        
         return assignedCard
     }
-    
+
 
 
 

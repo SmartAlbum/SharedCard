@@ -93,15 +93,15 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-8C-hrC">
-                                <rect key="frame" x="309" y="381" width="70" height="103"/>
+                                <rect key="frame" x="304" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNX-w6-hGA">
-                                <rect key="frame" x="277" y="381" width="70" height="103"/>
+                                <rect key="frame" x="269" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-2u-V6X">
-                                <rect key="frame" x="251" y="381" width="70" height="103"/>
+                                <rect key="frame" x="226" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-TJ-mpO">
@@ -133,7 +133,7 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="h03-EU-gEj">
-                                <rect key="frame" x="210" y="381" width="70" height="103"/>
+                                <rect key="frame" x="182" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
                         </subviews>

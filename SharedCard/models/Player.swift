@@ -62,12 +62,19 @@ class Player:NSObject , NSCoding{
     func isAccepttingCard()->Bool{
         return !stop
     }
+    
+    
     //check card value is less and equal to 21
     func isCardValueValid()->Bool{
         
         let value = getCardsValue()
         return value <= 21 && value >= 0
     }
+    
+    func isAcceptingCard()->Bool{
+        return isCardValueValid() && !stop && cards.count < 4
+    }
+    
     
     func getCardsValue()->Int{
         var containZero = self.cards.contains{ (element) -> Bool in
