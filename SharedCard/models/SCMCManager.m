@@ -68,9 +68,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SCMCDidChangeStateNotification"
                                                         object:nil
                                                       userInfo:dict];
-    if (!ISIPAD && state == MCSessionStateConnected) {
-        _iPadPeerID = peerID;
-    }
+//    if (!ISIPAD && state == MCSessionStateConnected) {
+//        _iPadPeerID = peerID;
+//    }
 }
 
 
@@ -160,6 +160,9 @@
                 }
                 
             }
+            if([message  isEqual: @"ipad"]){
+                _iPadPeerID = peerID;
+            }
         }
     }
     NSLog(@"did reveiveData");
@@ -189,6 +192,9 @@
 
 
 -(void)sendData:(NSData *)data toIpadCenterError:(NSError *)error {
+    while(_iPadPeerID == nil){
+        
+    }
     [_session sendData:data toPeers:@[_iPadPeerID] withMode:MCSessionSendDataReliable error:&error];
 }
 
