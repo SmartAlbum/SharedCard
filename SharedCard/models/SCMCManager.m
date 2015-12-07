@@ -124,6 +124,7 @@
                     for(Player *player in [game getAllPlayers]){
                         //show result based on player.result
                     }
+                    NSLog(@"Game End");
                 }
                 else if(game.currentTurn){
                     NSError *error = nil;

@@ -58,7 +58,7 @@ class Player:NSObject , NSCoding{
     func stopGettingCard(){
         stop = true
         //todo
-        if(self.isCardValueValid()){
+        if(!self.isCardValueValid()){
             self.result = GameResult.LOSE
         }
     }

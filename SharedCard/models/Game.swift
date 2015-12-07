@@ -258,11 +258,23 @@ class Game:NSObject{
     }
     
     func isGameEnd()->Bool{
-        let availabelPlayers = players.filter{ $0.isCardValueValid() && $0.result == nil}
-        if(availabelPlayers.count <= 1){
+        var end:Bool = false
+        if(players.filter{ !$0.stop   }.count == 0){
+            end = true
+        }
+        else{
+            if(players.filter{ $0.result == nil }.count >= 2){
+                end = players.filter{$0.result == nil && !$0.stop}.count == 0
+            }
+            else {
+                end = true
+            }
+        }
+        
+        if(end){
             compareAndGetResult()
         }
-        return availabelPlayers.count <= 1;
+        return end
     }
     
     func compareAndGetResult(){
@@ -298,6 +310,8 @@ class Game:NSObject{
                         else {
                             player.result = GameResult.LOSE
                         }
+                    } else{
+                        player.result = GameResult.WIN
                     }
                 }
                 
