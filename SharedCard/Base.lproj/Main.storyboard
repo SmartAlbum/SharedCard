@@ -286,6 +286,10 @@
                                 <rect key="frame" x="513" y="417" width="63" height="89"/>
                                 <animations/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="8sC-zb-CHh">
+                                <rect key="frame" x="56" y="374" width="63" height="89"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,9 +304,21 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="player1" destination="hL2-OE-Y9a" id="LE2-48-Fho"/>
+                        <outlet property="player1" destination="hL2-OE-Y9a" id="kHq-Jq-rPj"/>
                         <outlet property="player2" destination="Vax-aO-t5q" id="Osq-Mp-6fO"/>
                         <outlet property="player3" destination="4hV-kP-kRV" id="cGr-o6-K7Q"/>
+                        <outletCollection property="playercards1" destination="arf-V0-I3S" id="zb3-Iu-mdG"/>
+                        <outletCollection property="playercards1" destination="MWp-h3-RxZ" id="zWQ-wR-jGo"/>
+                        <outletCollection property="playercards1" destination="LWb-7u-lef" id="C2h-Rl-2gb"/>
+                        <outletCollection property="playercards2" destination="H9p-eA-tSX" id="zE1-Ah-jsw"/>
+                        <outletCollection property="playercards2" destination="yFu-D6-cCf" id="YTA-Sw-Eif"/>
+                        <outletCollection property="playercards2" destination="cVI-fv-FYW" id="ZZi-Bp-R8B"/>
+                        <outletCollection property="playercards2" destination="Bzz-hM-fds" id="ECm-CU-hb5"/>
+                        <outletCollection property="playercards1" destination="8sC-zb-CHh" id="g46-RG-TSc"/>
+                        <outletCollection property="playercards3" destination="RJO-GZ-i5L" id="Szw-qC-0C5"/>
+                        <outletCollection property="playercards3" destination="Rv1-fZ-gWJ" id="yqR-f1-SKn"/>
+                        <outletCollection property="playercards3" destination="Vm4-Wc-1wx" id="3MS-St-602"/>
+                        <outletCollection property="playercards3" destination="Sst-j5-fYb" id="XbN-kd-Vjo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijq-yD-Gsp" userLabel="First Responder" sceneMemberID="firstResponder"/>

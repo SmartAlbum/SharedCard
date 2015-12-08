@@ -33,7 +33,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         _gameManager = [[Game alloc] init];
         _playerCount = 0;
-//        _playerAvatarDic = [NSMutableDictionary dictionary];
+        //        _playerAvatarDic = [NSMutableDictionary dictionary];
     }
     [self addObserver];
     return  self;
@@ -55,6 +55,7 @@
     [[SCMCManager shareInstance] advertiseSelf:NO];
 }
 
+
 - (void)peerDidChangeStateWithNotification:(NSNotification *)notification{
     MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
     NSString *peerDisplayName = peerID.displayName;
@@ -65,27 +66,30 @@
         player.Id = peerID;
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
+            _cPlayer1 = player;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [player1 setHighlighted:YES];
             });
-//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
+            //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
         }
         else if (_playerCount == 1) {
-//            [player2 setImage:[UIImage imageNamed:@"head_2_b"]];
-//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
+            _cPlayer2 = player;
+            //            [player2 setImage:[UIImage imageNamed:@"head_2_b"]];
+            //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [player2 setHighlighted:YES];
             });
         }
         else if (_playerCount == 2) {
-//            [player3 setImage:[UIImage imageNamed:@"head_3_b"]];
-//            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_3_b"] forKey:player.Id];
+            _cPlayer3 = player;
+            //            [player3 setImage:[UIImage imageNamed:@"head_3_b"]];
+            //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_3_b"] forKey:player.Id];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [player3 setHighlighted:YES];
             });
         }
         _playerCount++;
-    
+        
         if(_playerCount ==3){
             CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
             style.imageSize = CGSizeMake(400, 400);
@@ -98,21 +102,21 @@
             
             [_gameManager startGame];
             
-            for (Player *player in [_gameManager getAllPlayers]) {
-                NSError *error = nil;
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-                [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                //            [_gameManager getCard];
-                //            [_gameManager getCard];
-                //            [_gameManager getCard];
-                
+            for(Player *player in [_gameManager getAllPlayers]){
+                [self refreshWithPlayer:player];
             }
+            
+            //tell iphone i am ipad.
+            NSError *error = nil;
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"ipad"];
+            [[SCMCManager shareInstance] sendData:data toPeer:peerID error:error];
+            
         }
     }
     
     if(state == MCSessionStateNotConnected) {
         Player *player = [_gameManager getPlayer:peerID];
-//         [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
+        //         [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops!" message:[NSString stringWithFormat:@"%@ is offline. Game is stop!", player.Name] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * action) {
@@ -120,20 +124,54 @@
                                                                   [_gameManager removeAllPlayer];
                                                               }];
         [alertController addAction:defaultAction];
-        [self presentViewController:alertController animated:YES completion:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewController:alertController animated:YES completion:nil];
+        });
     }
-        /*
- 
-        UIImage *avatar = [_playerAvatarDic valueForKey:player.Id];
-        //拿到原来的头像
-        _playerCount--;
-       
-    }*/
+    /*
+     
+     UIImage *avatar = [_playerAvatarDic valueForKey:player.Id];
+     //拿到原来的头像
+     _playerCount--;
+     
+     }*/
 }
 
-    
 
+- (void)refreshWithPlayer:(Player *)player {
     
+    NSArray *targetCards;
+    if(_cPlayer1.Id == player.Id){
+        _cPlayer1 = player;
+        targetCards = _playercards1;
+    }
+    else if(_cPlayer2.Id == player.Id){
+        _cPlayer2 = player;
+        targetCards = _playercards2;
+    }
+    else if(_cPlayer3.Id == player.Id){
+        _cPlayer3 = player;
+        targetCards = _playercards3;
+    }
+    if(targetCards){
+        for (UIImageView *imageView in targetCards){
+            imageView.image = nil;
+        }
+        for (int i=0; i < player.cards.count;i++) {
+            for (UIImageView *imageView in targetCards) {
+                if(imageView.tag==i){
+                    Card *card = [player.cards objectAtIndex:i];
+                    NSString *imageName = card.imageName;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIImage *image = [UIImage imageNamed: imageName];
+                        [imageView setImage:image];
+                    });
+                }
+            }
+        }
+    }
+}
+
 
 - (void)beginAdvertiseing {
     [[SCMCManager shareInstance] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
@@ -143,7 +181,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self beginAdvertiseing];
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -152,14 +190,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)newGame:(id)sender{
+    [_gameManager startGame];
+    //todo render ui here. e.g: show player cards.
+    for(Player *player in [_gameManager getAllPlayers]){
+        [self refreshWithPlayer:player];
+        NSError *error = nil;
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+        [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+    }
 }
-*/
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

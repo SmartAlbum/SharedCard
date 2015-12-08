@@ -100,12 +100,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/controllers/SCGameBoardViewController.m"
-                  timestampString = "471030243.402316"
+                  timestampString = "471283967.349119"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "1488">
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "1598">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -115,12 +115,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/controllers/SCGameBoardViewController.m"
-                  timestampString = "471030243.402623"
+                  timestampString = "471283967.349814"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "1512">
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "1613">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -131,14 +131,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SharedCard/models/SCMCManager.m"
-            timestampString = "471030235.085766"
+            filePath = "SharedCard/SCGameBoard3ViewController.h"
+            timestampString = "471283508.069187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-session:didReceiveData:fromPeer:"
-            landmarkType = "5">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "playercards2"
+            landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SCGameBoard3ViewController playercards2]"
+                  moduleName = "SharedCard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
+                  timestampString = "471283967.353193"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SCGameBoard3ViewController setPlayercards2:]"
+                  moduleName = "SharedCard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
+                  timestampString = "471283967.353881"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedCard/SCGameBoard3ViewController.h"
+            timestampString = "471283542.576832"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "playercards1"
+            landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SCGameBoard3ViewController playercards1]"
+                  moduleName = "SharedCard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
+                  timestampString = "471283967.355438"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SCGameBoard3ViewController setPlayercards1:]"
+                  moduleName = "SharedCard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
+                  timestampString = "471283967.355752"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
