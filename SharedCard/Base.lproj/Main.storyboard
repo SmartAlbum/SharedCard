@@ -136,6 +136,14 @@
                                 <rect key="frame" x="182" y="381" width="70" height="103"/>
                                 <animations/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkc-zH-ygB">
+                                <rect key="frame" x="447" y="111" width="147" height="97"/>
+                                <animations/>
+                                <state key="normal" title="new game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="vxg-9T-lqD" eventType="touchUpInside" id="KcZ-YN-zWW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

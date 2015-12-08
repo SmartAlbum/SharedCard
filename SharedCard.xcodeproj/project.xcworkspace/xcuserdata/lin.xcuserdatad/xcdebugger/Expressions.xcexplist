@@ -40,10 +40,10 @@
                value = "count">
             </PersistentString>
             <PersistentString
-               value = "self.count">
+               value = "self">
             </PersistentString>
             <PersistentString
-               value = "self">
+               value = "self.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -85,10 +85,10 @@
          contextName = "-[SCGameBoardViewController refreshWithPlayer:]:SCGameBoardViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "player.Id">
+               value = "_player1.Id">
             </PersistentString>
             <PersistentString
-               value = "_player1.Id">
+               value = "player.Id">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -125,6 +125,20 @@
             </PersistentString>
             <PersistentString
                value = "aCoder">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Game.getAllPlayers() -&gt; [Player]:Game.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[SCGameBoardViewController newGame:]:SCGameBoardViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "Game.stopGettingCard(MCPeerID) -&gt; ():Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "players">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

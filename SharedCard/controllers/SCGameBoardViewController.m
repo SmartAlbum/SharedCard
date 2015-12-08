@@ -67,6 +67,7 @@
     if(state == MCSessionStateConnected) {
         Player *player = [[Player alloc] init];
         player.Id = peerID;
+        player.Name = peerDisplayName;
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -149,9 +150,12 @@
         _player2 = player;
         targetCards = playercards2;
     }
-    
-    for (int i=0; i < player.cards.count;i++) {
-        if(targetCards){
+    if(targetCards){
+        for (UIImageView *imageView in targetCards){
+            imageView.image = nil;
+        }
+        for (int i=0; i < player.cards.count;i++) {
+        
             for (UIImageView *imageView in targetCards) {
                 if(imageView.tag==i){
                     Card *card = [player.cards objectAtIndex:i];
@@ -160,9 +164,8 @@
                         UIImage *image = [UIImage imageNamed: imageName];
                         [imageView setImage:image];
                     });
-                    
                 }
-            }
+        }
         }
     }
 }
@@ -192,6 +195,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)newGame:(id)sender{
+    [_gameManager startGame];
+    //todo render ui here. e.g: show player cards.
+    for(Player *player in [_gameManager getAllPlayers]){
+        [self refreshWithPlayer:player];
+        NSError *error = nil;
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+        [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+    }
+}
 /*
  #pragma mark - Navigation
  

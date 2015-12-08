@@ -109,6 +109,9 @@
         NSLog(@"player set hidden Card");
         [hideCard setImage:[UIImage imageNamed: hiddenCard.imageName]];
     }
+    for(UIImageView *playerCard in playercards){
+            playerCard .image = nil;
+    }
     for (int i = 0 ; i< otherCards.count;i++) {
         for(UIImageView *playerCard in playercards){
             if(playerCard.tag == i){

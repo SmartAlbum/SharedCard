@@ -37,6 +37,13 @@ class Player:NSObject , NSCoding{
         super.init()
     }
     
+    func newGame(){
+        self.stop = false
+        self.cards.removeAll()
+        self.hideCard = nil
+        self.result = nil
+    }
+    
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(Id,forKey:"Id")
         aCoder.encodeObject(cards,forKey:"cards")

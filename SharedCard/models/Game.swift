@@ -22,21 +22,23 @@ extension MutableCollectionType where Index == Int {
     mutating func shuffleInPlace() {
         // empty and single-element collections don't shuffle
         if count < 2 { return }
-        
-        for i in 0..<count - 1 {
-            let j = Int(arc4random_uniform(UInt32(count - i))) + i
-            guard i != j else { continue }
-            swap(&self[i], &self[j])
+        if(count==2){
+            swap(&self[0], &self[1]);
+        }
+        else{
+            for i in 0..<count - 1 {
+                let j = Int(arc4random_uniform(UInt32(count - i))) + i
+                guard i != j else { continue }
+                swap(&self[i], &self[j])
+            }
         }
     }
 }
 
 
 
-enum GameResult{
-    case WIN
-    case LOSE
-    case DRAW
+enum GameResult : String{
+    case WIN = "WIN", LOSE = "LOSE", DRAW = "DRAW"
 }
 class Game:NSObject{
     
@@ -76,20 +78,16 @@ class Game:NSObject{
     
     //start Game, assigned cards to all players
     func startGame(){
-//        if(players.count<2){
-//            return
-//        }
         RandomPlayer()
         
         if(cards.count<players.count*5){
             initCards()
         }
         for var player in players{
-            player.stop = false
-            player.cards.removeAll()
+            player.newGame()
             player.hideCard = cards.removeLast()
             player.cards.append(cards.removeLast())
-            player.result = nil
+
         }
         currentTurn = players[0]
     }
@@ -155,24 +153,27 @@ class Game:NSObject{
     
     //stopAccpetingCard
     func stopGettingCard(playerId:MCPeerID){
-        let stopPlayer = players.filter{ $0.Id == playerId }[0]
-        stopPlayer.stopGettingCard()
-        var currentPlayer:Player?
-        for var offset = 1 ; offset < players.count  ; ++offset{
-            let currentIndex = players.indexOf(stopPlayer)
-            let index = (currentIndex! + offset) % players.count
-            if(players[index].isCardValueValid() && !players[index].stop){
-                currentPlayer = players[index]
-                break
+        let targetPlayers = players.filter{ $0.Id == playerId }
+        if(targetPlayers.count>0){
+            let stopPlayer = players.filter{ $0.Id == playerId }[0]
+            stopPlayer.stopGettingCard()
+            var currentPlayer:Player?
+            for var offset = 1 ; offset < players.count  ; ++offset{
+                let currentIndex = players.indexOf(stopPlayer)
+                let index = (currentIndex! + offset) % players.count
+                if(players[index].isCardValueValid() && !players[index].stop){
+                    currentPlayer = players[index]
+                    break
+                }
             }
-        }
-        if(currentPlayer != nil){
-            currentTurn = currentPlayer!
-        }
-        else{
-            //todo
-            currentTurn = nil
-            NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+            if(currentPlayer != nil){
+                currentTurn = currentPlayer!
+            }
+            else{
+                //todo
+                currentTurn = nil
+                NSNotificationCenter.defaultCenter().postNotificationName("notifyGameEnd",object: nil)
+            }
         }
     }
     
@@ -332,8 +333,11 @@ class Game:NSObject{
                 else {
                     player.result = GameResult.LOSE
                 }
-                
             }
+        }
+        
+        for var player in players{
+            NSLog("%@:%@", player.Name,(player.result!.rawValue))
         }
     }
 }
