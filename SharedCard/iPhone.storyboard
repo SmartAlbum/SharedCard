@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zqd-WB-XtR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zqd-WB-XtR">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Starter View Controller-->
@@ -19,11 +19,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-Va-FPl">
                                 <rect key="frame" x="-5" y="-5" width="672" height="380"/>
-                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-Wg-hf9">
                                 <rect key="frame" x="246" y="219" width="76" height="41"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="START">
@@ -36,10 +34,8 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
                                 <rect key="frame" x="224" y="57" width="120" height="111"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H2u-Va-FPl" firstAttribute="leading" secondItem="EKC-zx-E0t" secondAttribute="leading" id="B8E-t2-mAH"/>
@@ -69,11 +65,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="OL4-Zn-fOo">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One more card?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOI-HN-APM">
                                 <rect key="frame" x="382" y="215" width="134" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.16078431372549021" green="0.8666666666666667" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -82,7 +76,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjQ-ya-9vN">
                                 <rect key="frame" x="464" y="249" width="78" height="44"/>
-                                <animations/>
                                 <state key="normal" title="No" image="no_btn.png">
                                     <color key="titleColor" red="1" green="0.05888293980137338" blue="0.24034064444815861" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -92,7 +85,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-ui-xNk">
                                 <rect key="frame" x="371" y="249" width="78" height="44"/>
-                                <animations/>
                                 <state key="normal" title="Yes" image="yes_btn.png">
                                     <color key="titleColor" red="0.19540607033382007" green="1" blue="0.77654622263105666" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -102,27 +94,21 @@
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-UX-OGn" userLabel="Card1">
                                 <rect key="frame" x="54" y="103" width="96" height="140"/>
-                                <animations/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="SjK-1v-ydd" userLabel="Card2">
                                 <rect key="frame" x="103" y="103" width="96" height="140"/>
-                                <animations/>
                             </imageView>
                             <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="4GY-RP-XkC" userLabel="Card3">
                                 <rect key="frame" x="152" y="103" width="96" height="140"/>
-                                <animations/>
                             </imageView>
                             <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-6t-ErV" userLabel="Card4">
                                 <rect key="frame" x="201" y="103" width="96" height="140"/>
-                                <animations/>
                             </imageView>
                             <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-45-rCG" userLabel="Card5">
                                 <rect key="frame" x="250" y="103" width="96" height="140"/>
-                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current points：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-je-eaa">
                                 <rect key="frame" x="382" y="161" width="139" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.070351413823358896" green="0.57510304771585219" blue="0.65421796085858586" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -131,7 +117,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ST-eG-YI9">
                                 <rect key="frame" x="462" y="188" width="46" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.090196078431372548" green="0.50588235294117645" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.979098369644677" green="1" blue="0.99406229253145584" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,10 +125,8 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Duv-ER-4Bo">
                                 <rect key="frame" x="472" y="85" width="67" height="67"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KXM-id-Qnl" firstAttribute="top" secondItem="OL4-Zn-fOo" secondAttribute="bottom" id="4Ou-Cf-aaR"/>
@@ -171,6 +154,50 @@
             </objects>
             <point key="canvasLocation" x="60" y="88"/>
         </scene>
+        <!--My Result Controller-->
+        <scene sceneID="EhO-yv-frF">
+            <objects>
+                <viewController id="6V2-p3-CXg" customClass="SCMyResultController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lcN-tw-c2Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="l4e-VO-Gyd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dkd-7G-Vo1">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg4.png" translatesAutoresizingMaskIntoConstraints="NO" id="hD8-cV-gRy">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-gf-AOB" userLabel="result">
+                                <rect key="frame" x="165" y="129" width="239" height="93"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2t-ZC-3WH">
+                                <rect key="frame" x="229" y="239" width="110" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.22352941179999999" green="1" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hD8-cV-gRy" firstAttribute="leading" secondItem="dkd-7G-Vo1" secondAttribute="leading" id="DP2-3o-6OE"/>
+                            <constraint firstItem="l4e-VO-Gyd" firstAttribute="top" secondItem="hD8-cV-gRy" secondAttribute="bottom" id="IHU-Rd-ATg"/>
+                            <constraint firstItem="hD8-cV-gRy" firstAttribute="top" secondItem="lcN-tw-c2Z" secondAttribute="bottom" id="vA4-F4-Oww"/>
+                            <constraint firstAttribute="trailing" secondItem="hD8-cV-gRy" secondAttribute="trailing" id="yea-lU-GBE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IdJ-tO-ebn"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hae-lb-nrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="919"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ahY-1l-YQk">
             <objects>
@@ -181,7 +208,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BuJ-cq-4rl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -190,13 +216,35 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TmJ-8j-Ovs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-373"/>
+            <point key="canvasLocation" x="60" y="-345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SJt-ct-TnG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iSi-l9-Szq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iNK-Fr-iab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6V2-p3-CXg" kind="relationship" relationship="rootViewController" id="unm-RN-QED"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4i-5p-Qmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="497"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Cardicon2.png" width="152" height="152"/>
+        <image name="Cardicon2.png" width="144" height="144"/>
+        <image name="Draw_Game.png" width="1300" height="500"/>
         <image name="bg1.jpg" width="2560" height="1600"/>
         <image name="bg3.png" width="1536" height="1024"/>
+        <image name="bg4.png" width="2560" height="1600"/>
         <image name="no_btn.png" width="444" height="202"/>
         <image name="transparent.png" width="225" height="315"/>
         <image name="yes_btn.png" width="444" height="202"/>

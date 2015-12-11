@@ -84,8 +84,6 @@
 		CF497B2C1C0BF80100A8B50F /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B2B1C0BF80100A8B50F /* LaunchScreen.png */; };
 		CF497B5D1C0C5DE900A8B50F /* bg2_for2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B4F1C0C5DE900A8B50F /* bg2_for2.png */; };
 		CF497B5E1C0C5DE900A8B50F /* bg2_for3.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B501C0C5DE900A8B50F /* bg2_for3.png */; };
-		CF497B5F1C0C5DE900A8B50F /* Cardicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B511C0C5DE900A8B50F /* Cardicon.png */; };
-		CF497B601C0C5DE900A8B50F /* Cardicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B521C0C5DE900A8B50F /* Cardicon2.png */; };
 		CF497B611C0C5DE900A8B50F /* head_1_b.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B531C0C5DE900A8B50F /* head_1_b.png */; };
 		CF497B621C0C5DE900A8B50F /* head_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B541C0C5DE900A8B50F /* head_1.png */; };
 		CF497B631C0C5DE900A8B50F /* head_3_b.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B551C0C5DE900A8B50F /* head_3_b.png */; };
@@ -96,6 +94,17 @@
 		CF497B681C0C5DE900A8B50F /* head_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B5A1C0C5DE900A8B50F /* head_4.png */; };
 		CF497B691C0C5DE900A8B50F /* head_5_b.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B5B1C0C5DE900A8B50F /* head_5_b.png */; };
 		CF497B6A1C0C5DE900A8B50F /* head_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CF497B5C1C0C5DE900A8B50F /* head_5.png */; };
+		CF4D55EC1C1A9E8700884A58 /* Cardicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EA1C1A9E8700884A58 /* Cardicon.png */; };
+		CF4D55ED1C1A9E8700884A58 /* Cardicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */; };
+		CF4D55EF1C1AA23800884A58 /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EE1C1AA23800884A58 /* bg4.png */; };
+		CF4D55F21C1AA4CE00884A58 /* SCMyResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */; };
+		CF4D55F51C1AA52F00884A58 /* SCCongController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D55F41C1AA52F00884A58 /* SCCongController.m */; };
+		CF4D55FB1C1AAC6800884A58 /* Win_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */; };
+		CF4D55FD1C1AAD7C00884A58 /* Draw_Game.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */; };
+		CF4D56001C1AB00C00884A58 /* U_Lose.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FE1C1AB00C00884A58 /* U_Lose.png */; };
+		CF4D56011C1AB00C00884A58 /* U_Win.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FF1C1AB00C00884A58 /* U_Win.png */; };
+		CF4D56031C1AB25800884A58 /* SCDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D56021C1AB25800884A58 /* SCDrawController.m */; };
+		CF4D560C1C1ABD0800884A58 /* NewGame_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */; };
 		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
 		CFBF93D31C0D8315001BBC1E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93D21C0D8315001BBC1E /* bg2.png */; };
 		CFBF93D61C0D9898001BBC1E /* SCGameBoard3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBF93D51C0D9898001BBC1E /* SCGameBoard3ViewController.m */; };
@@ -218,8 +227,6 @@
 		CF497B2B1C0BF80100A8B50F /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		CF497B4F1C0C5DE900A8B50F /* bg2_for2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2_for2.png; sourceTree = "<group>"; };
 		CF497B501C0C5DE900A8B50F /* bg2_for3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2_for3.png; sourceTree = "<group>"; };
-		CF497B511C0C5DE900A8B50F /* Cardicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cardicon.png; sourceTree = "<group>"; };
-		CF497B521C0C5DE900A8B50F /* Cardicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cardicon2.png; sourceTree = "<group>"; };
 		CF497B531C0C5DE900A8B50F /* head_1_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_1_b.png; sourceTree = "<group>"; };
 		CF497B541C0C5DE900A8B50F /* head_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_1.png; sourceTree = "<group>"; };
 		CF497B551C0C5DE900A8B50F /* head_3_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_3_b.png; sourceTree = "<group>"; };
@@ -230,6 +237,20 @@
 		CF497B5A1C0C5DE900A8B50F /* head_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_4.png; sourceTree = "<group>"; };
 		CF497B5B1C0C5DE900A8B50F /* head_5_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_5_b.png; sourceTree = "<group>"; };
 		CF497B5C1C0C5DE900A8B50F /* head_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_5.png; sourceTree = "<group>"; };
+		CF4D55EA1C1A9E8700884A58 /* Cardicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cardicon.png; sourceTree = "<group>"; };
+		CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cardicon2.png; sourceTree = "<group>"; };
+		CF4D55EE1C1AA23800884A58 /* bg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg4.png; sourceTree = "<group>"; };
+		CF4D55F01C1AA4AD00884A58 /* SCMyResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMyResultController.h; sourceTree = "<group>"; };
+		CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMyResultController.m; sourceTree = "<group>"; };
+		CF4D55F31C1AA51700884A58 /* SCCongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCongController.h; sourceTree = "<group>"; };
+		CF4D55F41C1AA52F00884A58 /* SCCongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCongController.m; sourceTree = "<group>"; };
+		CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Win_iPad.png; sourceTree = "<group>"; };
+		CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Draw_Game.png; sourceTree = "<group>"; };
+		CF4D55FE1C1AB00C00884A58 /* U_Lose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = U_Lose.png; sourceTree = "<group>"; };
+		CF4D55FF1C1AB00C00884A58 /* U_Win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = U_Win.png; sourceTree = "<group>"; };
+		CF4D56021C1AB25800884A58 /* SCDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDrawController.m; sourceTree = "<group>"; };
+		CF4D56041C1AB26A00884A58 /* SCDrawController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDrawController.h; sourceTree = "<group>"; };
+		CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGame_btn.png; sourceTree = "<group>"; };
 		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		CFBF93D21C0D8315001BBC1E /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		CFBF93D41C0D9898001BBC1E /* SCGameBoard3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCGameBoard3ViewController.h; path = ../SCGameBoard3ViewController.h; sourceTree = "<group>"; };
@@ -331,34 +352,40 @@
 		277005611C04DE61003815DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF3E91341C10075900872115 /* no_btn.png */,
+				CF497B201C0BF61900A8B50F /* bg1.jpg */,
+				CFBF93D21C0D8315001BBC1E /* bg2.png */,
+				CF497B4F1C0C5DE900A8B50F /* bg2_for2.png */,
+				CF497B501C0C5DE900A8B50F /* bg2_for3.png */,
+				CF497B1F1C0BF61900A8B50F /* bg3.png */,
+				CF4D55EE1C1AA23800884A58 /* bg4.png */,
+				CF497B2B1C0BF80100A8B50F /* LaunchScreen.png */,
+				CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */,
+				CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */,
+				CF4D55FF1C1AB00C00884A58 /* U_Win.png */,
+				CF4D55FE1C1AB00C00884A58 /* U_Lose.png */,
 				CF3E91351C10075900872115 /* start-game.png */,
+				CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */,
 				CF3E91361C10075900872115 /* yes_btn.png */,
+				CF3E91341C10075900872115 /* no_btn.png */,
+				CF4D55EA1C1A9E8700884A58 /* Cardicon.png */,
+				CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */,
 				CF3E91201C0E907400872115 /* head_1_b_b.png */,
 				CF3E91211C0E907400872115 /* head_2_b_b.png */,
 				CF3E91221C0E907400872115 /* head_3_b_b.png */,
 				CF3E91231C0E907400872115 /* head_4_b_b.png */,
 				CF3E91241C0E907400872115 /* head_5_b_b.png */,
+				CF497B531C0C5DE900A8B50F /* head_1_b.png */,
+				CF497B571C0C5DE900A8B50F /* head_2_b.png */,
+				CF497B551C0C5DE900A8B50F /* head_3_b.png */,
+				CF497B591C0C5DE900A8B50F /* head_4_b.png */,
+				CF497B5B1C0C5DE900A8B50F /* head_5_b.png */,
+				CF497B541C0C5DE900A8B50F /* head_1.png */,
+				CF497B581C0C5DE900A8B50F /* head_2.png */,
+				CF497B561C0C5DE900A8B50F /* head_3.png */,
+				CF497B5A1C0C5DE900A8B50F /* head_4.png */,
+				CF497B5C1C0C5DE900A8B50F /* head_5.png */,
 				CFBF93E71C0DC55F001BBC1E /* Back.png */,
 				CFBF93E51C0DAC86001BBC1E /* transparent.png */,
-				CFBF93D21C0D8315001BBC1E /* bg2.png */,
-				CF497B4F1C0C5DE900A8B50F /* bg2_for2.png */,
-				CF497B501C0C5DE900A8B50F /* bg2_for3.png */,
-				CF497B511C0C5DE900A8B50F /* Cardicon.png */,
-				CF497B521C0C5DE900A8B50F /* Cardicon2.png */,
-				CF497B531C0C5DE900A8B50F /* head_1_b.png */,
-				CF497B541C0C5DE900A8B50F /* head_1.png */,
-				CF497B551C0C5DE900A8B50F /* head_3_b.png */,
-				CF497B561C0C5DE900A8B50F /* head_3.png */,
-				CF497B571C0C5DE900A8B50F /* head_2_b.png */,
-				CF497B581C0C5DE900A8B50F /* head_2.png */,
-				CF497B591C0C5DE900A8B50F /* head_4_b.png */,
-				CF497B5A1C0C5DE900A8B50F /* head_4.png */,
-				CF497B5B1C0C5DE900A8B50F /* head_5_b.png */,
-				CF497B5C1C0C5DE900A8B50F /* head_5.png */,
-				CF497B2B1C0BF80100A8B50F /* LaunchScreen.png */,
-				CF497B1F1C0BF61900A8B50F /* bg3.png */,
-				CF497B201C0BF61900A8B50F /* bg1.jpg */,
 				CF497AB31C0BF5DC00A8B50F /* 1_1.png */,
 				CF497AB41C0BF5DC00A8B50F /* 1_2.png */,
 				CF497AB51C0BF5DC00A8B50F /* 1_3.png */,
@@ -447,6 +474,12 @@
 				275071001C0BFBFB0051810B /* SCStarterViewController.m */,
 				275071021C0BFC120051810B /* SCPlayerBoardViewController.h */,
 				275071031C0BFC120051810B /* SCPlayerBoardViewController.m */,
+				CF4D55F01C1AA4AD00884A58 /* SCMyResultController.h */,
+				CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */,
+				CF4D55F31C1AA51700884A58 /* SCCongController.h */,
+				CF4D55F41C1AA52F00884A58 /* SCCongController.m */,
+				CF4D56021C1AB25800884A58 /* SCDrawController.m */,
+				CF4D56041C1AB26A00884A58 /* SCDrawController.h */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -581,12 +614,12 @@
 			files = (
 				CFBF93E61C0DAC86001BBC1E /* transparent.png in Resources */,
 				CF497B0F1C0BF5DC00A8B50F /* 3_Q.png in Resources */,
-				CF497B601C0C5DE900A8B50F /* Cardicon2.png in Resources */,
 				CF3E91371C10075900872115 /* no_btn.png in Resources */,
 				CF497B621C0C5DE900A8B50F /* head_1.png in Resources */,
 				CF497B661C0C5DE900A8B50F /* head_2.png in Resources */,
 				CF497B021C0BF5DC00A8B50F /* 2_Q.png in Resources */,
 				CF497B001C0BF5DC00A8B50F /* 2_J.png in Resources */,
+				CF4D560C1C1ABD0800884A58 /* NewGame_btn.png in Resources */,
 				CF497B0E1C0BF5DC00A8B50F /* 3_K.png in Resources */,
 				CFBF93D31C0D8315001BBC1E /* bg2.png in Resources */,
 				CF497B151C0BF5DC00A8B50F /* 4_6.png in Resources */,
@@ -616,13 +649,14 @@
 				CFBF93DE1C0DA7CD001BBC1E /* 2_6.png in Resources */,
 				CF497B111C0BF5DC00A8B50F /* 4_2.png in Resources */,
 				CF497AF51C0BF5DC00A8B50F /* 1_Q.png in Resources */,
+				CF4D56001C1AB00C00884A58 /* U_Lose.png in Resources */,
 				CF497B011C0BF5DC00A8B50F /* 2_K.png in Resources */,
 				CF497B251C0BF61900A8B50F /* bg3.png in Resources */,
 				CFBF93DF1C0DA7CD001BBC1E /* 2_7.png in Resources */,
 				CFBF93E11C0DA7CD001BBC1E /* 2_9.png in Resources */,
 				CF3E91281C0E907400872115 /* head_4_b_b.png in Resources */,
 				CF497AF91C0BF5DC00A8B50F /* 2_4.png in Resources */,
-				CF497B5F1C0C5DE900A8B50F /* Cardicon.png in Resources */,
+				CF4D55EC1C1A9E8700884A58 /* Cardicon.png in Resources */,
 				CF3E91251C0E907400872115 /* head_1_b_b.png in Resources */,
 				CFBF93DD1C0DA7CD001BBC1E /* 2_5.png in Resources */,
 				CF3E91291C0E907400872115 /* head_5_b_b.png in Resources */,
@@ -634,6 +668,7 @@
 				CF497B651C0C5DE900A8B50F /* head_2_b.png in Resources */,
 				CF497AE91C0BF5DC00A8B50F /* 1_1.png in Resources */,
 				CF497AF01C0BF5DC00A8B50F /* 1_8.png in Resources */,
+				CF4D56011C1AB00C00884A58 /* U_Win.png in Resources */,
 				2770056E1C04DE61003815DD /* Assets.xcassets in Resources */,
 				CF497B101C0BF5DC00A8B50F /* 4_1.png in Resources */,
 				CF497B121C0BF5DC00A8B50F /* 4_3.png in Resources */,
@@ -644,7 +679,9 @@
 				2770056C1C04DE61003815DD /* Main.storyboard in Resources */,
 				CFBF93E01C0DA7CD001BBC1E /* 2_8.png in Resources */,
 				CF3E91271C0E907400872115 /* head_3_b_b.png in Resources */,
+				CF4D55FB1C1AAC6800884A58 /* Win_iPad.png in Resources */,
 				CF497B6A1C0C5DE900A8B50F /* head_5.png in Resources */,
+				CF4D55ED1C1A9E8700884A58 /* Cardicon2.png in Resources */,
 				CF497B5E1C0C5DE900A8B50F /* bg2_for3.png in Resources */,
 				CF497AEC1C0BF5DC00A8B50F /* 1_4.png in Resources */,
 				CF497B061C0BF5DC00A8B50F /* 3_4.png in Resources */,
@@ -660,6 +697,8 @@
 				CF497B041C0BF5DC00A8B50F /* 3_2.png in Resources */,
 				CF497B161C0BF5DC00A8B50F /* 4_7.png in Resources */,
 				CF497B181C0BF5DC00A8B50F /* 4_9.png in Resources */,
+				CF4D55FD1C1AAD7C00884A58 /* Draw_Game.png in Resources */,
+				CF4D55EF1C1AA23800884A58 /* bg4.png in Resources */,
 				CF497B2C1C0BF80100A8B50F /* LaunchScreen.png in Resources */,
 				CF3E91391C10075900872115 /* yes_btn.png in Resources */,
 				CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */,
@@ -694,10 +733,13 @@
 				27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */,
 				3E451F661C069C3C0080B546 /* Card.swift in Sources */,
 				275070FE1C0BFBDA0051810B /* SCWelcomeViewController.m in Sources */,
+				CF4D55F21C1AA4CE00884A58 /* SCMyResultController.m in Sources */,
 				27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
+				CF4D55F51C1AA52F00884A58 /* SCCongController.m in Sources */,
 				3E451F6A1C069C560080B546 /* Player.swift in Sources */,
 				275071011C0BFBFB0051810B /* SCStarterViewController.m in Sources */,
+				CF4D56031C1AB25800884A58 /* SCDrawController.m in Sources */,
 				3E451F681C069C450080B546 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
