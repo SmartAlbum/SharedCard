@@ -105,6 +105,10 @@
 		CF4D56011C1AB00C00884A58 /* U_Win.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FF1C1AB00C00884A58 /* U_Win.png */; };
 		CF4D56031C1AB25800884A58 /* SCDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D56021C1AB25800884A58 /* SCDrawController.m */; };
 		CF4D560C1C1ABD0800884A58 /* NewGame_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */; };
+		CF4D56111C1AC2A200884A58 /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560D1C1AC2A200884A58 /* bgMusic.mp3 */; };
+		CF4D56121C1AC2A200884A58 /* gameStart:Over.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560E1C1AC2A200884A58 /* gameStart:Over.wav */; };
+		CF4D56131C1AC2A200884A58 /* btnSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560F1C1AC2A200884A58 /* btnSound.wav */; };
+		CF4D56141C1AC2A200884A58 /* getCard.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF4D56101C1AC2A200884A58 /* getCard.wav */; };
 		CF9A46AC1C06AF0000321F09 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */; };
 		CFBF93D31C0D8315001BBC1E /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93D21C0D8315001BBC1E /* bg2.png */; };
 		CFBF93D61C0D9898001BBC1E /* SCGameBoard3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBF93D51C0D9898001BBC1E /* SCGameBoard3ViewController.m */; };
@@ -251,6 +255,10 @@
 		CF4D56021C1AB25800884A58 /* SCDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDrawController.m; sourceTree = "<group>"; };
 		CF4D56041C1AB26A00884A58 /* SCDrawController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDrawController.h; sourceTree = "<group>"; };
 		CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGame_btn.png; sourceTree = "<group>"; };
+		CF4D560D1C1AC2A200884A58 /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
+		CF4D560E1C1AC2A200884A58 /* gameStart:Over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "gameStart:Over.wav"; sourceTree = "<group>"; };
+		CF4D560F1C1AC2A200884A58 /* btnSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btnSound.wav; sourceTree = "<group>"; };
+		CF4D56101C1AC2A200884A58 /* getCard.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = getCard.wav; sourceTree = "<group>"; };
 		CF9A46AB1C06AF0000321F09 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		CFBF93D21C0D8315001BBC1E /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		CFBF93D41C0D9898001BBC1E /* SCGameBoard3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCGameBoard3ViewController.h; path = ../SCGameBoard3ViewController.h; sourceTree = "<group>"; };
@@ -352,6 +360,10 @@
 		277005611C04DE61003815DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF4D560D1C1AC2A200884A58 /* bgMusic.mp3 */,
+				CF4D560E1C1AC2A200884A58 /* gameStart:Over.wav */,
+				CF4D560F1C1AC2A200884A58 /* btnSound.wav */,
+				CF4D56101C1AC2A200884A58 /* getCard.wav */,
 				CF497B201C0BF61900A8B50F /* bg1.jpg */,
 				CFBF93D21C0D8315001BBC1E /* bg2.png */,
 				CF497B4F1C0C5DE900A8B50F /* bg2_for2.png */,
@@ -612,6 +624,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4D56121C1AC2A200884A58 /* gameStart:Over.wav in Resources */,
 				CFBF93E61C0DAC86001BBC1E /* transparent.png in Resources */,
 				CF497B0F1C0BF5DC00A8B50F /* 3_Q.png in Resources */,
 				CF3E91371C10075900872115 /* no_btn.png in Resources */,
@@ -660,6 +673,7 @@
 				CF3E91251C0E907400872115 /* head_1_b_b.png in Resources */,
 				CFBF93DD1C0DA7CD001BBC1E /* 2_5.png in Resources */,
 				CF3E91291C0E907400872115 /* head_5_b_b.png in Resources */,
+				CF4D56141C1AC2A200884A58 /* getCard.wav in Resources */,
 				CF497B081C0BF5DC00A8B50F /* 3_6.png in Resources */,
 				CF497AF31C0BF5DC00A8B50F /* 1_J.png in Resources */,
 				CF3E91381C10075900872115 /* start-game.png in Resources */,
@@ -677,6 +691,8 @@
 				CF497B051C0BF5DC00A8B50F /* 3_3.png in Resources */,
 				CF497AEE1C0BF5DC00A8B50F /* 1_6.png in Resources */,
 				2770056C1C04DE61003815DD /* Main.storyboard in Resources */,
+				CF4D56131C1AC2A200884A58 /* btnSound.wav in Resources */,
+				CF4D56111C1AC2A200884A58 /* bgMusic.mp3 in Resources */,
 				CFBF93E01C0DA7CD001BBC1E /* 2_8.png in Resources */,
 				CF3E91271C0E907400872115 /* head_3_b_b.png in Resources */,
 				CF4D55FB1C1AAC6800884A58 /* Win_iPad.png in Resources */,
