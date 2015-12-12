@@ -50,7 +50,7 @@
     MCSessionState state = [[[notification userInfo] objectForKey:@"state"] intValue];
     NSLog(@"PEER STATUE CHANGE(From SCPlayerBoard):%@ is %ld\n", peerDisplayName, (long)state);
     //TODO For Tina(这个时候有人加进来或者出去了)
-
+    
 }
 
 - (void)viewDidLoad {
@@ -60,6 +60,11 @@
     // Do any additional setup after loading the view.
     yes_button.enabled = FALSE;
     no_button.enabled = FALSE;
+    [yes_button setBackgroundImage:[UIImage imageNamed:@"yes_btn_dis"] forState:UIControlStateDisabled];
+    [no_button setBackgroundImage:[UIImage imageNamed:@"no_btn_dis"] forState:UIControlStateDisabled];
+    [yes_button setBackgroundImage:[UIImage imageNamed:@"yes_btn"] forState:UIControlStateNormal];
+    [no_button setBackgroundImage:[UIImage imageNamed:@"no_btn"] forState:UIControlStateNormal];
+    
     NSError *error;
     NSString *readyMsg = @"ready";
     NSData *data = [readyMsg dataUsingEncoding:NSUTF8StringEncoding];
@@ -85,14 +90,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)YES_btn:(id)sender {
     if (_playerSelf) {
@@ -100,8 +105,11 @@
         NSString *boolStr = [NSString stringWithFormat:@"%d", YES];
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
-        yes_button.enabled = false;
-        no_button.enabled = false;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            yes_button.enabled = false;
+            no_button.enabled = false;
+        });
     }
     [_getCardPlayer prepareToPlay];
     [_getCardPlayer play]; //播放
@@ -114,8 +122,10 @@
         NSData *data = [boolStr dataUsingEncoding:NSUTF8StringEncoding];
         [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
         //在不拿牌的时候都disable
-        yes_button.enabled = false;
-        no_button.enabled = false;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            yes_button.enabled = false;
+            no_button.enabled = false;
+        });
     }
 }
 
@@ -135,7 +145,7 @@
         [_gameStartPlayer play];
     }
     _playerSelf = refreshPlayer;
-   //绘制界面
+    //绘制界面
     Card *hiddenCard = refreshPlayer.hideCard;
     NSArray *otherCards = refreshPlayer.cards;
     if (hiddenCard) {
@@ -143,7 +153,7 @@
         [hideCard setImage:[UIImage imageNamed: hiddenCard.imageName]];
     }
     for(UIImageView *playerCard in playercards){
-            playerCard.image = nil;
+        playerCard.image = nil;
     }
     for (int i = 0 ; i< otherCards.count;i++) {
         for(UIImageView *playerCard in playercards){
@@ -157,10 +167,11 @@
 }
 
 - (void)enableUserChoice{
-    yes_button.enabled = true;
-    yes_button.highlighted = YES;
-    no_button.enabled = true;
-    no_button.highlighted = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        yes_button.enabled = true;
+        no_button.enabled = true;
+    });
     NSLog(@"player enable button");
 }
 
