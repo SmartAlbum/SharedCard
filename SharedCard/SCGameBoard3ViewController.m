@@ -10,14 +10,18 @@
 #import "SCMCManager.h"
 #import "SharedCardProject-Swift.h"
 #import "UIView+Toast.h"
+#import <AVFoundation/AVFoundation.h>
+
+
 @import MultipeerConnectivity;
 
 
 
-@interface SCGameBoard3ViewController ()
+@interface SCGameBoard3ViewController ()<SCMCManagerDelegate, AVAudioPlayerDelegate>
 @property(nonatomic, strong)Game *gameManager;
 //@property(nonatomic, strong)NSMutableDictionary *playerAvatarDic;
 @property(assign) NSInteger playerCount;
+@property(nonatomic, strong)AVAudioPlayer *player;
 
 
 
@@ -118,6 +122,12 @@
         Player *player = [_gameManager getPlayer:peerID];
         //         [_gameManager removePlayer:[NSString stringWithFormat:@"%@", [[UIDevice currentDevice] identifierForVendor]]];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops!" message:[NSString stringWithFormat:@"%@ is offline. Game is stop!", player.Name] preferredStyle:UIAlertControllerStyleAlert];
+        NSError *error = nil;
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
+        for (Player *player in [[Game Instance] getAllPlayers]) {
+            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+        }
+
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * action) {
                                                                   [self dismissViewControllerAnimated:YES completion:nil];
@@ -181,7 +191,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self beginAdvertiseing];
-    
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"bgMusic" ofType:@"mp3"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    _player = player;
+    // 创建播放器
+    [_player prepareToPlay];
+    _player.delegate = self;
+    [_player setVolume:1];
+    _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
+    [_player play]; //播放
+
     // Do any additional setup after loading the view.
 }
 
@@ -192,14 +212,19 @@
 
 - (IBAction)newGame:(id)sender{
     [_gameManager startGame];
+    NSError *error = nil;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
     //todo render ui here. e.g: show player cards.
-    for(Player *player in [_gameManager getAllPlayers]){
-        [self refreshWithPlayer:player];
-        NSError *error = nil;
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+    for (Player *player in [[Game Instance] getAllPlayers]) {
+        player.ready = false;
         [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
     }
 }
+
+-(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
+
+}
+
 
 /*
  #pragma mark - Navigation
