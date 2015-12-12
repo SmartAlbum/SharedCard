@@ -162,6 +162,7 @@
         _player2 = player;
         targetCards = playercards2;
     }
+
     if(targetCards){
         for (UIImageView *imageView in targetCards){
             imageView.image = nil;
@@ -223,6 +224,8 @@
     [_gameManager startGame];
     NSError *error = nil;
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
+    [hideCard1 setImage:[UIImage imageNamed:@"Back"]];
+    [hideCard2 setImage:[UIImage imageNamed:@"Back"]];
     for (Player *player in [[Game Instance] getAllPlayers]) {
         player.ready = false;
         [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
