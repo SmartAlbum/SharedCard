@@ -210,9 +210,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1O-wf-G7t">
                                 <rect key="frame" x="190" y="316" width="63" height="89"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="arf-V0-I3S">
-                                <rect key="frame" x="221" y="316" width="65" height="89"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bzz-hM-fds">
                                 <rect key="frame" x="416" y="387" width="63" height="89"/>
                             </imageView>
@@ -253,6 +250,9 @@
                                     <action selector="newGame:" destination="vxg-9T-lqD" eventType="touchUpInside" id="v87-dL-bCb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="arf-V0-I3S">
+                                <rect key="frame" x="220" y="316" width="65" height="89"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -262,6 +262,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="hideCard1" destination="arf-V0-I3S" id="0bd-e4-OKJ"/>
+                        <outlet property="hideCard2" destination="H9p-eA-tSX" id="CUm-cv-Lzl"/>
+                        <outlet property="hideCard3" destination="RJO-GZ-i5L" id="yth-Ay-Ut1"/>
                         <outlet property="player1" destination="hL2-OE-Y9a" id="kHq-Jq-rPj"/>
                         <outlet property="player2" destination="Vax-aO-t5q" id="Osq-Mp-6fO"/>
                         <outlet property="player3" destination="4hV-kP-kRV" id="cGr-o6-K7Q"/>
