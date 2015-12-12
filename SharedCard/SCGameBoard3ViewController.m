@@ -109,11 +109,6 @@
             for(Player *player in [_gameManager getAllPlayers]){
                 [self refreshWithPlayer:player];
             }
-            
-            //tell iphone i am ipad.
-            NSError *error = nil;
-            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"ipad"];
-            [[SCMCManager shareInstance] sendData:data toPeer:peerID error:error];
         }
         //tell iphone i am ipad.
         NSError *error = nil;
