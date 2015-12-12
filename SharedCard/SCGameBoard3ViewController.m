@@ -134,7 +134,7 @@
         for (Player *player in [[Game Instance] getAllPlayers]) {
             [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
         }
-
+        
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * action) {
                                                                   [self dismissViewControllerAnimated:YES completion:nil];
@@ -172,7 +172,9 @@
     }
     if(targetCards){
         for (UIImageView *imageView in targetCards){
-            imageView.image = nil;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                imageView.image = nil;
+            });
         }
         for (int i=0; i < player.cards.count;i++) {
             for (UIImageView *imageView in targetCards) {
@@ -209,7 +211,7 @@
     [_player setVolume:1];
     _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
     [_player play]; //播放
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -240,7 +242,6 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [hideCard1 setImage:[UIImage imageNamed:cPlayer1.hideCard.imageName]];
         });
-        
     }
     if(cPlayer2 !=NULL){
         cPlayer2 = [_gameManager getPlayer:cPlayer2.Id];
@@ -251,7 +252,7 @@
     if(cPlayer3 !=NULL){
         cPlayer3 = [_gameManager getPlayer:cPlayer3.Id];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [hideCard2 setImage:[UIImage imageNamed:cPlayer3.hideCard.imageName]];
+            [hideCard3 setImage:[UIImage imageNamed:cPlayer3.hideCard.imageName]];
         });
     }
 }
