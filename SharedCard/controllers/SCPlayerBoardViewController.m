@@ -136,6 +136,7 @@
         NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
         AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         _gameStartPlayer = audioPlayer;
+        [player setImage:[UIImage imageNamed:refreshPlayer.avatar]];
         // 创建播放器
         _gameStartPlayer.delegate = self;
         [_gameStartPlayer setVolume:1];
