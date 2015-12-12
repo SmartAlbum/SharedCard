@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharedCard/controllers/SCPlayerBoardViewController.m"
-            timestampString = "471583199.406531"
+            timestampString = "471602352.908742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,7 +68,7 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471586015.377239"
+                  timestampString = "471603421.72059"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
@@ -83,7 +83,7 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471586015.377514"
+                  timestampString = "471603421.720962"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -116,7 +116,7 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471586015.379214"
+                  timestampString = "471603421.742394"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -131,7 +131,7 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471586015.379622"
+                  timestampString = "471603421.742674"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -139,6 +139,54 @@
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedCard/models/SCMCManager.m"
+            timestampString = "471602626.149244"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "-session:didReceiveData:fromPeer:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedCard/controllers/SCPlayerBoardViewController.m"
+            timestampString = "471602641.156808"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-refreshWithPlayer:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SharedCard/models/SCMCManager.m"
+            timestampString = "471603310.562526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-session:didReceiveData:fromPeer:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

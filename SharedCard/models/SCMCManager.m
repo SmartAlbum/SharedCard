@@ -87,7 +87,7 @@
                     [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
                     
                     if (_delegate && [_delegate respondsToSelector:@selector(refreshWithPlayer:)]) {
-                        [_delegate refreshWithPlayer:_player];
+                        [_delegate refreshWithPlayer:player];
                     }
                 }
                 

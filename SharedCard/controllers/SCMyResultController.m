@@ -43,6 +43,10 @@
 - (void)endGameWithException {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self dismissViewControllerAnimated:YES completion:^{
+            NSError *error;
+            NSString *readyMsg = @"ready";
+            NSData *data = [readyMsg dataUsingEncoding:NSUTF8StringEncoding];
+            [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
         }];
     });
 }

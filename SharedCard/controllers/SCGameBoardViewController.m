@@ -218,19 +218,20 @@
 
 
 - (IBAction)newGame:(id)sender{
+    [_gameManager startGame];
     NSError *error = nil;
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
     for (Player *player in [[Game Instance] getAllPlayers]) {
+        player.ready = false;
         [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
     }
-    [_gameManager startGame];
-    //todo render ui here. e.g: show player cards.
-    for(Player *player in [_gameManager getAllPlayers]){
-        [self refreshWithPlayer:player];
-        NSError *error = nil;
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
-        [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-    }
+//    //todo render ui here. e.g: show player cards.
+//    for(Player *player in [_gameManager getAllPlayers]){
+//        [self refreshWithPlayer:player];
+//        NSError *error = nil;
+//        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:player];
+//        [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+//    }
 }
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {

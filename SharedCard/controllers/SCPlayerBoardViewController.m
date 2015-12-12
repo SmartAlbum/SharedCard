@@ -74,6 +74,11 @@
     _getCardPlayer.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [SCMCManager shareInstance].delegate = self;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
