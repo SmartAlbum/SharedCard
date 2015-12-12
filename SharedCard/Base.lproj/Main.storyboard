@@ -143,8 +143,10 @@
                         <outletCollection property="playercards1" destination="eAV-2u-V6X" id="wVg-H6-Q8x"/>
                         <outletCollection property="playercards1" destination="h03-EU-gEj" id="DFK-hb-LuG"/>
                         <outletCollection property="playercards1" destination="LNX-w6-hGA" id="7Ar-Do-NhY"/>
-                        <outletCollection property="playercards2" destination="155-rW-c9U" id="WD0-i2-mIn"/>
-                        <outletCollection property="playercards1" destination="leX-aE-2ND" id="1E7-Nk-gUj"/>
+                        <outletCollection property="playercards2" destination="leX-aE-2ND" id="9ah-Nw-0PL"/>
+                        <outletCollection property="playercards2" destination="UTt-hO-T5k" id="9GR-Cb-7f1"/>
+                        <outletCollection property="playercards2" destination="Z1d-Xt-fIV" id="PCF-52-0Cw"/>
+                        <outletCollection property="playercards2" destination="155-rW-c9U" id="oOj-0J-VIZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyy-ex-FLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
