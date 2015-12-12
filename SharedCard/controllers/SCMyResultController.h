@@ -11,5 +11,4 @@
 @interface SCMyResultController : UIViewController
 @property(nonatomic, strong)NSString *result;
 @property (weak, nonatomic) IBOutlet UIImageView *resultImageView;
-- (IBAction)playAgain:(id)sender;
 @end
