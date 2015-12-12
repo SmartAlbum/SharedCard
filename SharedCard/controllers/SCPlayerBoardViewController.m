@@ -9,6 +9,7 @@
 #import "SCPlayerBoardViewController.h"
 #import "SCMCManager.h"
 #import <AVFoundation/AVFoundation.h>
+#import "SCMyResultController.h"
 @import MultipeerConnectivity;
 
 @interface SCPlayerBoardViewController ()<SCMCManagerDelegate, AVAudioPlayerDelegate>
@@ -154,6 +155,22 @@
     yes_button.enabled = true;
     no_button.enabled = true;
     NSLog(@"player enable button");
+}
+
+- (void)endGameWithException {
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
+- (void)endGameWithResult:(NSString *)result {
+    NSLog(@"endGameEndGame");
+    NSLog(@"--------getMessagePlayer:%@, result:%@\n\n", _playerSelf.Name, result);
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:nil];
+    SCMyResultController *resultController = [storyboard instantiateViewControllerWithIdentifier:@"resultController"];
+    resultController.result = result;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController pushViewController:resultController animated:YES];
+    });
 }
 
 @end

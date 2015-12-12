@@ -56,6 +56,9 @@
                             <constraint firstItem="sB1-FH-zCY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d8b-vc-ZnD"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
@@ -75,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2_for2.png" translatesAutoresizingMaskIntoConstraints="NO" id="84v-x1-Di3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg2_for2.png" translatesAutoresizingMaskIntoConstraints="NO" id="84v-x1-Di3">
                                 <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b_b.png" highlightedImage="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
@@ -136,6 +139,9 @@
                     <navigationItem key="navigationItem" id="9mq-QD-Y7t">
                         <barButtonItem key="backBarButtonItem" title="back" id="rZv-R4-joT"/>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -158,8 +164,11 @@
         <!--Navigation Controller-->
         <scene sceneID="HkJ-ko-mOo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QBR-xF-1E7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="QBR-xF-1E7" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SQQ-Bf-e2Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -310,6 +319,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="1uU-fK-boi">
                                 <rect key="frame" x="641" y="429" width="111" height="111"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61K-Yc-g0L">
+                                <rect key="frame" x="372" y="668" width="280" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.22352941179999999" green="1" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="GO3-Pf-wCb" eventType="touchUpInside" id="2t8-IT-HnB"/>
+                                    <action selector="playAgain:" destination="eP7-DE-vxB" eventType="touchUpInside" id="Fpn-xJ-gi6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -320,6 +342,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XWO-UA-mjJ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -351,10 +376,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="gaq-fk-gPi" userLabel="Win">
                                 <rect key="frame" x="233" y="373" width="558" height="226"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBp-BT-j3e">
+                                <rect key="frame" x="372" y="657" width="280" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.22352941179999999" green="1" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="eP7-DE-vxB" eventType="touchUpInside" id="alt-uN-6dN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="y4K-oT-xFk"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>

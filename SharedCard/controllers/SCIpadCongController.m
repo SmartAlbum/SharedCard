@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (_winnerIcon) {
+        [_winIcon setImage:_winnerIcon];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -25,10 +28,8 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)changeWinnerIconImage:(UIImage *)image {
-    if (image) {
-        [_winIcon setImage:image];
-    }
+- (IBAction)playAgain:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

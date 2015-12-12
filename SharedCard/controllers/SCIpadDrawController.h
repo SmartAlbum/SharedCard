@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SCIpadDrawController : UIViewController
+- (IBAction)playAgain:(id)sender;
 
 @end

@@ -68,9 +68,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"SCMCDidChangeStateNotification"
                                                         object:nil
                                                       userInfo:dict];
-//    if (!ISIPAD && state == MCSessionStateConnected) {
-//        _iPadPeerID = peerID;
-//    }
+    //    if (!ISIPAD && state == MCSessionStateConnected) {
+    //        _iPadPeerID = peerID;
+    //    }
 }
 
 
@@ -121,36 +121,7 @@
                     [game stopGettingCard:game.currentTurn.Id];
                 }
                 if([game isGameEnd]){
-                    bool flag = NO;
-                    for(Player *player in [game getAllPlayers]){
-                        //show result based on player.result
-                        if ([player getResult] == 1) {
-                            if (self.delegate && [self.delegate respondsToSelector:@selector(endGameWithDrawGame:winner:)]) {
-                                [self.delegate endGameWithDrawGame:NO winner:player];
-                            }
-                            flag = YES;
-                            NSError *error = nil;
-                            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"WIN"];
-                            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-
-                        }
-                        else if ([player getResult] == 0) {
-                            NSError *error = nil;
-                            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"LOSE"];
-                            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-
-                        }
-                        else if ([player getResult] == -1) {
-                            NSError *error = nil;
-                            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"DRAW"];
-                            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
-                        }
-                    }
-                    if (flag == NO) {
-                        if (self.delegate && [self.delegate respondsToSelector:@selector(endGameWithDrawGame:winner:)]) {
-                            [self.delegate endGameWithDrawGame:YES winner:nil];
-                        }
-                    }
+                    [self iPadGameEnd];
                     NSLog(@"Game End");
                 }
                 else if(game.currentTurn){
@@ -164,7 +135,7 @@
                 NSLog(@"exception occur");
             }
         }
-
+        
     }
     else{
         NSObject *unarchiverObject = [NSKeyedUnarchiver unarchiveObjectWithData:data];
@@ -188,15 +159,61 @@
                 }
                 
             }
-            if([message  isEqual: @"ipad"]){
+           else if([message  isEqual: @"ipad"]){
                 _iPadPeerID = peerID;
             }
+            else if([message  isEqual: @"endGame"]){
+                //有人掉线
+                if(self.delegate && [_delegate respondsToSelector:@selector(endGameWithException)]) {
+                    [_delegate endGameWithException];
+                }
+            }
+            else if([message  isEqual: @"WIN"] || [message  isEqual: @"LOSE"] || [message  isEqual: @"DRAW"]){
+                //结束显示结局
+                if(self.delegate && [_delegate respondsToSelector:@selector(endGameWithResult:)]) {
+                    [_delegate endGameWithResult:message];
+                }
+            }
+            
         }
     }
     NSLog(@"did reveiveData");
 }
 
-
+- (void)iPadGameEnd {
+    bool flag = NO;
+    for(Player *player in [[Game Instance] getAllPlayers]){
+        //show result based on player.result
+        NSLog(@"--------player:%@, result:%ld\n\n", player, (long)[player getResult]);
+        if ([player getResult] == 1) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(endGameWithDrawGame:winner:)]) {
+                [self.delegate endGameWithDrawGame:NO winner:player];
+            }
+            flag = YES;
+            NSError *error = nil;
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"WIN"];
+            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+            
+        }
+        else if ([player getResult] == 0) {
+            NSError *error = nil;
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"LOSE"];
+            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+            
+        }
+        else if ([player getResult] == -1) {
+            NSError *error = nil;
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"DRAW"];
+            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+        }
+    }
+    if (flag == NO) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(endGameWithDrawGame:winner:)]) {
+            [self.delegate endGameWithDrawGame:YES winner:nil];
+        }
+    }
+    
+}
 
 -(void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress{
     

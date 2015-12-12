@@ -2,12 +2,14 @@
 //  SCMyResultController.h
 //  SharedCard
 //
-//  Created by Christina on 11/12/15.
+//  Created by JessieYong on 15/12/12.
 //  Copyright © 2015年 JessieYong. All rights reserved.
 //
 
-#ifndef SCMyResultController_h
-#define SCMyResultController_h
+#import <UIKit/UIKit.h>
 
-
-#endif /* SCMyResultController_h */
+@interface SCMyResultController : UIViewController
+@property(nonatomic, strong)NSString *result;
+@property (weak, nonatomic) IBOutlet UIImageView *resultImageView;
+- (IBAction)playAgain:(id)sender;
+@end

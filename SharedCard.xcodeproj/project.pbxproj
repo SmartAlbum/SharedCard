@@ -14,6 +14,7 @@
 		275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071031C0BFC120051810B /* SCPlayerBoardViewController.m */; };
 		275B3A581C1BB24A00F93A10 /* SCIpadCongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B3A571C1BB24A00F93A10 /* SCIpadCongController.m */; };
 		275B3A5B1C1BB26F00F93A10 /* SCIpadDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B3A5A1C1BB26F00F93A10 /* SCIpadDrawController.m */; };
+		275B3A5E1C1BC8DA00F93A10 /* SCMyResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B3A5D1C1BC8DA00F93A10 /* SCMyResultController.m */; };
 		277005631C04DE61003815DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005621C04DE61003815DD /* main.m */; };
 		277005661C04DE61003815DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005651C04DE61003815DD /* AppDelegate.m */; };
 		2770056C1C04DE61003815DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056A1C04DE61003815DD /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
@@ -99,7 +100,6 @@
 		CF4D55EC1C1A9E8700884A58 /* Cardicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EA1C1A9E8700884A58 /* Cardicon.png */; };
 		CF4D55ED1C1A9E8700884A58 /* Cardicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */; };
 		CF4D55EF1C1AA23800884A58 /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EE1C1AA23800884A58 /* bg4.png */; };
-		CF4D55F21C1AA4CE00884A58 /* SCMyResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */; };
 		CF4D55FB1C1AAC6800884A58 /* Win_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */; };
 		CF4D55FD1C1AAD7C00884A58 /* Draw_Game.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */; };
 		CF4D56001C1AB00C00884A58 /* U_Lose.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FE1C1AB00C00884A58 /* U_Lose.png */; };
@@ -153,6 +153,8 @@
 		275B3A571C1BB24A00F93A10 /* SCIpadCongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIpadCongController.m; sourceTree = "<group>"; };
 		275B3A591C1BB26F00F93A10 /* SCIpadDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIpadDrawController.h; sourceTree = "<group>"; };
 		275B3A5A1C1BB26F00F93A10 /* SCIpadDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIpadDrawController.m; sourceTree = "<group>"; };
+		275B3A5C1C1BC8DA00F93A10 /* SCMyResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMyResultController.h; sourceTree = "<group>"; };
+		275B3A5D1C1BC8DA00F93A10 /* SCMyResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMyResultController.m; sourceTree = "<group>"; };
 		2770055E1C04DE61003815DD /* SharedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277005621C04DE61003815DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		277005641C04DE61003815DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -248,8 +250,6 @@
 		CF4D55EA1C1A9E8700884A58 /* Cardicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cardicon.png; sourceTree = "<group>"; };
 		CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cardicon2.png; sourceTree = "<group>"; };
 		CF4D55EE1C1AA23800884A58 /* bg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg4.png; sourceTree = "<group>"; };
-		CF4D55F01C1AA4AD00884A58 /* SCMyResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMyResultController.h; sourceTree = "<group>"; };
-		CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMyResultController.m; sourceTree = "<group>"; };
 		CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Win_iPad.png; sourceTree = "<group>"; };
 		CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Draw_Game.png; sourceTree = "<group>"; };
 		CF4D55FE1C1AB00C00884A58 /* U_Lose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = U_Lose.png; sourceTree = "<group>"; };
@@ -486,12 +486,12 @@
 				275071001C0BFBFB0051810B /* SCStarterViewController.m */,
 				275071021C0BFC120051810B /* SCPlayerBoardViewController.h */,
 				275071031C0BFC120051810B /* SCPlayerBoardViewController.m */,
-				CF4D55F01C1AA4AD00884A58 /* SCMyResultController.h */,
-				CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */,
 				275B3A561C1BB24A00F93A10 /* SCIpadCongController.h */,
 				275B3A571C1BB24A00F93A10 /* SCIpadCongController.m */,
 				275B3A591C1BB26F00F93A10 /* SCIpadDrawController.h */,
 				275B3A5A1C1BB26F00F93A10 /* SCIpadDrawController.m */,
+				275B3A5C1C1BC8DA00F93A10 /* SCMyResultController.h */,
+				275B3A5D1C1BC8DA00F93A10 /* SCMyResultController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -751,7 +751,7 @@
 				27F85B7A1C0558AD00985BF5 /* SCGameBoardViewController.m in Sources */,
 				3E451F661C069C3C0080B546 /* Card.swift in Sources */,
 				275070FE1C0BFBDA0051810B /* SCWelcomeViewController.m in Sources */,
-				CF4D55F21C1AA4CE00884A58 /* SCMyResultController.m in Sources */,
+				275B3A5E1C1BC8DA00F93A10 /* SCMyResultController.m in Sources */,
 				27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
 				3E451F6A1C069C560080B546 /* Player.swift in Sources */,

@@ -42,7 +42,6 @@
         _gameManager = [Game Instance];
         _playerCount = 0;
         //        _playerAvatarDic = [NSMutableDictionary dictionary];
-        
     }
     [self addObserver];
     return  self;
@@ -124,6 +123,11 @@
     if(state == MCSessionStateNotConnected) {
         Player *player = [_gameManager getPlayer:peerID];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops!" message:[NSString stringWithFormat:@"%@ is offline. Game is stop!", player.Name] preferredStyle:UIAlertControllerStyleAlert];
+        NSError *error = nil;
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
+        for (Player *player in [[Game Instance] getAllPlayers]) {
+            [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+        }
         __weak SCGameBoardViewController *weakSelf = self;
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * action) {
@@ -227,6 +231,8 @@
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
     NSString *idenName;
     UIImage *winnerIcon;
+    UIViewController *resultController;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     if (winner == _player1) {
         winnerIcon = player1.image;
     }
@@ -235,18 +241,17 @@
     }
     if(drawGame) {
         idenName = @"drawController";
+        resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
     }
     else{
         idenName = @"congController";
-    }
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SCIpadCongController *resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
-    if (!drawGame) {
-        [resultController changeWinnerIconImage:winnerIcon];
+        resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
+        ((SCIpadCongController *)resultController).winnerIcon = winnerIcon;
     }
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self presentViewController:resultController animated:YES completion:^{
-        }];
+        [self.navigationController pushViewController:resultController animated:YES];
+        //        [self presentViewController:resultController animated:YES completion:^{
+    //        }];
     });
 }
 

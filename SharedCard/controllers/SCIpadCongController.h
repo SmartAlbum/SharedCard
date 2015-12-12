@@ -10,6 +10,7 @@
 
 @interface SCIpadCongController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *winIcon;
--(void)changeWinnerIconImage:(UIImage *)image;
+@property (nonatomic, strong) UIImage *winnerIcon;
+- (IBAction)playAgain:(id)sender;
 
 @end
