@@ -120,6 +120,8 @@
 		CFBF93E21C0DA7CD001BBC1E /* 2_10.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93DC1C0DA7CD001BBC1E /* 2_10.png */; };
 		CFBF93E61C0DAC86001BBC1E /* transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93E51C0DAC86001BBC1E /* transparent.png */; };
 		CFBF93E81C0DC55F001BBC1E /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBF93E71C0DC55F001BBC1E /* Back.png */; };
+		CFE50A3F1C1C2491001E36BB /* no_btn_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = CFE50A3D1C1C2491001E36BB /* no_btn_dis.png */; };
+		CFE50A401C1C2491001E36BB /* yes_btn_dis.png in Resources */ = {isa = PBXBuildFile; fileRef = CFE50A3E1C1C2491001E36BB /* yes_btn_dis.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +273,8 @@
 		CFBF93DC1C0DA7CD001BBC1E /* 2_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_10.png; sourceTree = "<group>"; };
 		CFBF93E51C0DAC86001BBC1E /* transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent.png; sourceTree = "<group>"; };
 		CFBF93E71C0DC55F001BBC1E /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		CFE50A3D1C1C2491001E36BB /* no_btn_dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_btn_dis.png; sourceTree = "<group>"; };
+		CFE50A3E1C1C2491001E36BB /* yes_btn_dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yes_btn_dis.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,7 +382,9 @@
 				CF3E91351C10075900872115 /* start-game.png */,
 				CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */,
 				CF3E91361C10075900872115 /* yes_btn.png */,
+				CFE50A3E1C1C2491001E36BB /* yes_btn_dis.png */,
 				CF3E91341C10075900872115 /* no_btn.png */,
+				CFE50A3D1C1C2491001E36BB /* no_btn_dis.png */,
 				CF4D55EA1C1A9E8700884A58 /* Cardicon.png */,
 				CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */,
 				CF3E91201C0E907400872115 /* head_1_b_b.png */,
@@ -677,6 +683,7 @@
 				CF497B081C0BF5DC00A8B50F /* 3_6.png in Resources */,
 				CF497AF31C0BF5DC00A8B50F /* 1_J.png in Resources */,
 				CF3E91381C10075900872115 /* start-game.png in Resources */,
+				CFE50A401C1C2491001E36BB /* yes_btn_dis.png in Resources */,
 				CF497B0C1C0BF5DC00A8B50F /* 3_10.png in Resources */,
 				CF497AF81C0BF5DC00A8B50F /* 2_3.png in Resources */,
 				CF497B651C0C5DE900A8B50F /* head_2_b.png in Resources */,
@@ -684,6 +691,7 @@
 				CF497AF01C0BF5DC00A8B50F /* 1_8.png in Resources */,
 				CF4D56011C1AB00C00884A58 /* U_Win.png in Resources */,
 				2770056E1C04DE61003815DD /* Assets.xcassets in Resources */,
+				CFE50A3F1C1C2491001E36BB /* no_btn_dis.png in Resources */,
 				CF497B101C0BF5DC00A8B50F /* 4_1.png in Resources */,
 				CF497B121C0BF5DC00A8B50F /* 4_3.png in Resources */,
 				CF497B1B1C0BF5DC00A8B50F /* 4_K.png in Resources */,
