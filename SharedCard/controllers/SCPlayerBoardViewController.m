@@ -153,7 +153,9 @@
 
 - (void)enableUserChoice{
     yes_button.enabled = true;
+    yes_button.highlighted = YES;
     no_button.enabled = true;
+    no_button.highlighted = YES;
     NSLog(@"player enable button");
 }
 
@@ -169,7 +171,8 @@
     SCMyResultController *resultController = [storyboard instantiateViewControllerWithIdentifier:@"resultController"];
     resultController.result = result;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.navigationController pushViewController:resultController animated:YES];
+        [self presentViewController:resultController animated:YES completion:^{
+        }];
     });
 }
 

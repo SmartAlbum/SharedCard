@@ -7,6 +7,8 @@
 //
 
 #import "SCIpadCongController.h"
+#import "SCMCManager.h"
+
 
 @interface SCIpadCongController ()
 
@@ -29,6 +31,11 @@
 }
 
 - (IBAction)playAgain:(id)sender {
+    NSError *error = nil;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
+    for (Player *player in [[Game Instance] getAllPlayers]) {
+        [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

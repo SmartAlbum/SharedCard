@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -135,15 +135,16 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="hideCard1" destination="8DN-7h-rFW" id="6dc-Qh-31H"/>
+                        <outlet property="hideCard2" destination="Jf4-TJ-mpO" id="SXK-cE-rc9"/>
                         <outlet property="player1" destination="E9T-gL-ZIO" id="dOD-cF-Bip"/>
                         <outlet property="player2" destination="hpq-9m-0oI" id="lV4-GV-MjE"/>
                         <outletCollection property="playercards1" destination="eBD-8C-hrC" id="x72-lj-oeH"/>
                         <outletCollection property="playercards1" destination="eAV-2u-V6X" id="wVg-H6-Q8x"/>
                         <outletCollection property="playercards1" destination="h03-EU-gEj" id="DFK-hb-LuG"/>
                         <outletCollection property="playercards1" destination="LNX-w6-hGA" id="7Ar-Do-NhY"/>
-                        <outletCollection property="playercards2" destination="UTt-hO-T5k" id="a2w-Ke-fUT"/>
-                        <outletCollection property="playercards2" destination="Z1d-Xt-fIV" id="epe-10-p9h"/>
                         <outletCollection property="playercards2" destination="155-rW-c9U" id="WD0-i2-mIn"/>
+                        <outletCollection property="playercards1" destination="leX-aE-2ND" id="1E7-Nk-gUj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyy-ex-FLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
