@@ -133,7 +133,7 @@
                                 <color key="shadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Duv-ER-4Bo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Duv-ER-4Bo">
                                 <rect key="frame" x="439" y="30" width="96" height="93"/>
                             </imageView>
                         </subviews>
@@ -231,7 +231,6 @@
         <image name="bg1.jpg" width="2560" height="1600"/>
         <image name="bg3.png" width="1536" height="1024"/>
         <image name="bg4.png" width="2560" height="1600"/>
-        <image name="head_5.png" width="90" height="90"/>
         <image name="no_btn.png" width="444" height="202"/>
         <image name="transparent.png" width="225" height="315"/>
         <image name="yes_btn.png" width="444" height="202"/>
