@@ -36,6 +36,8 @@
 @synthesize playercards2;
 @synthesize _player1;
 @synthesize _player2;
+@synthesize hideCard1;
+@synthesize hideCard2;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -236,7 +238,12 @@
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
     if(_player1!=NULL){
-//        [[_gameManager getPlayer:_p]
+        _player1 = [_gameManager getPlayer:_player1.Id];
+        [hideCard1 setImage:[UIImage imageNamed:_player1.hideCard.imageName]];
+    }
+    if(_player2 !=NULL){
+        _player2 = [_gameManager getPlayer:_player2.Id];
+        [hideCard2 setImage:[UIImage imageNamed:_player2.hideCard.imageName]];
     }
 //    [self newGame:nil];
 //    NSString *idenName;

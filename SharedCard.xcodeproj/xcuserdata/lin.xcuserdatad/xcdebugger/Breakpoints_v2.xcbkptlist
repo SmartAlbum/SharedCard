@@ -286,8 +286,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
             endingLineNumber = "208"
-            landmarkName = "@implementation SCMCManager"
-            landmarkType = "3">
+            landmarkName = "-iPadGameEnd"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,7 +302,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
             endingLineNumber = "207"
-            landmarkName = "-sendData:toPeer:error:"
+            landmarkName = "-iPadGameEnd"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
