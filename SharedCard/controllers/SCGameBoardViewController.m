@@ -235,6 +235,9 @@
 }
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
+    if(_player1!=NULL){
+//        [[_gameManager getPlayer:_p]
+    }
 //    [self newGame:nil];
 //    NSString *idenName;
 //    UIImage *winnerIcon;
