@@ -84,9 +84,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b_b.png" highlightedImage="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
                                 <rect key="frame" x="700" y="489" width="99" height="103"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b_b.png" highlightedImage="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
-                                <rect key="frame" x="239" y="488" width="100" height="101"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="155-rW-c9U">
                                 <rect key="frame" x="643" y="356" width="70" height="103"/>
                             </imageView>
@@ -123,6 +120,9 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-7h-rFW">
                                 <rect key="frame" x="334" y="356" width="72" height="103"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b_b.png" highlightedImage="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
+                                <rect key="frame" x="239" y="489" width="100" height="101"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,6 +247,7 @@
                                 <rect key="frame" x="369" y="45" width="287" height="90"/>
                                 <state key="normal" title="new game" image="NewGame_btn.png"/>
                                 <connections>
+                                    <action selector="newGame:" destination="ZF3-2N-g8h" eventType="touchUpInside" id="IGS-cr-DHB"/>
                                     <action selector="newGame:" destination="vxg-9T-lqD" eventType="touchUpInside" id="v87-dL-bCb"/>
                                 </connections>
                             </button>
