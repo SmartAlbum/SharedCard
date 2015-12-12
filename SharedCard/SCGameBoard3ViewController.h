@@ -19,10 +19,14 @@
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards2;
 @property (nonatomic, strong) IBOutletCollection(UIImageView) NSArray *playercards3;
 
+
+
 @property (strong, nonatomic) Player *cPlayer1;
 @property (strong, nonatomic) Player *cPlayer2;
 @property (strong, nonatomic) Player *cPlayer3;
 
-
+@property (strong, nonatomic) IBOutlet UIImageView *hideCard1;
+@property (strong, nonatomic) IBOutlet UIImageView *hideCard2;
+@property (strong, nonatomic) IBOutlet UIImageView *hideCard3;
 
 @end
