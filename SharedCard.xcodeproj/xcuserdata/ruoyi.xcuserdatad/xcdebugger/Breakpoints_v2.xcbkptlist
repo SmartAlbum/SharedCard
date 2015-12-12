@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharedCard/controllers/SCGameBoardViewController.m"
-            timestampString = "470825700.981398"
+            timestampString = "471535052.662319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-peerDidChangeStateWithNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -35,45 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SharedCard/controllers/SCGameBoardViewController.m"
-            timestampString = "471029737.139031"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "-refreshWithPlayer:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SharedCard/controllers/SCPlayerBoardViewController.m"
-            timestampString = "471028986.068031"
+            timestampString = "471576035.620387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "-YES_btn:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SharedCard/controllers/SCPlayerBoardViewController.m"
-            timestampString = "471029286.291131"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-refreshWithPlayer:"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -84,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SharedCard/controllers/SCGameBoardViewController.m"
-            timestampString = "471029376.714182"
+            timestampString = "471535052.662319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-peerDidChangeStateWithNotification:"
             landmarkType = "5">
             <Locations>
@@ -100,12 +68,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/controllers/SCGameBoardViewController.m"
-                  timestampString = "471283967.349119"
+                  timestampString = "471576168.579283"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "1598">
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "1536">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -115,12 +83,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/controllers/SCGameBoardViewController.m"
-                  timestampString = "471283967.349814"
+                  timestampString = "471576168.579592"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "1613">
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "1560">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -148,12 +116,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471283967.353193"
+                  timestampString = "471576168.581424"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -163,12 +131,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471283967.353881"
+                  timestampString = "471576168.58178"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -196,12 +164,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471283967.355438"
+                  timestampString = "471576168.583062"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -211,12 +179,12 @@
                   moduleName = "SharedCard"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruoyi/Desktop/SharedCard/SharedCard/SCGameBoard3ViewController.h"
-                  timestampString = "471283967.355752"
+                  timestampString = "471576168.583287"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>

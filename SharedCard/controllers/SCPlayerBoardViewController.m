@@ -8,10 +8,14 @@
 
 #import "SCPlayerBoardViewController.h"
 #import "SCMCManager.h"
+#import <AVFoundation/AVFoundation.h>
 @import MultipeerConnectivity;
 
-@interface SCPlayerBoardViewController ()<SCMCManagerDelegate>
+@interface SCPlayerBoardViewController ()<SCMCManagerDelegate, AVAudioPlayerDelegate>
 @property (strong, nonatomic) Player *playerSelf;
+@property (nonatomic, strong) AVAudioPlayer *getCardPlayer;
+@property (nonatomic, strong) AVAudioPlayer *gameStartPlayer;
+
 
 @end
 
@@ -59,6 +63,14 @@
     NSString *readyMsg = @"ready";
     NSData *data = [readyMsg dataUsingEncoding:NSUTF8StringEncoding];
     [[SCMCManager shareInstance] sendData:data toIpadCenterError:error];
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"getCard" ofType:@"wav"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    _getCardPlayer = audioPlayer;
+    // 创建播放器
+    _getCardPlayer.delegate = self;
+    [_getCardPlayer setVolume:1];
+    _getCardPlayer.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,6 +97,8 @@
         yes_button.enabled = false;
         no_button.enabled = false;
     }
+    [_getCardPlayer prepareToPlay];
+    [_getCardPlayer play]; //播放
 }
 
 - (IBAction)NO_btn:(id)sender {
@@ -101,6 +115,19 @@
 
 
 - (void)refreshWithPlayer:(Player *)refreshPlayer {
+    if (_playerSelf == nil && refreshPlayer != nil ) {
+        NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"gameStart:Over" ofType:@"wav"];
+        NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+        AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        _gameStartPlayer = audioPlayer;
+        // 创建播放器
+        _gameStartPlayer.delegate = self;
+        [_gameStartPlayer setVolume:1];
+        [_gameStartPlayer prepareToPlay];
+        _gameStartPlayer.numberOfLoops = 1; //设置音乐播放次数  -1为一直循环
+        [_gameStartPlayer prepareToPlay];
+        [_gameStartPlayer play];
+    }
     _playerSelf = refreshPlayer;
    //绘制界面
     Card *hiddenCard = refreshPlayer.hideCard;

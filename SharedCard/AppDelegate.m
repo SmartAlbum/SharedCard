@@ -31,7 +31,7 @@
     UIViewController *con = [storyboard instantiateInitialViewController];
     self.window.rootViewController = con;
     [self.window makeKeyAndVisible];
-    return YES;
+        return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

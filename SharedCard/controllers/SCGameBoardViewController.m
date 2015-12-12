@@ -10,16 +10,19 @@
 #import "SCMCManager.h"
 #import "SharedCardProject-Swift.h"
 #import "UIView+Toast.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @import MultipeerConnectivity;
 
 
 
 
-@interface SCGameBoardViewController ()<SCMCManagerDelegate>
+@interface SCGameBoardViewController ()<SCMCManagerDelegate, AVAudioPlayerDelegate>
 @property(nonatomic, strong)Game *gameManager;
 //@property(nonatomic, strong)NSMutableDictionary *playerAvatarDic;
 @property(assign) NSInteger playerCount;
+@property(nonatomic, strong)AVAudioPlayer *player;
 @end
 
 @implementation SCGameBoardViewController
@@ -129,6 +132,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self presentViewController:alertController animated:YES completion:nil];
         });
+        
     }
     /*
      
@@ -179,6 +183,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self beginAdvertiseing];
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"bgMusic" ofType:@"mp3"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    _player = player;
+    // 创建播放器
+    [_player prepareToPlay];
+    _player.delegate = self;
+    [_player setVolume:1];
+    _player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
+    [_player play]; //播放
+
     //    _mcManager = [[SCMCManager alloc] init];
     //    [_mcManager setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
     //    [_mcManager advertiseSelf:YES];
