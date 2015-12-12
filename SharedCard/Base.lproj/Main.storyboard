@@ -79,51 +79,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg2_for2.png" translatesAutoresizingMaskIntoConstraints="NO" id="84v-x1-Di3">
-                                <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                                <rect key="frame" x="0.0" y="65" width="1024" height="703"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_2_b_b.png" highlightedImage="head_2_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-9m-0oI">
-                                <rect key="frame" x="730" y="512" width="104" height="96"/>
+                                <rect key="frame" x="735" y="512" width="104" height="96"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_1_b_b.png" highlightedImage="head_1_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-gL-ZIO">
-                                <rect key="frame" x="201" y="506" width="112" height="101"/>
+                                <rect key="frame" x="200" y="507" width="112" height="101"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="h03-EU-gEj">
-                                <rect key="frame" x="195" y="381" width="70" height="103"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-2u-V6X">
-                                <rect key="frame" x="230" y="381" width="70" height="103"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNX-w6-hGA">
-                                <rect key="frame" x="265" y="381" width="70" height="103"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-8C-hrC">
-                                <rect key="frame" x="300" y="381" width="70" height="103"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-8C-hrC">
+                                <rect key="frame" x="283" y="374" width="70" height="103"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-7h-rFW">
-                                <rect key="frame" x="335" y="381" width="72" height="103"/>
+                                <rect key="frame" x="318" y="374" width="72" height="103"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="155-rW-c9U">
-                                <rect key="frame" x="655" y="381" width="70" height="103"/>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="155-rW-c9U">
+                                <rect key="frame" x="676" y="374" width="70" height="103"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1d-Xt-fIV">
-                                <rect key="frame" x="690" y="381" width="70" height="103"/>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1d-Xt-fIV">
+                                <rect key="frame" x="711" y="374" width="70" height="103"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-hO-T5k">
-                                <rect key="frame" x="725" y="381" width="70" height="103"/>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-hO-T5k">
+                                <rect key="frame" x="746" y="374" width="70" height="103"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="leX-aE-2ND">
-                                <rect key="frame" x="760" y="381" width="70" height="103"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="leX-aE-2ND">
+                                <rect key="frame" x="781" y="374" width="70" height="103"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-TJ-mpO">
-                                <rect key="frame" x="795" y="381" width="72" height="103"/>
+                                <rect key="frame" x="816" y="374" width="72" height="103"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkc-zH-ygB">
-                                <rect key="frame" x="369" y="103" width="287" height="90"/>
+                                <rect key="frame" x="369" y="90" width="287" height="90"/>
                                 <state key="normal" title="new game" image="NewGame_btn.png"/>
                                 <connections>
                                     <action selector="newGame:" destination="vxg-9T-lqD" eventType="touchUpInside" id="KcZ-YN-zWW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="h03-EU-gEj">
+                                <rect key="frame" x="178" y="374" width="70" height="103"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-2u-V6X">
+                                <rect key="frame" x="213" y="374" width="70" height="103"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNX-w6-hGA">
+                                <rect key="frame" x="248" y="374" width="70" height="103"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -194,69 +194,69 @@
                                 <rect key="frame" x="0.0" y="59" width="1024" height="709"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_4_b_b.png" highlightedImage="head_4_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vax-aO-t5q">
-                                <rect key="frame" x="464" y="538" width="99" height="79"/>
+                                <rect key="frame" x="464" y="539" width="99" height="79"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_3_b_b.png" highlightedImage="head_3_b.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-OE-Y9a">
-                                <rect key="frame" x="84" y="476" width="114" height="95"/>
+                                <rect key="frame" x="83" y="473" width="114" height="95"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b_b.png" highlightedImage="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
-                                <rect key="frame" x="799" y="487" width="116" height="93"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LWb-7u-lef">
-                                <rect key="frame" x="67" y="379" width="63" height="89"/>
+                                <rect key="frame" x="60" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="1P1-yq-dHz">
-                                <rect key="frame" x="98" y="379" width="63" height="89"/>
+                                <rect key="frame" x="91" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="MWp-h3-RxZ">
-                                <rect key="frame" x="129" y="379" width="63" height="89"/>
+                                <rect key="frame" x="122" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="w1O-wf-G7t">
-                                <rect key="frame" x="160" y="379" width="63" height="89"/>
+                                <rect key="frame" x="153" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="arf-V0-I3S">
-                                <rect key="frame" x="191" y="379" width="65" height="89"/>
+                                <rect key="frame" x="184" y="341" width="65" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bzz-hM-fds">
-                                <rect key="frame" x="417" y="417" width="63" height="89"/>
+                                <rect key="frame" x="410" y="379" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="YKe-yi-Jq3">
-                                <rect key="frame" x="449" y="417" width="63" height="89"/>
+                                <rect key="frame" x="442" y="379" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="cVI-fv-FYW">
-                                <rect key="frame" x="481" y="417" width="63" height="89"/>
+                                <rect key="frame" x="474" y="379" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="yFu-D6-cCf">
-                                <rect key="frame" x="513" y="417" width="63" height="89"/>
+                                <rect key="frame" x="506" y="379" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="H9p-eA-tSX">
-                                <rect key="frame" x="545" y="417" width="66" height="89"/>
+                                <rect key="frame" x="538" y="379" width="66" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sst-j5-fYb">
-                                <rect key="frame" x="744" y="379" width="63" height="89"/>
+                                <rect key="frame" x="737" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="ydv-kc-zR5">
-                                <rect key="frame" x="776" y="379" width="63" height="89"/>
+                                <rect key="frame" x="769" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vm4-Wc-1wx">
-                                <rect key="frame" x="808" y="379" width="63" height="89"/>
+                                <rect key="frame" x="801" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rv1-fZ-gWJ">
-                                <rect key="frame" x="840" y="379" width="63" height="89"/>
+                                <rect key="frame" x="833" y="341" width="63" height="89"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back.png" translatesAutoresizingMaskIntoConstraints="NO" id="RJO-GZ-i5L">
-                                <rect key="frame" x="872" y="379" width="65" height="89"/>
+                                <rect key="frame" x="865" y="341" width="65" height="89"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyi-iN-fgx">
-                                <rect key="frame" x="369" y="103" width="287" height="90"/>
+                                <rect key="frame" x="369" y="92" width="287" height="90"/>
                                 <state key="normal" title="new game" image="NewGame_btn.png"/>
                                 <connections>
                                     <action selector="newGame:" destination="vxg-9T-lqD" eventType="touchUpInside" id="v87-dL-bCb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="head_5_b_b.png" highlightedImage="head_5_b.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-kP-kRV">
+                                <rect key="frame" x="801" y="491" width="116" height="93"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -267,6 +267,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="14J-6a-xkW"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -288,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijq-yD-Gsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="2131"/>
+            <point key="canvasLocation" x="-94" y="2149"/>
         </scene>
         <!--Ipad Cong Controller-->
         <scene sceneID="vZd-mC-mu8">
@@ -414,7 +417,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1_1.png" width="225" height="315"/>
         <image name="Back.png" width="481" height="676"/>
         <image name="Cardicon.png" width="209" height="209"/>
         <image name="Draw_Game.png" width="1300" height="500"/>

@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Starter View Controller-->
@@ -184,13 +186,20 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-gf-AOB" userLabel="result">
                                 <rect key="frame" x="165" y="129" width="239" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mHj-gf-AOB" secondAttribute="height" multiplier="239:93" id="b0S-og-HMc"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="l4e-VO-Gyd" firstAttribute="top" secondItem="hD8-cV-gRy" secondAttribute="bottom" id="6OI-nX-ufT"/>
                             <constraint firstItem="hD8-cV-gRy" firstAttribute="leading" secondItem="dkd-7G-Vo1" secondAttribute="leading" id="DP2-3o-6OE"/>
                             <constraint firstItem="l4e-VO-Gyd" firstAttribute="top" secondItem="hD8-cV-gRy" secondAttribute="bottom" id="IHU-Rd-ATg"/>
+                            <constraint firstItem="hD8-cV-gRy" firstAttribute="top" secondItem="lcN-tw-c2Z" secondAttribute="bottom" id="SN3-X1-C9g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hD8-cV-gRy" secondAttribute="trailing" constant="-20" id="ZLp-2G-rKl"/>
                             <constraint firstItem="mHj-gf-AOB" firstAttribute="centerX" secondItem="dkd-7G-Vo1" secondAttribute="centerX" id="rF4-vr-8rI"/>
+                            <constraint firstItem="hD8-cV-gRy" firstAttribute="leading" secondItem="dkd-7G-Vo1" secondAttribute="leadingMargin" constant="-20" id="rZS-zU-KaX"/>
                             <constraint firstItem="hD8-cV-gRy" firstAttribute="top" secondItem="lcN-tw-c2Z" secondAttribute="bottom" id="vA4-F4-Oww"/>
                             <constraint firstAttribute="trailing" secondItem="hD8-cV-gRy" secondAttribute="trailing" id="yea-lU-GBE"/>
                         </constraints>
