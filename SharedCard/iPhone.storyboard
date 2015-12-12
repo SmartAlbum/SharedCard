@@ -20,27 +20,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H2u-Va-FPl">
                                 <rect key="frame" x="-5" y="-5" width="672" height="380"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-Wg-hf9">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-ES-5ej">
                                 <rect key="frame" x="246" y="219" width="76" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="START">
-                                    <color key="titleColor" red="0.10195178291418258" green="0.84122474747474751" blue="0.76497347298020668" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="beginSearch:" destination="Zqd-WB-XtR" eventType="touchUpInside" id="FFq-6b-G6u"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-Wg-hf9">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" red="0.10195178291418258" green="0.84122474747474751" blue="0.76497347298020668" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beginSearch:" destination="Zqd-WB-XtR" eventType="touchUpInside" id="FFq-6b-G6u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Cardicon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-LN-zKZ">
                                 <rect key="frame" x="224" y="57" width="120" height="111"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H2u-Va-FPl" firstAttribute="leading" secondItem="EKC-zx-E0t" secondAttribute="leading" id="B8E-t2-mAH"/>
+                            <constraint firstItem="c5v-LN-zKZ" firstAttribute="centerX" secondItem="EKC-zx-E0t" secondAttribute="centerX" id="EIi-4e-Lzq"/>
                             <constraint firstAttribute="trailing" secondItem="H2u-Va-FPl" secondAttribute="trailing" id="Eio-in-FSf"/>
                             <constraint firstItem="H2u-Va-FPl" firstAttribute="top" secondItem="EKC-zx-E0t" secondAttribute="top" id="GPJ-Fl-aId"/>
+                            <constraint firstItem="kE3-ES-5ej" firstAttribute="centerX" secondItem="EKC-zx-E0t" secondAttribute="centerX" id="YrF-Aa-ydu"/>
                             <constraint firstItem="e7B-9o-lCn" firstAttribute="top" secondItem="H2u-Va-FPl" secondAttribute="bottom" id="rvP-5T-C7e"/>
                         </constraints>
                     </view>
@@ -175,10 +182,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4.png" translatesAutoresizingMaskIntoConstraints="NO" id="hD8-cV-gRy">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-gf-AOB" userLabel="result">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-gf-AOB" userLabel="result">
                                 <rect key="frame" x="165" y="129" width="239" height="93"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2t-ZC-3WH">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2t-ZC-3WH">
                                 <rect key="frame" x="229" y="239" width="110" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -195,7 +202,9 @@
                         <constraints>
                             <constraint firstItem="hD8-cV-gRy" firstAttribute="leading" secondItem="dkd-7G-Vo1" secondAttribute="leading" id="DP2-3o-6OE"/>
                             <constraint firstItem="l4e-VO-Gyd" firstAttribute="top" secondItem="hD8-cV-gRy" secondAttribute="bottom" id="IHU-Rd-ATg"/>
+                            <constraint firstItem="mHj-gf-AOB" firstAttribute="centerX" secondItem="dkd-7G-Vo1" secondAttribute="centerX" id="rF4-vr-8rI"/>
                             <constraint firstItem="hD8-cV-gRy" firstAttribute="top" secondItem="lcN-tw-c2Z" secondAttribute="bottom" id="vA4-F4-Oww"/>
+                            <constraint firstItem="J2t-ZC-3WH" firstAttribute="centerX" secondItem="dkd-7G-Vo1" secondAttribute="centerX" id="xNU-UG-xBi"/>
                             <constraint firstAttribute="trailing" secondItem="hD8-cV-gRy" secondAttribute="trailing" id="yea-lU-GBE"/>
                         </constraints>
                     </view>
