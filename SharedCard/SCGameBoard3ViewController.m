@@ -35,7 +35,7 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        _gameManager = [[Game alloc] init];
+        _gameManager = [Game Instance];
         _playerCount = 0;
         //        _playerAvatarDic = [NSMutableDictionary dictionary];
     }
