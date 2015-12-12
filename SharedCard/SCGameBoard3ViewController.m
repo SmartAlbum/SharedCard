@@ -74,9 +74,9 @@
     if(state == MCSessionStateConnected) {
         Player *player = [[Player alloc] init];
         player.Id = peerID;
-        [_gameManager addPlayer:player];
         if (_playerCount == 0) {
             cPlayer1 = player;
+            player.avatar = @"head_3";
             dispatch_async(dispatch_get_main_queue(), ^{
                 [player1 setHighlighted:YES];
             });
@@ -84,6 +84,7 @@
         }
         else if (_playerCount == 1) {
             cPlayer2 = player;
+            player.avatar = @"head_4";
             //            [player2 setImage:[UIImage imageNamed:@"head_2_b"]];
             //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -92,12 +93,14 @@
         }
         else if (_playerCount == 2) {
             cPlayer3 = player;
+            player.avatar = @"head_5";
             //            [player3 setImage:[UIImage imageNamed:@"head_3_b"]];
             //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_3_b"] forKey:player.Id];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [player3 setHighlighted:YES];
             });
         }
+        [_gameManager addPlayer:player];
         _playerCount++;
         
         if(_playerCount ==3){
