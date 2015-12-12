@@ -11,6 +11,8 @@
 #import "SharedCardProject-Swift.h"
 #import "UIView+Toast.h"
 #import <AVFoundation/AVFoundation.h>
+#import "SCIpadCongController.h"
+#import "SCIpadDrawController.h"
 
 
 @import MultipeerConnectivity;
@@ -221,6 +223,33 @@
         [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
     }
 }
+
+-(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
+    NSString *idenName;
+    UIImage *winnerIcon;
+    if (winner == _player1) {
+        winnerIcon = player1.image;
+    }
+    else if (winner == _player2) {
+        winnerIcon = player2.image;
+    }
+    if(drawGame) {
+        idenName = @"drawController";
+    }
+    else{
+        idenName = @"congController";
+    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SCIpadCongController *resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
+    if (!drawGame) {
+        [resultController changeWinnerIconImage:winnerIcon];
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:resultController animated:YES completion:^{
+        }];
+    });
+}
+
 /*
  #pragma mark - Navigation
  

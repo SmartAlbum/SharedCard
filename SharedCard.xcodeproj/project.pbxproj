@@ -12,6 +12,8 @@
 		275070FE1C0BFBDA0051810B /* SCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275070FD1C0BFBDA0051810B /* SCWelcomeViewController.m */; };
 		275071011C0BFBFB0051810B /* SCStarterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071001C0BFBFB0051810B /* SCStarterViewController.m */; };
 		275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275071031C0BFC120051810B /* SCPlayerBoardViewController.m */; };
+		275B3A581C1BB24A00F93A10 /* SCIpadCongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B3A571C1BB24A00F93A10 /* SCIpadCongController.m */; };
+		275B3A5B1C1BB26F00F93A10 /* SCIpadDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B3A5A1C1BB26F00F93A10 /* SCIpadDrawController.m */; };
 		277005631C04DE61003815DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005621C04DE61003815DD /* main.m */; };
 		277005661C04DE61003815DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 277005651C04DE61003815DD /* AppDelegate.m */; };
 		2770056C1C04DE61003815DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770056A1C04DE61003815DD /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
@@ -98,12 +100,10 @@
 		CF4D55ED1C1A9E8700884A58 /* Cardicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EB1C1A9E8700884A58 /* Cardicon2.png */; };
 		CF4D55EF1C1AA23800884A58 /* bg4.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55EE1C1AA23800884A58 /* bg4.png */; };
 		CF4D55F21C1AA4CE00884A58 /* SCMyResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */; };
-		CF4D55F51C1AA52F00884A58 /* SCCongController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D55F41C1AA52F00884A58 /* SCCongController.m */; };
 		CF4D55FB1C1AAC6800884A58 /* Win_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */; };
 		CF4D55FD1C1AAD7C00884A58 /* Draw_Game.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */; };
 		CF4D56001C1AB00C00884A58 /* U_Lose.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FE1C1AB00C00884A58 /* U_Lose.png */; };
 		CF4D56011C1AB00C00884A58 /* U_Win.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D55FF1C1AB00C00884A58 /* U_Win.png */; };
-		CF4D56031C1AB25800884A58 /* SCDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4D56021C1AB25800884A58 /* SCDrawController.m */; };
 		CF4D560C1C1ABD0800884A58 /* NewGame_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */; };
 		CF4D56111C1AC2A200884A58 /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560D1C1AC2A200884A58 /* bgMusic.mp3 */; };
 		CF4D56121C1AC2A200884A58 /* gameStart:Over.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF4D560E1C1AC2A200884A58 /* gameStart:Over.wav */; };
@@ -149,6 +149,10 @@
 		275071001C0BFBFB0051810B /* SCStarterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCStarterViewController.m; sourceTree = "<group>"; };
 		275071021C0BFC120051810B /* SCPlayerBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPlayerBoardViewController.h; sourceTree = "<group>"; };
 		275071031C0BFC120051810B /* SCPlayerBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPlayerBoardViewController.m; sourceTree = "<group>"; };
+		275B3A561C1BB24A00F93A10 /* SCIpadCongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIpadCongController.h; sourceTree = "<group>"; };
+		275B3A571C1BB24A00F93A10 /* SCIpadCongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIpadCongController.m; sourceTree = "<group>"; };
+		275B3A591C1BB26F00F93A10 /* SCIpadDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCIpadDrawController.h; sourceTree = "<group>"; };
+		275B3A5A1C1BB26F00F93A10 /* SCIpadDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIpadDrawController.m; sourceTree = "<group>"; };
 		2770055E1C04DE61003815DD /* SharedCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277005621C04DE61003815DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		277005641C04DE61003815DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -246,14 +250,10 @@
 		CF4D55EE1C1AA23800884A58 /* bg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg4.png; sourceTree = "<group>"; };
 		CF4D55F01C1AA4AD00884A58 /* SCMyResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMyResultController.h; sourceTree = "<group>"; };
 		CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMyResultController.m; sourceTree = "<group>"; };
-		CF4D55F31C1AA51700884A58 /* SCCongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCongController.h; sourceTree = "<group>"; };
-		CF4D55F41C1AA52F00884A58 /* SCCongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCongController.m; sourceTree = "<group>"; };
 		CF4D55FA1C1AAC6800884A58 /* Win_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Win_iPad.png; sourceTree = "<group>"; };
 		CF4D55FC1C1AAD7C00884A58 /* Draw_Game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Draw_Game.png; sourceTree = "<group>"; };
 		CF4D55FE1C1AB00C00884A58 /* U_Lose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = U_Lose.png; sourceTree = "<group>"; };
 		CF4D55FF1C1AB00C00884A58 /* U_Win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = U_Win.png; sourceTree = "<group>"; };
-		CF4D56021C1AB25800884A58 /* SCDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDrawController.m; sourceTree = "<group>"; };
-		CF4D56041C1AB26A00884A58 /* SCDrawController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDrawController.h; sourceTree = "<group>"; };
 		CF4D560B1C1ABD0800884A58 /* NewGame_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewGame_btn.png; sourceTree = "<group>"; };
 		CF4D560D1C1AC2A200884A58 /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
 		CF4D560E1C1AC2A200884A58 /* gameStart:Over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "gameStart:Over.wav"; sourceTree = "<group>"; };
@@ -488,10 +488,10 @@
 				275071031C0BFC120051810B /* SCPlayerBoardViewController.m */,
 				CF4D55F01C1AA4AD00884A58 /* SCMyResultController.h */,
 				CF4D55F11C1AA4CE00884A58 /* SCMyResultController.m */,
-				CF4D55F31C1AA51700884A58 /* SCCongController.h */,
-				CF4D55F41C1AA52F00884A58 /* SCCongController.m */,
-				CF4D56021C1AB25800884A58 /* SCDrawController.m */,
-				CF4D56041C1AB26A00884A58 /* SCDrawController.h */,
+				275B3A561C1BB24A00F93A10 /* SCIpadCongController.h */,
+				275B3A571C1BB24A00F93A10 /* SCIpadCongController.m */,
+				275B3A591C1BB26F00F93A10 /* SCIpadDrawController.h */,
+				275B3A5A1C1BB26F00F93A10 /* SCIpadDrawController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -742,6 +742,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275B3A581C1BB24A00F93A10 /* SCIpadCongController.m in Sources */,
+				275B3A5B1C1BB26F00F93A10 /* SCIpadDrawController.m in Sources */,
 				271845C31C0EA00D00C9E1DB /* UIView+Toast.m in Sources */,
 				275071041C0BFC120051810B /* SCPlayerBoardViewController.m in Sources */,
 				CFBF93D61C0D9898001BBC1E /* SCGameBoard3ViewController.m in Sources */,
@@ -752,10 +754,8 @@
 				CF4D55F21C1AA4CE00884A58 /* SCMyResultController.m in Sources */,
 				27F85B8B1C05B79100985BF5 /* SCMCManager.m in Sources */,
 				277005631C04DE61003815DD /* main.m in Sources */,
-				CF4D55F51C1AA52F00884A58 /* SCCongController.m in Sources */,
 				3E451F6A1C069C560080B546 /* Player.swift in Sources */,
 				275071011C0BFBFB0051810B /* SCStarterViewController.m in Sources */,
-				CF4D56031C1AB25800884A58 /* SCDrawController.m in Sources */,
 				3E451F681C069C450080B546 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

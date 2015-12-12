@@ -19,6 +19,7 @@
 - (void)refreshWithUserChoice:(BOOL)anotherCard;
 //...more data transfer methods
 - (void)enableUserChoice;
+- (void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner;
 @end
 
 @interface SCMCManager : NSObject<MCSessionDelegate>

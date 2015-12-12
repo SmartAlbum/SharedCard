@@ -44,6 +44,18 @@ class Player:NSObject , NSCoding{
         self.result = nil
     }
     
+    func getResult()->NSInteger{
+        if(self.result == GameResult.WIN){
+            return 1;
+        }
+        else if(self.result == GameResult.LOSE){
+            return 0;
+        }
+        else{
+            return -1;
+        }
+    }
+    
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(Id,forKey:"Id")
         aCoder.encodeObject(cards,forKey:"cards")
