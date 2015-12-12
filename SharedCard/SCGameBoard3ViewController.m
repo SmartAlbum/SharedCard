@@ -205,6 +205,7 @@
     NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     _player = player;
+    _gameButton.enabled = NO;
     // 创建播放器
     [_player prepareToPlay];
     _player.delegate = self;
@@ -221,6 +222,7 @@
 }
 
 - (IBAction)newGame:(id)sender{
+    _gameButton.enabled = NO;
     [_gameManager startGame];
     dispatch_async(dispatch_get_main_queue(), ^{
         [hideCard1 setImage:[UIImage imageNamed:@"Back"]];
@@ -237,6 +239,7 @@
 }
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
+    _gameButton.enabled = YES;
     if(cPlayer1!=NULL){
         cPlayer1 = [_gameManager getPlayer:cPlayer1.Id];
         dispatch_async(dispatch_get_main_queue(), ^{

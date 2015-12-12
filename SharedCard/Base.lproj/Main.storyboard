@@ -138,7 +138,6 @@
                         <outlet property="gamebutton" destination="Zkc-zH-ygB" id="imD-Ru-Rzv"/>
                         <outlet property="hideCard1" destination="8DN-7h-rFW" id="6dc-Qh-31H"/>
                         <outlet property="hideCard2" destination="Jf4-TJ-mpO" id="SXK-cE-rc9"/>
-                        <outlet property="newGamebutton" destination="Zkc-zH-ygB" id="7b8-4q-rmv"/>
                         <outlet property="player1" destination="E9T-gL-ZIO" id="dOD-cF-Bip"/>
                         <outlet property="player2" destination="hpq-9m-0oI" id="lV4-GV-MjE"/>
                         <outletCollection property="playercards1" destination="eBD-8C-hrC" id="x72-lj-oeH"/>
@@ -253,7 +252,6 @@
                                 <state key="normal" title="new game" image="NewGame_btn.png"/>
                                 <connections>
                                     <action selector="newGame:" destination="ZF3-2N-g8h" eventType="touchUpInside" id="IGS-cr-DHB"/>
-                                    <action selector="newGame:" destination="vxg-9T-lqD" eventType="touchUpInside" id="v87-dL-bCb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -265,6 +263,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="gameButton" destination="Hyi-iN-fgx" id="KhM-tb-oB7"/>
                         <outlet property="hideCard1" destination="arf-V0-I3S" id="0bd-e4-OKJ"/>
                         <outlet property="hideCard2" destination="H9p-eA-tSX" id="CUm-cv-Lzl"/>
                         <outlet property="hideCard3" destination="RJO-GZ-i5L" id="yth-Ay-Ut1"/>

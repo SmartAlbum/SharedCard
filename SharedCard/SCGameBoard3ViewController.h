@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SharedCardProject-Swift.h"
 @interface SCGameBoard3ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *gameButton;
 
 @property (strong, nonatomic) IBOutlet UIImageView *player1;
 @property (strong, nonatomic) IBOutlet UIImageView *player2;
