@@ -32,6 +32,12 @@
 @synthesize player1;
 @synthesize player2;
 @synthesize player3;
+@synthesize cPlayer1;
+@synthesize cPlayer2;
+@synthesize cPlayer3;
+@synthesize hideCard1;
+@synthesize hideCard2;
+@synthesize hideCard3;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -70,14 +76,14 @@
         player.Id = peerID;
         [_gameManager addPlayer:player];
         if (_playerCount == 0) {
-            _cPlayer1 = player;
+            cPlayer1 = player;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [player1 setHighlighted:YES];
             });
             //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_1_b"] forKey:player.Id];
         }
         else if (_playerCount == 1) {
-            _cPlayer2 = player;
+            cPlayer2 = player;
             //            [player2 setImage:[UIImage imageNamed:@"head_2_b"]];
             //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_2_b"] forKey:player.Id];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -85,7 +91,7 @@
             });
         }
         else if (_playerCount == 2) {
-            _cPlayer3 = player;
+            cPlayer3 = player;
             //            [player3 setImage:[UIImage imageNamed:@"head_3_b"]];
             //            [_playerAvatarDic setObject:[UIImage imageNamed:@"head_3_b"] forKey:player.Id];
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -149,16 +155,16 @@
 - (void)refreshWithPlayer:(Player *)player {
     
     NSArray *targetCards;
-    if(_cPlayer1.Id == player.Id){
-        _cPlayer1 = player;
+    if(cPlayer1.Id == player.Id){
+        cPlayer1 = player;
         targetCards = _playercards1;
     }
-    else if(_cPlayer2.Id == player.Id){
-        _cPlayer2 = player;
+    else if(cPlayer2.Id == player.Id){
+        cPlayer2 = player;
         targetCards = _playercards2;
     }
-    else if(_cPlayer3.Id == player.Id){
-        _cPlayer3 = player;
+    else if(cPlayer3.Id == player.Id){
+        cPlayer3 = player;
         targetCards = _playercards3;
     }
     if(targetCards){
@@ -210,6 +216,11 @@
 
 - (IBAction)newGame:(id)sender{
     [_gameManager startGame];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [hideCard1 setImage:[UIImage imageNamed:@"Back"]];
+        [hideCard2 setImage:[UIImage imageNamed:@"Back"]];
+        [hideCard3 setImage:[UIImage imageNamed:@"Back"]];
+    });
     NSError *error = nil;
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
     //todo render ui here. e.g: show player cards.
@@ -220,7 +231,25 @@
 }
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
-
+    if(cPlayer1!=NULL){
+        cPlayer1 = [_gameManager getPlayer:cPlayer1.Id];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hideCard1 setImage:[UIImage imageNamed:cPlayer1.hideCard.imageName]];
+        });
+        
+    }
+    if(cPlayer2 !=NULL){
+        cPlayer2 = [_gameManager getPlayer:cPlayer2.Id];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hideCard2 setImage:[UIImage imageNamed:cPlayer2.hideCard.imageName]];
+        });
+    }
+    if(cPlayer3 !=NULL){
+        cPlayer3 = [_gameManager getPlayer:cPlayer3.Id];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hideCard2 setImage:[UIImage imageNamed:cPlayer3.hideCard.imageName]];
+        });
+    }
 }
 
 
