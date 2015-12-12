@@ -265,17 +265,17 @@
                         <outlet property="player1" destination="hL2-OE-Y9a" id="kHq-Jq-rPj"/>
                         <outlet property="player2" destination="Vax-aO-t5q" id="Osq-Mp-6fO"/>
                         <outlet property="player3" destination="4hV-kP-kRV" id="cGr-o6-K7Q"/>
-                        <outletCollection property="playercards1" destination="arf-V0-I3S" id="zb3-Iu-mdG"/>
                         <outletCollection property="playercards1" destination="MWp-h3-RxZ" id="zWQ-wR-jGo"/>
                         <outletCollection property="playercards1" destination="LWb-7u-lef" id="C2h-Rl-2gb"/>
-                        <outletCollection property="playercards2" destination="H9p-eA-tSX" id="zE1-Ah-jsw"/>
                         <outletCollection property="playercards2" destination="yFu-D6-cCf" id="YTA-Sw-Eif"/>
                         <outletCollection property="playercards2" destination="cVI-fv-FYW" id="ZZi-Bp-R8B"/>
                         <outletCollection property="playercards2" destination="Bzz-hM-fds" id="ECm-CU-hb5"/>
-                        <outletCollection property="playercards3" destination="RJO-GZ-i5L" id="Szw-qC-0C5"/>
                         <outletCollection property="playercards3" destination="Rv1-fZ-gWJ" id="yqR-f1-SKn"/>
                         <outletCollection property="playercards3" destination="Vm4-Wc-1wx" id="3MS-St-602"/>
                         <outletCollection property="playercards3" destination="Sst-j5-fYb" id="XbN-kd-Vjo"/>
+                        <outletCollection property="playercards1" destination="1P1-yq-dHz" id="ozJ-Qi-4qv"/>
+                        <outletCollection property="playercards2" destination="YKe-yi-Jq3" id="xw0-Do-jFp"/>
+                        <outletCollection property="playercards3" destination="ydv-kc-zR5" id="hhR-Dt-YiQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijq-yD-Gsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
