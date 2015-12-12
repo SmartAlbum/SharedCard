@@ -193,6 +193,7 @@
 - (void)beginAdvertiseing {
     [[SCMCManager shareInstance] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
     [[SCMCManager shareInstance] advertiseSelf:YES];
+    [SCMCManager shareInstance].delegate = self;
 }
 
 - (void)viewDidLoad {
