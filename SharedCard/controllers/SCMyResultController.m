@@ -7,8 +7,11 @@
 //
 
 #import "SCMyResultController.h"
+#import "SCMCManager.h"
 
-@interface SCMyResultController ()
+
+
+@interface SCMyResultController ()<SCMCManagerDelegate>
 
 @end
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[SCMCManager shareInstance] setDelegate:self];
     if([_result isEqualToString:@"WIN"]) {
         [_resultImageView setImage:[UIImage imageNamed:@"U_Win"]];
     }
@@ -34,6 +38,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)endGameWithException {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    });
 }
 
 /*

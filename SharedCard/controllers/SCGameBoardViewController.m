@@ -218,6 +218,11 @@
 
 
 - (IBAction)newGame:(id)sender{
+    NSError *error = nil;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
+    for (Player *player in [[Game Instance] getAllPlayers]) {
+        [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
+    }
     [_gameManager startGame];
     //todo render ui here. e.g: show player cards.
     for(Player *player in [_gameManager getAllPlayers]){
@@ -229,30 +234,30 @@
 }
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
-    NSString *idenName;
-    UIImage *winnerIcon;
-    UIViewController *resultController;
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    if (winner == _player1) {
-        winnerIcon = player1.image;
-    }
-    else if (winner == _player2) {
-        winnerIcon = player2.image;
-    }
-    if(drawGame) {
-        idenName = @"drawController";
-        resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
-    }
-    else{
-        idenName = @"congController";
-        resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
-        ((SCIpadCongController *)resultController).winnerIcon = winnerIcon;
-    }
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.navigationController pushViewController:resultController animated:YES];
-        //        [self presentViewController:resultController animated:YES completion:^{
-    //        }];
-    });
+//    [self newGame:nil];
+//    NSString *idenName;
+//    UIImage *winnerIcon;
+//    UIViewController *resultController;
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    if (winner == _player1) {
+//        winnerIcon = player1.image;
+//    }
+//    else if (winner == _player2) {
+//        winnerIcon = player2.image;
+//    }
+//    if(drawGame) {
+//        idenName = @"drawController";
+//        resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
+//    }
+//    else{
+//        idenName = @"congController";
+//        resultController = [storyboard instantiateViewControllerWithIdentifier:idenName];
+//        ((SCIpadCongController *)resultController).winnerIcon = winnerIcon;
+//    }
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//            [self presentViewController:resultController animated:YES completion:^{
+//            }];
+//    });
 }
 
 /*
