@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Starter View Controller-->
@@ -183,11 +182,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg4.png" translatesAutoresizingMaskIntoConstraints="NO" id="hD8-cV-gRy">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-gf-AOB" userLabel="result">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Draw_Game.png" translatesAutoresizingMaskIntoConstraints="NO" id="mHj-gf-AOB" userLabel="result">
                                 <rect key="frame" x="165" y="129" width="239" height="93"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mHj-gf-AOB" secondAttribute="height" multiplier="239:93" id="b0S-og-HMc"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
