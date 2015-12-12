@@ -494,7 +494,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "202"
             endingLineNumber = "202"
-            landmarkName = "-newGame:"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
             <Locations>
                <Location
