@@ -165,7 +165,9 @@
 
     if(targetCards){
         for (UIImageView *imageView in targetCards){
-            imageView.image = nil;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                imageView.image = nil;
+            });
         }
         for (int i=0; i < player.cards.count;i++) {
         
@@ -224,8 +226,10 @@
     [_gameManager startGame];
     NSError *error = nil;
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
-    [hideCard1 setImage:[UIImage imageNamed:@"Back"]];
-    [hideCard2 setImage:[UIImage imageNamed:@"Back"]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [hideCard1 setImage:[UIImage imageNamed:@"Back"]];
+        [hideCard2 setImage:[UIImage imageNamed:@"Back"]];
+    });
     for (Player *player in [[Game Instance] getAllPlayers]) {
         player.ready = false;
         [[SCMCManager shareInstance] sendData:data toPeer:player.Id error:error];
@@ -242,11 +246,17 @@
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
     if(_player1!=NULL){
         _player1 = [_gameManager getPlayer:_player1.Id];
-        [hideCard1 setImage:[UIImage imageNamed:_player1.hideCard.imageName]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hideCard1 setImage:[UIImage imageNamed:_player1.hideCard.imageName]];
+        });
+        
     }
     if(_player2 !=NULL){
         _player2 = [_gameManager getPlayer:_player2.Id];
-        [hideCard2 setImage:[UIImage imageNamed:_player2.hideCard.imageName]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hideCard2 setImage:[UIImage imageNamed:_player2.hideCard.imageName]];
+        });
+        
     }
 //    [self newGame:nil];
 //    NSString *idenName;
