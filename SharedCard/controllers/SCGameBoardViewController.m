@@ -196,6 +196,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self beginAdvertiseing];
+    _gamebutton.enabled = NO;
     NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"bgMusic" ofType:@"mp3"];
     NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
@@ -225,6 +226,7 @@
 
 
 - (IBAction)newGame:(id)sender{
+    _gamebutton.enabled = NO;
     [_gameManager startGame];
     NSError *error = nil;
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:@"endGame"];
@@ -246,6 +248,7 @@
 }
 
 -(void)endGameWithDrawGame:(BOOL)drawGame winner:(Player *)winner {
+    _gamebutton.enabled = YES;
     if(_player1!=NULL){
         _player1 = [_gameManager getPlayer:_player1.Id];
         dispatch_async(dispatch_get_main_queue(), ^{
